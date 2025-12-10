@@ -1,0 +1,317 @@
+$animation-duration: 0.6s;
+$initial-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+$final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+
+.btn {
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: $base-radius;
+  border: none;
+  color: color(light);
+  cursor: pointer;
+  width: fit-content;
+  background-color: color(primary);
+  transition: all 0.2s ease;
+  display: inline-block;
+  z-index: 1;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 120%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  &:hover, &:focus-visible {
+    color: color(light);
+    background-color: color(secondary);
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px color(secondary), 0 0 0 4px color(light); 
+    }
+
+    &::before {
+      top: -70%;
+      transition: all 0.3s;
+      background-image:
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, transparent 20%, color(secondary) 20%, transparent 30%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%); // GEÄNDERT
+      background-size: $initial-size;
+      background-position: 50% 120%;
+      animation: greentopBubbles $animation-duration ease;
+    }
+
+    &::after {
+      bottom: -70%;
+      background-image:
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
+        radial-gradient(circle, color(secondary) 20%, transparent 20%); // GEÄNDERT
+      background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+      background-position: 50% 0%;
+      animation: greenbottomBubbles $animation-duration ease;
+    }
+  }
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: $final-size-zero;
+  }
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: $final-size-zero;
+  }
+}
+
+.flex, .row {
+  display: flex;
+
+  &.align-end {
+    align-items: end;
+  }
+
+  &.align-start {
+    align-items: start;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-arround {
+    justify-content: space-around;
+  }
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.text-align-center {
+  text-align: center
+}
+
+.back-to-top {
+  @extend %animated-transform;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+  background-color: color(secondary);
+  color: color(light);
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  border: none;
+
+  html.scrolling-up & {
+    @extend %animated-transform;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  &:hover, &:focus, &:active {
+    background-color: darken(color(primary), 10%);
+    color: color(light);
+  }
+}
+
+.box {
+  position: relative;
+  padding: $base-gap * 3;
+  background-color: color(light, 0.04);
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 4rem;
+
+  @include breakpoint(large) {
+    margin-bottom: 0;
+  }
+
+  &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+  }
+
+  p:last-of-type {
+    margin-bottom: unset;
+  }
+}
+
+.img-container {
+  position: relative;
+
+  a {
+    width: 50%;
+    display: flex;
+
+    img {
+      object-fit: cover;
+      border-radius: $base-gap;
+      margin-bottom: 25%;
+      display: block;
+    }
+
+    &:last-of-type {
+      width: 50%;
+      display: block;
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+
+      img {
+        margin: unset;
+      }
+    }
+  }
+}
+
+.no-margin {
+  margin-bottom: unset;
+}
+
+.notification {
+  position: fixed;
+  z-index: 1000;
+  left: 1rem;
+  bottom: 1rem;
+  background-color: color(secondary);
+  padding: 1.5rem 2rem;
+  border-radius: $base-radius;
+  pointer-events: none;
+
+  &:before {
+    @extend .icon;
+    @extend .icon-close;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 5px;
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.helper-right {
+    position: relative;
+
+    &:after {
+        content: '';
+        top: 0;
+        right: 0;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background: color(secondary, 0.02);
+        z-index: -1;
+    }
+}
+
+
+// ************** Smooth Scrolling - Start ************** //
+.lenis {
+	height: auto;
+
+	&.lenis-smooth {
+		scroll-behavior: auto;
+
+		[data-lenis-prevent] {
+			overscroll-behavior: contain;
+      touch-action: auto;
+		}
+	}
+
+	&.lenis-stopped {
+		overflow: hidden;
+	}
+
+	&.lenis-scrolling {
+		iframe {
+			pointer-events: none;
+		}
+	}
+}
+// ************** Smooth Scrolling - End ************** //

@@ -1,0 +1,414 @@
+// ----------------------------
+// Navigation Base
+// ----------------------------
+.navigation {
+  background: color(dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid color(light);
+
+  &__container {
+    @extend %animated-transform;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    html.scrolled & {
+      @extend %animated-transform;
+
+      @include breakpoint($break) {
+        padding: 0.75rem 0;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    nav {
+      @media (min-width: 1800px) {
+        transform: translateX(2rem);
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+
+    &-link {
+      display: grid;
+      color: color(light);
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: color(primary);
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+
+    &--desktop {
+      @include breakpoint($break, max) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+
+  &__mobile {
+    position: fixed;
+    top: var(--navigation-height);
+    right: 0;
+    bottom: 0;
+    min-width: 340px;
+    z-index: 1001;
+    background: color(background);
+    box-shadow: 0 2px 0.45rem color(dark);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &--open {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+
+      .navigation__menu--mobile {
+        display: flex;
+      }
+    }
+
+    @include breakpoint($break) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: color(light);
+
+    @include breakpoint($break, max) {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      color: color(primary);
+    }
+  }
+
+  // ----------------------------
+  // Hamburger Icon
+  // ----------------------------
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 1.4rem;
+    height: 1rem;
+    justify-content: space-between;
+
+    &__line {
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &--open {
+      .hamburger__line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+      .hamburger__line:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger__line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+  }
+}
+
+// ----------------------------
+// Nav Item & Links
+// ----------------------------
+.nav-item {
+  position: relative;
+  padding: 0;
+
+  &--nested {
+    .nav-link {
+      padding-left: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  &.sub {
+    span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @extend .icon;
+
+      &::before {
+        @extend .icon-arrow-down;
+        line-height: 1;
+        order: 1;
+        float: left;
+      }
+    }
+  }
+
+  @include breakpoint($break, max) {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid color(light);
+    }
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0.75rem 1rem;
+    color: color(light);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+
+    @include breakpoint($break) {
+      &:after {
+        content: "";
+        position: absolute;
+        width: calc(100% - $base-gap * 2);
+        transform: scaleX(0);
+        height: 2px;
+        bottom: calc($base-gap / 2);
+        left: calc($base-gap / 2);
+        background-color: color(primary);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible
+    &--active {
+      @include breakpoint($break, max) {
+        background: color(primary, 0.5);
+      }
+
+      @include breakpoint($break) {
+        color: color(primary);
+
+        &:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    &--active {
+      @include breakpoint($break, max) {
+        background: color(primary);
+      }
+
+      @include breakpoint($break) {
+        color: color(primary);
+
+        &:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    &--span {
+      cursor: pointer;
+    }
+  }
+}
+
+// ----------------------------
+// Dropdown
+// ----------------------------
+.nav-dropdown {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  background: color(dark);
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  min-height: calc(100vh - var(--navigation-height));
+
+  @include breakpoint($break) {
+    position: absolute;
+    top: 100%;
+    border-radius: $base-border;
+    width: 100%;
+    max-height: 500px;
+    box-shadow: 0 4px 12px color(dark);
+    border: 1px solid color(border);
+    min-height: unset;
+  }
+
+  &--open {
+    opacity: 1;
+    @include breakpoint($break) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__item {
+    padding: 0;
+
+    &--parent {
+      border-bottom: 1px solid color(border);
+
+      .nav-dropdown__link {
+        font-weight: 600;
+        background: color(primary);
+
+        &:hover {
+          background: color(secondary);
+        }
+      }
+    }
+  }
+
+  &__close {
+    @extend %animated-transform;
+    padding: 0.5rem;
+    background-color: color(secondary);
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid color(light);
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: color(dark);
+    }
+  }
+
+  &__link {
+    @extend .nav-link;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: color(light)!important;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: color(secondary);
+      color: color(light);
+    }
+
+    &--active {
+      background: color(primary);
+      color: color(light);
+    }
+  }
+}
+
+// ----------------------------
+// Additional Navigation
+// ----------------------------
+.footer-navigation {
+  @include breakpoint($break, max) {
+    padding: 0 1rem;
+
+    .navigation__menu--footer {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      padding-bottom: 1.5rem;
+
+      @include breakpoint(tiny) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+
+      .nav-item {
+        border-bottom: 0;
+
+        .nav-item__wrapper {
+          a {
+            text-align: center;
+            background-color: color(medium);
+
+            &:hover, &:focus, &.nav-link--active {
+              background-color: color(primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint($break) {
+    .navigation__menu--footer {
+      justify-content: center;
+      padding: 1rem;
+      background-color: color(second-bg);
+    }
+  }
+}
+
+// ----------------------------
+// Dark Mode
+// ----------------------------
+.dark .navigation {
+  .nav-dropdown {
+    box-shadow: 0 4px 12px color(dark);
+  }
+}

@@ -1,0 +1,141 @@
+@mixin font-face-V2($font-name, $file-name, $types, $style) {
+    @font-face {
+      font-family: '#{$font-name}';
+      font-weight: $style;
+      src: #{url('/assets/fonts/' + $file-name + ".eot")} format("embedded-opentype"),
+           #{url('/assets/fonts/' + $file-name + ".woff")} format("woff"),
+           #{url('/assets/fonts/' + $file-name + ".ttf")} format("truetype"),
+           #{url('/assets/fonts/' + $file-name + ".svg" + '#' + $font-name)} format("svg");
+    }  
+} 
+
+// Mixin, um Farben global als Variablen zu setzen
+@function color($name, $alpha: null) {
+  $color: map-get($colors, $name);
+
+  @if $alpha != null {
+    @return rgba($color, $alpha);
+  }
+
+  @return $color;
+}
+
+@mixin generate-bg-colors {
+  @each $name, $color in $colors {
+    .bg-color-#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+@include generate-bg-colors;
+  
+$breakpoints: (
+    default: $breakpoint-default,
+    tiny: $breakpoint-tiny,
+    small: $breakpoint-small,
+    medium: $breakpoint-medium,
+    large: $breakpoint-large,
+    giant: $breakpoint-giant,
+    huge: $breakpoint-huge,
+    full: $breakpoint-full,
+    cut: $breakpoint-cut
+);
+  
+@mixin breakpoint($breakpoint, $mode: min) { 
+  @each $key, $value in $breakpoints {
+    @if $mode == max {
+      $breakpointValue: if($breakpoint == $key, $value, null);
+      @if $breakpointValue {
+        @media (max-width: $breakpointValue) {
+          @content;
+        }
+      }
+    } @else {
+      @if $breakpoint == $key {
+        @media (min-width: $value) {
+          @content;
+        }
+      }
+    }
+  }
+} 
+
+// ************** Abstandklasse - Start ************* // 
+
+// Mixin für automatische Abstandsberechnung auf verschiedenen Breakpoints
+@mixin distance($base-distance: $base-distance, $top: true, $bottom: true, $type: 'padding') {
+  $wert: $base-distance / 5; // Berechnet den Abstandswert für den Breakpoint "Default"
+  $index: 1; // Initialisiert den Multiplikatorwert
+  $property: if($type == 'padding', padding, margin); // Bestimmt die CSS-Eigenschaft (padding oder margin)
+
+  // Schleife für Breakpoints zur Berechnung
+  @each $breakpoint, $values in $breakpoint-list {
+    @include breakpoint($breakpoint) {
+      #{$property}-top: if($top, calc($wert * $index), 0); // Berechnet den Wert für Margin-Top oder Padding-Top
+      #{$property}-bottom: if($bottom, calc($wert * $index), 0); // Berechnet den Wert für Margin-Bottom oder Padding-Bottom
+    }
+    $index: $index + if($index < 5, 0.5, 0); // Erhöht den Multiplikator für jeden Breakpoint
+  }
+
+  &.no-distance-top {
+    #{$property}-top: 0; // Setzt Margin-Top oder Padding-Top auf 0
+  }
+
+  &.no-distance-bottom {
+    #{$property}-bottom: 0; // Setzt Margin-Bottom oder Padding-Bottom auf 0
+  }
+}
+
+// Klassenaufruf für Abstand ohne/mit Margin
+.distance { @include distance(); } // Aufruf ohne Margin
+.distance-margin { @include distance($type: 'margin'); } // Aufruf mit Margin
+
+ 
+// ************** Abstandklasse - End ************* //
+
+
+
+
+
+@mixin fadeInLetters($word-length, $animation-duration) {
+  $animation-delay: 0s;
+  @for $i from 1 through $word-length {
+    span:nth-child(#{$i}) {
+      animation: fadeInLetter $animation-duration $animation-delay forwards;
+      $animation-delay: $animation-delay + $animation-duration;
+    }
+  }
+}
+
+
+
+
+%icon:before,
+.icon:before,
+%icon:after,
+.icon:after {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: $icon-font;
+}
+
+@each $name, $ico in $icons {
+  // .icon-#{$name}
+  .icon-#{$name}:before {
+    content: "#{$ico}";
+  }
+}
+
+@each $name, $ico in $icons {
+  // .icon-#{$name}
+  .icon-after-#{$name}:after {
+    content: "#{$ico}";
+  }
+}

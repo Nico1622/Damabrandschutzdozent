@@ -1,0 +1,101 @@
+.swiper {
+  padding: 2rem;
+  border-radius: $base-radius;
+  
+  .swiper-slide {
+    display: flex!important;
+
+    @include breakpoint(medium, max) {
+      flex-wrap: wrap;
+    }
+
+    .slide-container {
+      width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      .device-icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        img {
+          background: color(dark, 0.2);
+          border: 1px solid color(light, 0.08);
+          border-radius: 16px;
+          padding: .5rem;
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+          height: 100%;
+
+          &:hover, &:focus {
+              background: color(dark, 0.08);
+              border-color: color(primary, 0.5);
+              transform: translateY(-4px);
+          }
+        }
+      }
+    }
+  }
+  
+  .slide-counter {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  &.referenz-swiper {    
+    background-color: color(dark, 0.4);
+    margin-bottom: 2rem;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: space-around;
+  background-color: color(dark, 0.4);
+  padding: 2rem;
+  border-radius: $base-radius;
+
+  .btn-prev, .btn-next {
+    white-space: nowrap;
+  }
+
+  .thumbs-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: color(dark, 0.4);
+    border-radius: $base-radius;
+
+    .thumbs-swiper {
+      .swiper-slide {
+        justify-content: center;
+
+        .thumb-image {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          cursor: pointer;
+          opacity: 0.5;
+          transition: 0.3s ease;
+          padding: 0.5rem;
+        }
+
+        &.swiper-slide-thumb-active {
+          .thumb-image {
+            background-color: color(primary, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

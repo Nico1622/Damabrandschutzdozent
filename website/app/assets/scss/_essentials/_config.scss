@@ -1,0 +1,93 @@
+// Breakpoint
+$break: large;
+
+// Basic Styles
+$main-font: 'Roboto';
+$display-font: 'Barlow';
+$icon-font: 'Icomoon'; 
+
+// Colors
+$colors: (
+  'primary': #538aea,       // Frisches, modernes Blau für Akzente
+  'secondary': #8A7FF3,     // Weiches Violett als Zweitakzent
+  'medium': #3E4248,        // Neutraler Ton für Text & Icons
+  'light': #D5D6D8,         // Helle Schrift auf dunklem Grund
+  'dark': #101113,          // Tiefes, aber nicht pures Schwarz
+  'alert': #E75A5A,         // Warmes Rot für Warnungen
+  'ultralight': #FFFFFF,    // Reines Weiß für starke Kontraste
+  'background': mix(#181A1D, #202224, 70%),
+  'second-bg': mix(#1F2125, #282A2E, 70%),
+  'form': mix(#232529, #2C2E32, 70%),
+);
+
+// Base Variables
+$base-gap: 18px;
+$base-font-size: 18px;
+$base-line-height: 28px;
+$base-box-shadow: 0px 0px 12px map-get($colors, 'dark'); 
+$base-border: 2px solid map-get($colors, 'primary');
+$base-distance: 200px;
+$base-radius: 10px;
+ 
+// Headlines
+$h1-size: 50px;
+$h2-size: 44px;
+$h3-size: 40px;
+$h4-size: 24px;
+$h5-size: 20px;
+$h6-size: 18px;
+
+// Custom Styles
+$row-max-width: 1600px;
+$max-width: 2560px;
+$bar-height: 70px;
+
+// Breakpoint-Variablen
+$breakpoint-default:0px;
+$breakpoint-tiny:   480px;
+$breakpoint-small:  576px;
+$breakpoint-medium: 768px; 
+$breakpoint-large:  992px;
+$breakpoint-giant:  1200px;
+$breakpoint-huge:   1360px;
+$breakpoint-full:   1500px;
+$breakpoint-cut:    1600px;
+
+:root {
+    --break-default: #{$breakpoint-default};
+    --break-tiny: #{$breakpoint-tiny};
+    --break-small: #{$breakpoint-small};
+    --break-medium: #{$breakpoint-medium};
+    --break-large: #{$breakpoint-large};
+    --break-giant: #{$breakpoint-giant};
+    --break-huge: #{$breakpoint-huge};
+    --break-full: #{$breakpoint-full};
+    --break-cut: #{$breakpoint-cut};
+    --break-variable: #{$break};
+}
+
+// Icomoon
+$icons: (
+	paper-plane: "\e900", 
+	phone: "\e901", 
+	arrow-right: "\e902", 
+  arrow-left: "\e903", 
+  arrow-down: "\e904", 
+  close: "\e905", 
+  check: "\e906",
+  error: "\e907",
+  profile: "\e908",
+  search: "\e909",
+);
+
+$breakpoint-list: (
+  default,
+  tiny, 
+  small, 
+  medium, 
+  large, 
+  giant, 
+  huge, 
+  full, 
+  cut 
+);

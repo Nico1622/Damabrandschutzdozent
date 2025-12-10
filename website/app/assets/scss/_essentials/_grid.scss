@@ -1,0 +1,128 @@
+// Variablen für das Grid-System
+$grid-columns: 12;
+$grid-gutter: 18px;
+
+// Funktion zum Berechnen der Breite einer Spalte
+@function grid-column-width($columns) {
+  @return 100% / $grid-columns * $columns;
+}
+
+// Mixin zum Stylen der Spalten mit Prefix und Suffix
+@mixin grid-column($columns, $offset: 0) {
+  float: left;
+  width: grid-column-width($columns);
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+}
+
+// Mixin zum Clearen der Floats
+@mixin grid-clear() { 
+  clear: both;
+}
+
+// Mixin für das Container-Element
+// Mixin für das Container-Element
+@mixin row() {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: $row-max-width;
+
+  &.align-center {
+    align-items: center
+  }
+}
+
+// Beispielverwendung:
+.row {
+  @include row();
+  position: relative;
+  
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.start {
+    justify-content: flex-start;
+  }
+
+  &.around {
+    justify-content: space-around;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.align-top {
+    align-items: flex-start;
+  }
+
+  &.align-center {
+    align-items: center
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+}
+
+.col {
+  @include grid-column(12);
+  position: relative;
+}
+
+// Schleife für col-Klassen
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include grid-column($i);
+  }
+}
+
+// Schleife für Breakpoint-Klassen mit Prefix und Suffix
+@each $breakpoint in $breakpoint-list {
+  @include breakpoint(#{$breakpoint}) {
+    .#{$breakpoint} {
+      @include grid-column(12);
+    }
+  
+    @for $i from 1 through $grid-columns {
+      .#{$breakpoint}-#{$i} { 
+        @include grid-column($i);
+      }
+    }
+  }
+}
+
+// Klasse für Prefix
+@each $breakpoint in $breakpoint-list {
+  @include breakpoint(#{$breakpoint}) {
+    @for $i from 0 through $grid-columns {
+      .#{$breakpoint}-prefix-#{$i} {
+        margin-left: grid-column-width($i);
+      }
+    }
+  }
+}
+
+// Klasse für Suffix
+@each $breakpoint in $breakpoint-list {
+  @include breakpoint(#{$breakpoint}) {
+    @for $i from 0 through $grid-columns {
+      .#{$breakpoint}-suffix-#{$i} {
+        margin-right: grid-column-width($i);
+      }
+    }
+  }
+}
+
+.no-gutter {
+  padding-left: unset;
+  padding-right: unset;
+}

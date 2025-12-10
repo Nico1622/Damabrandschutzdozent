@@ -1,0 +1,23 @@
+  // Verwendung des Mixins
+  @include font-face-V2(
+      $font-name: "Icomoon", 
+      $file-name: "icomoon", 
+      $types: (woff, ttf, svg, eot), 
+      $style: normal,
+  );  
+
+  @include font-face-V2(
+      $font-name: "Barlow", 
+      $file-name: "barlow-semi-condensed-v15-latin", 
+      $types: (woff, ttf, svg, eot), 
+      $style: (100, 400, 500, 600, 700),
+  );   
+
+  @include font-face-V2(
+      $font-name: "Roboto", 
+      $file-name: "roboto-v30-latin", 
+      $types: (woff, ttf, svg, eot), 
+      $style: (400, 500, 700),
+  );  
+  
+  

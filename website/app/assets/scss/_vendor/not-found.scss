@@ -1,0 +1,34 @@
+$bg-color: color(background);
+$text-color: color(light);
+$text-muted: #a9b2c3;
+$text-submuted: #7e8ca0;
+$accent-color: color(secondary);
+$primary-color: color(primary);
+$primary-hover: color(secondary);
+
+.notfound-container {  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  background: $bg-color;
+
+  .notfound-title {
+    font-size: clamp(36px, 30vw, 110px);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .notfound-text {
+    font-size: 1.25rem;
+    color: $text-muted;
+    margin-bottom: 0.25rem;
+  }
+
+  .notfound-subtext {
+    font-size: 1rem;
+    color: $text-submuted;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,22 @@
+// Basics
+@import '_essentials/config';
+@import '_essentials/mixins';
+@import '_essentials/grid';
+@import '_essentials/fonts';
+
+// Styles
+@import 'globals'; 
+@import 'helpers';
+@import 'navigation';
+@import 'page';
+
+// Modules 
+@import '_modules/aos';
+@import '_modules/captcha'; 
+ 
+// Vendor
+@import '_vendor/forms'; 
+@import '_vendor/not-found';
+@import '_vendor/pageLoader'; 
+@import '_vendor/devices';
+@import '_vendor/swiper'; 
