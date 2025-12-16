@@ -13,23 +13,17 @@ export default function ProfilPage() {
     <div className="pageWrap no-padding-top">
       <div className="helper-right distance">
         <div className="row">
-          <div className="col large-6">
+          <div className="col large-6 huge-5 huge-suffix-1">
             <h1 className="line">
               Webdesign mit Köpfchen
               <span>klarer Fokus aufs Wesentliche</span>
             </h1>
 
             <p>
-              Was als Schulpraktikum begann, wurde schnell zu einer Leidenschaft. Seit über <strong>fünf Jahren</strong>{" "}
-              gestalte und entwickle ich moderne, benutzerfreundliche und zielgerichtete Webauftritte – vom ersten
-              Layout bis zur Umsetzung mithilfe von CMS, sauberem HTML, SCSS und der Integration passender
-              JavaScript-Tools.
+              Was mit einem Schulpraktikum begann, entwickelte sich zu meiner beruflichen Leidenschaft. Seit über fünf Jahren konzipiere und realisiere ich moderne, nutzerzentrierte Webauftritte – von der Planung bis zur Umsetzung. Dabei arbeite ich mit CMS-Systemen, HTML5, SCSS und JavaScript, um stabile und ansprechende Lösungen zu entwickeln.
             </p>
             <p>
-              Ein besonderer Fokus liegt auf der Erstellung und Pflege von individuellen Online-Shops mit Hilfe von
-              WooCommerce. Neben meiner kreativen Arbeit begleite ich Auszubildende und Praktikant:innen, bin
-              Ansprechpartner bei technischen Fragen rund um das Helpdesk, sowie führend mit dabei bei der Erstellung
-              von Onlineshops mit WooCommerce.
+              Ein besonderer Schwerpunkt liegt in meiner derzeiteigen Anstellung auf der Entwicklung und Betreuung von WooCommerce-Shops. Ergänzend unterstütze ich Auszubildende und Praktikant:innen, übernehme technische Supportaufgaben und bringe mich aktiv in die Weiterentwicklung bestehender Systeme ein.
             </p>
           </div>
           <div className="col large-6 huge-5 huge-prefix-1">
@@ -46,20 +40,19 @@ export default function ProfilPage() {
 
         <div className="distance no-distance-bottom">
           <div className="row card-container">
-            <div className="col large-4">
+            <div className="col large-4 margin-bottom">
               <Card title="Clean Code">
-                Wartbarer, skalierbarer Code ist die Grundlage jeder erfolgreichen Anwendung. Ich schreibe Code, den
-                auch andere verstehen.
+                Ich lege großen Wert auf wartbaren und skalierbaren Code, der langfristig verständlich und erweiterbar bleibt.
               </Card>
             </div>
-            <div className="col large-4">
+            <div className="col large-4 margin-bottom">
               <Card title="Nutzerzentriert">
-                Am Ende zählt die User Experience. Jede Entscheidung wird mit dem Nutzer im Fokus getroffen.
+                Technische und gestalterische Entscheidungen treffe ich stets mit Blick auf die User Experience.
               </Card>
             </div>
-            <div className="col large-4">
-              <Card title="Kreative Lösungen">
-                Komplexe Probleme brauchen kreative Ansätze. Ich denke über den Tellerrand hinaus.
+            <div className="col large-4 margin-bottom">
+              <Card title="Frontend-Kompetenz">
+                Ich entwickle performante, responsive Oberflächen mit sauberer Trennung von Struktur, Stil und Logik.
               </Card>
             </div>
           </div>
@@ -74,20 +67,17 @@ export default function ProfilPage() {
               <div className="timeline">
                 <Card className="badge" date="2023 - Heute" title="WWWE GmbH (Festanstellung)">
                   <p>
-                    Entwicklung und Wartung von kundenspezifischen Online-Shops auf Basis von Shopify und WooCommerce.
-                    Enge Zusammenarbeit mit Design- und Backend-Teams.
+                    In meiner aktuellen Position entwickle und betreue ich kundenspezifische Online-Shops auf Basis von Shopify und WooCommerce. Dabei arbeite ich eng mit Design- und Backend-Teams zusammen, um ganzheitliche E-Commerce-Lösungen umzusetzen.
                   </p>
                 </Card>
                 <Card className="badge" date="2020 - 2023" title="WWWE GmbH (Ausbildung)">
                   <p>
-                    Einstieg in die professionelle Webentwicklung. Mitarbeit an verschiedenen Projekten – von Corporate
-                    Websites bis zu kleineren E-Commerce Lösungen.
+                    Mein Einstieg in die professionelle Webentwicklung. Während meiner Ausbildung war ich an zahlreichen Projekten beteiligt – von Corporate Websites bis hin zu E-Commerce-Lösungen. In dieser Zeit konnte ich mein technisches Fundament festigen und wertvolle Praxiserfahrung sammeln.
                   </p>
                 </Card>
                 <Card className="badge" date="2016 - 2020" title="Informationstechnischer Assistent (BTI Neuss)">
                   <p>
-                    Fundierte Ausbildung in der Softwareentwicklung mit Schwerpunkt auf Webtechnologien. Erste
-                    praktische Erfahrungen in HTML, CSS, JavaScript und PHP.
+                    Fundierte Ausbildung im Bereich Softwareentwicklung mit Schwerpunkt auf Webtechnologien. Hier sammelte ich meine ersten praktischen Erfahrungen mit HTML, CSS, JavaScript und PHP und entdeckte meine Leidenschaft für die Webentwicklung.
                   </p>
                 </Card>
               </div>
@@ -98,72 +88,37 @@ export default function ProfilPage() {
             <div className="card-container skills">
               <Card icon="" title="Technische Skills">
                 <ul className="unstyled-list">
-                  <li>
-                    <span>HTML5</span>
-                  </li>
-                  <li>
-                    <span>SCSS</span>
-                  </li>
-                  <li>
-                    <span>Next.JS</span>
-                  </li>
-                  <li>
-                    <span>PHP</span>
-                  </li>
-                  <li>
-                    <span>JavaScript</span>
-                  </li>
+                  <li>HTML5</li>
+                  <li>SCSS / CSS</li>
+                  <li>JavaScript</li>
+                  <li>Next.js</li>
+                  <li>PHP</li>
                 </ul>
               </Card>
               <Card icon="" title="E-Commerce & Shop-Systeme">
                 <ul className="unstyled-list">
-                  <li>
-                    <span>WooCommerce</span>
-                  </li>
-                  <li>
-                    <span>E-Pages</span>
-                  </li>
-                  <li>
-                    <span>SEO Optimierung</span>
-                  </li>
+                  <li>WooCommerce</li>
+                  <li>E-Pages</li>
+                  <li>Shop-Optimierung</li>
+                  <li>SEO-Grundlagen</li>
                 </ul>
               </Card>
               <Card icon="" title="Tools & Workflow">
                 <ul className="unstyled-list">
-                  <li>
-                    <span>Figma</span>
-                  </li>
-                  <li>
-                    <span>Adobe XD</span>
-                  </li>
-                  <li>
-                    <span>VS Code</span>
-                  </li>
-                  <li>
-                    <span>GitLab</span>
-                  </li>
+                  <li>Figma</li>
+                  <li>Adobe XD</li>
+                  <li>VS Code</li>
+                  <li>GitHub</li>
                 </ul>
               </Card>
               <Card icon="" title="Soft Skills">
                 <ul className="unstyled-list">
-                  <li>
-                    <span>Strukturierte Arbeitsweise</span>
-                  </li>
-                  <li>
-                    <span>Kreativität</span>
-                  </li>
-                  <li>
-                    <span>Zuverlässigkeit</span>
-                  </li>
-                  <li>
-                    <span>Nutzerzentriertes Denken</span>
-                  </li>
-                  <li>
-                    <span>Teamarbeit</span>
-                  </li>
-                  <li>
-                    <span>Problemlösung</span>
-                  </li>
+                  <li>Strukturierte Arbeitsweise</li>
+                  <li>Qualitätsbewusstsein</li>
+                  <li>Zuverlässigkeit</li>
+                  <li>Nutzerzentrierung</li>
+                  <li>Teamfähigkeit</li>
+                  <li>Lösungsorientierung</li>
                 </ul>
               </Card>
             </div>
@@ -174,10 +129,9 @@ export default function ProfilPage() {
       <section className="projects distance no-distance-bottom">
         <div className="row">
           <div className="col">
-            <h2>Projekt Referenzen</h2>
+            <h2>Projekt-Referenzen</h2>
             <p>
-              Eine Auswahl meiner Arbeiten aus den letzten Jahren. Von E-Commerce Lösungen bis zu komplexen
-              Webanwendungen.
+              Eine Auswahl relevanter Projekte aus den letzten Jahren – mit Fokus auf E-Commerce und Webentwicklung.
             </p>
           </div>
           <div className="col">

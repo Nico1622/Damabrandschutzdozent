@@ -55,7 +55,7 @@ export default function Captcha({ onChange }: CaptchaProps) {
           <button
             key={opt}
             type="button"
-            className={selectedCaptcha === opt ? "active" : ""}
+            className={`${selectedCaptcha === opt ? "active" : ""} no-btn`}
             onClick={() => handleSelect(opt)}
           >
             {opt}

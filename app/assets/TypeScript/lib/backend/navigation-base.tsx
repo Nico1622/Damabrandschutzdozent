@@ -257,7 +257,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
         </nav>
 
         <button
-          className="navigation__toggle"
+          className="navigation__toggle no-btn"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={isOpen}

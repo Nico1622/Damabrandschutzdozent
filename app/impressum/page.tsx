@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ImprintPage() {
   return ( 
-    <div className="imprint">
+    <div className="imprint pageWrap">
       <div className="row">
         <div className="col">
             <h1>Impressum</h1>

@@ -61,7 +61,7 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
 
       <Footer />
 
-      <Button className="back-to-top" aria-label="Zum Seitenanfang scrollen">&#8679;</Button>
+      <Button className="back-to-top no-btn" aria-label="Zum Seitenanfang scrollen">&#8679;</Button>
     </>
   );
 }

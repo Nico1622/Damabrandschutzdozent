@@ -37,10 +37,10 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={company.xing.href!} target="_blank" rel="noopener noreferrer" title={company.xing.title}
-                      className={company.xing.text}>
-                      <Image src={`/assets/images/icons/${company.xing.name}.svg`}
-                          alt={company.xing.text}
+                    <Link href={company.linkedin.href!} target="_blank" rel="noopener noreferrer" title={company.linkedin.title}
+                      className={company.linkedin.text}>
+                      <Image src={`/assets/images/icons/${company.linkedin.name}.svg`}
+                          alt={company.linkedin.text}
                           width={36}
                           height={36}
                           style={{ height: "auto" }}
@@ -61,7 +61,7 @@ export default function Header() {
               <span className="hr"></span>
 
               <p>
-                Als leidenschaftlicher Frontend-Entwickler liegt mein Fokus auf der Gestaltung von Websites & Onlineshops mit beeindruckendem Benutzererlebnis. Ich liebe es, kreative Lösungen zu finden und innovative Designs zu entwickeln.
+                Als Frontend-Entwickler liegt mein Schwerpunkt auf der Gestaltung moderner Websites und Onlineshops mit klarem Fokus auf Benutzererlebnis und Performance. Ich entwickle durchdachte, funktionale Lösungen, die Design und Technik sinnvoll verbinden.
               </p>
               
               <Button href="/kontakt" title="Mehr über mich und meine Arbeit erfahren">

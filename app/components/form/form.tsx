@@ -86,10 +86,10 @@ export default function ContactForm({}: ContactFormProps) {
                         required
                         />
                         <label htmlFor="Datenschutz">
-                        Die{" "}
-                        <Link href="/datenschutz" target="_blank">
+                        Die 
+                        <Link href="/datenschutz" title="Informationen zum Datenschutz lesen" target="_blank">
                             Datenschutzerklärung
-                        </Link>{" "}
+                        </Link>
                         habe ich gelesen und akzeptiert.
                         </label>
                     </span>

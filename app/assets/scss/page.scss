@@ -36,10 +36,9 @@ header {
         }
 
         p {
-            writing-mode:vertical-rl;
+            writing-mode: vertical-rl;
             margin-bottom: 0;
             transform: scale(-1);
-            text-transform: uppercase;
         }
 
         .line {
@@ -64,6 +63,11 @@ header {
                     display: grid;
                     width: fit-content;
                     line-height: 1;
+
+                    &:hover, &:focus-visible {
+                        transform: rotate(15deg);
+                        opacity: 0.9;
+                    }
                 }
             }
         }
@@ -144,15 +148,15 @@ header {
             }
 
             &:nth-of-type(2) {
-                transform: translateX(130px);
+                transform: translateX(132px);
             }
 
             &:nth-of-type(3) {
-                transform: translateX(152px);   
+                transform: translateX(154px);   
             }
 
             &:last-of-type {
-                transform: translateX(205px);
+                transform: translateX(210px);
             }
 
             span {
@@ -895,7 +899,7 @@ footer {
         @include distance(100px);
         background-color: color(dark);
         display: flex; 
-        align-items: center;
+        align-items: stretch;
         column-gap: $base-gap;
         row-gap: $base-gap;
         justify-content: space-between;
@@ -931,9 +935,13 @@ footer {
             }
 
             &.footer-branding {
-                img {
-                    @include breakpoint(giant, max) {
-                        max-width: 260px;
+                a {
+                    display: inline-flex;
+
+                    img {
+                        @include breakpoint(giant, max) {
+                            max-width: 260px;
+                        }
                     }
                 }
             }
@@ -959,14 +967,22 @@ footer {
 
                 li {
                     padding: 0;
+                    display: flex;
+                    align-items: center;
+
                     &:before {
                         display: none;
                     }
+
                     a {
                         @extend %animated-transform;
+                        display: inline-flex;
+                        align-items: center;
 
                         img {
                             width: 30px;
+                            height: fit-content;
+                            @extend %animated-transform;
 
                             @include breakpoint(small) {
                                 width: 40px;
@@ -975,7 +991,8 @@ footer {
 
                         &:hover, &:focus {
                             img {
-                                opacity: 0.7;
+                                transform: rotate(15deg);
+                                opacity: 0.9;
                             }
                         }
                     }

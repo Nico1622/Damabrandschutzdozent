@@ -50,13 +50,13 @@ export const siteConfig = {
     xing: {
       name: "Xing",
       title: "Besuchen Sie mich auf XING",
-      text: "Musterfirma",
+      text: "Xing",
       href: "https://www.xing.com/company/musterfirma",
     },
     linkedin: {
       name: "LinkedIn",
       title: "Besuchen Sie mich auf LinkedIn",
-      text: "Musterfirma GmbH",
+      text: "LinkedIn",
       href: "https://www.linkedin.com/company/musterfirma",
     },
   },

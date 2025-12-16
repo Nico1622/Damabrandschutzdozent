@@ -74,9 +74,7 @@ export default function ReferenzenSwiper() {
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Kaspar Spirituosen</h2>
-                      <p>Irgendein Text zu Projekt 1.</p>
-                      <p>Irgendein Text zu Projekt 1.</p>
-                      <p>Irgendein Text zu Projekt 1.</p>
+                      <p>Für Kaspar Spirituosen entwickelte ich einen modernen Online-Shop, der das hochwertige Sortiment optimal präsentiert. Der Fokus lag auf einer eleganten Produktdarstellung, einer intuitiven Navigation sowie einer reibungslosen Kaufabwicklung. Durch den Einsatz von WooCommerce in Kombination mit WordPress entstand eine Lösung, die sowohl visuell als auch technisch überzeugt.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
@@ -122,9 +120,7 @@ export default function ReferenzenSwiper() {
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Busche Gruppe</h2>
-                      <p>Irgendein Text zu Projekt 2.</p>
-                      <p>Irgendein Text zu Projekt 2.</p>
-                      <p>Irgendein Text zu Projekt 2.</p>
+                      <p>Bei der Busche Gruppe lag der Schwerpunkt auf der Entwicklung einer Corporate Website, die das Unternehmen professionell und authentisch repräsentiert. Besonderes Augenmerk legte ich auf klare Strukturen, Barrierefreiheit und eine hohe Performance.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
@@ -170,9 +166,7 @@ export default function ReferenzenSwiper() {
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Up Cologne</h2>
-                      <p>Irgendein Text zu Projekt 3.</p>
-                      <p>Irgendein Text zu Projekt 3.</p>
-                      <p>Irgendein Text zu Projekt 3.</p>
+                      <p>Für Up Cologne entwickelte ich eine dynamische Website auf Basis moderner Webtechnologien. Ziel war es, komplexe Inhalte übersichtlich darzustellen und gleichzeitig ein interaktives, benutzerfreundliches Erlebnis zu schaffen.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
@@ -218,9 +212,7 @@ export default function ReferenzenSwiper() {
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Scharrn3</h2>
-                      <p>Irgendein Text zu Projekt 3.</p>
-                      <p>Irgendein Text zu Projekt 3.</p>
-                      <p>Irgendein Text zu Projekt 3.</p>
+                      <p>Scharrn3 erhielt eine individuell entwickelte Weblösung, die exakt auf die spezifischen Anforderungen abgestimmt wurde. Dabei standen responsives Design, kurze Ladezeiten und eine SEO-optimierte Struktur im Fokus, um eine maximale Sichtbarkeit zu erreichen.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">

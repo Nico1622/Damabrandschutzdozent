@@ -1,8 +1,8 @@
 // Basics
 @import '_essentials/config';
 @import '_essentials/mixins';
-@import '_essentials/grid';
 @import '_essentials/fonts';
+@import '_essentials/grid';
 
 // Styles
 @import 'globals'; 
@@ -10,7 +10,7 @@
 @import 'navigation';
 @import 'page';
 
-// Modules 
+// Modules  
 @import '_modules/aos';
 @import '_modules/captcha'; 
  

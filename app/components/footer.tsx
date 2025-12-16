@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link href={company.instagram.href!} target="_blank" rel="noopener noreferrer" title={company.instagram.title}
                   className={company.instagram.text}>
                   <Image src={`/assets/images/icons/${company.instagram.name}.svg`}
-                      alt={company.instagram.text}
+                      alt={company.instagram.text} 
                       width={24}
                       height={24}
                       style={{ height: "auto" }}
@@ -52,10 +52,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={company.xing.href!} target="_blank" rel="noopener noreferrer" title={company.xing.title}
-                  className={company.xing.text}>
-                  <Image src={`/assets/images/icons/${company.xing.name}.svg`}
-                      alt={company.xing.text}
+                <Link href={company.linkedin.href!} target="_blank" rel="noopener noreferrer" title={company.linkedin.title}
+                  className={company.linkedin.text}>
+                  <Image src={`/assets/images/icons/${company.linkedin.name}.svg`}
+                      alt={company.linkedin.text}
                       width={24}
                       height={24}
                       style={{ height: "auto" }}

@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function DatenschutzPage() {
   return (
-    <div>
+    <div className="pageWrap">
       <div className="row">
         <div className="col">
           <h1>

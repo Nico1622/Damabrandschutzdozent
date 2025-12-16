@@ -11,7 +11,6 @@ export default function KontaktPage() {
       <div className="row">
         <div className="col">
           <h1>Kontakt</h1>
-          <p>Schreib mir gerne eine Nachricht.</p>  
         </div>
       </div>
 

@@ -35,13 +35,9 @@ return (
           <span>- Facettenreich kreativ</span>
         </h1>
         <p>
-          Seit 5 Jahren bin ich in der Webentwicklung unterwegs. Mein Spielplatz?{" "}
-          <strong>Wordpress</strong>, <strong>HTML</strong>, <strong>SCSS</strong>,{" "}
-          <strong>Javascript</strong>, <strong>Next.JS</strong> und <strong>PHP</strong>. Jede Codezeile erzählt ihre eigene
-          Geschichte, sei es bei der Entwicklung ansprechender Designs oder innovativer
-          Funktionalitäten. Mehr darüber erfahrt Ihr in meinem{" "}
-          <Link href="/profil" title="Mehr über mich und meine Arbeit erfahren">Profil</Link>.
+          Seit über fünf Jahren bin ich in der Webentwicklung tätig und habe mir ein breites technisches Fundament aufgebaut. Mein Schwerpunkt liegt auf WordPress, HTML5, SCSS und JavaScript, ergänzt durch Next.js sowie Backend-Kenntnisse in PHP. Dabei verbinde ich sauberen Code mit einem hohen Anspruch an Design und Nutzerfreundlichkeit.
         </p>
+        <p>Konzepte setze ich zunächst visuell mit Figma oder Adobe XD um, bevor sie technisch realisiert werden. Ziel ist stets eine klare Struktur, gute Wartbarkeit und eine positive User Experience. Weitere Einblicke in meinen Werdegang finden Sie in meinem <Link href="/profil" title="Mehr über mich und meine Arbeit erfahren">Profil</Link>.</p>
       </div>
     </div>
   </section>
@@ -51,8 +47,8 @@ return (
       <div className="col medium-5 full-4 giant-prefix-1">
         <div className="sticky-container lazy-bg">
           <h2 className="line second">
-            Mein Workflow In der Webentwicklung
-            <span>- Von der Idee zur Innovation</span>
+            Mein Workflow in der Webentwicklung
+            <span>- Von der Idee zur Umsetzung</span>
           </h2>
           <Button href="/referenzen" title="Meine Projekte und Arbeiten ansehen">
             Referenzen anschauen
@@ -62,11 +58,11 @@ return (
       <div className="col medium-6 giant-5">
         <div className="workflow-container">
           {[
-            { title: "Recherche", text: "Zu Beginn werden Zielgruppe, Markt und Wettbewerber analysiert. Auf Basis dieser Erkenntnisse entsteht eine klare Strategie, die als Fundament für Struktur und Design dient." },
-            { title: "Design", text: "Aus den Konzepten entsteht ein durchdachtes Layout, das Nutzerführung, Markenauftritt und Funktion vereint. So entsteht ein klares, modernes und konsistentes Design." },
-            { title: "Entwicklung", text: "Das Design wird in sauberen, performanten Code umgesetzt. Funktionen, Strukturen und Inhalte werden technisch präzise umgesetzt und für alle Endgeräte optimiert." },
-            { title: "Optimierung", text: "In dieser Phase werden Ladezeiten verbessert, Funktionen getestet und Inhalte für Suchmaschinen optimiert. Ziel ist eine schnelle, benutzerfreundliche und stabile Website." },
-            { title: "Veröffentlichung", text: "Abschließend wird die Website auf dem Server eingerichtet, Domains und SSL konfiguriert und der Live-Betrieb geprüft, damit der Onlinegang reibungslos erfolgt." },
+            { title: "Recherche", text: "Analyse von Zielgruppe, Markt und Anforderungen als Grundlage für Struktur und Design." },
+            { title: "Design", text: "Entwicklung klarer, konsistenter Layouts mit Fokus auf Nutzerführung und Markenwirkung." },
+            { title: "Entwicklung", text: "Umsetzung in performanten, wartbaren Code – optimiert für alle Endgeräte." },
+            { title: "Optimierung", text: "Performance-Optimierung, Funktionstests und grundlegende SEO-Anpassungen." },
+            { title: "Veröffentlichung", text: "Server-Setup, Domain- und SSL-Konfiguration sowie finale Live-Prüfung." },
           ].map((step, i) => (
             <div
               key={i}
@@ -87,9 +83,7 @@ return (
       <div className="col small-10 large-7 giant-6 huge-5">
         <blockquote>Bereits überzeugt?</blockquote>
         <p>
-          Als <strong>teamfähiger Profi</strong> mit einer <strong>Leidenschaft für moderne Techniken</strong> bin ich
-          genau der Richtige für Ihr Unternehmen.{" "}
-          <Link href="/kontakt" title="Kontaktieren Sie mich via E-Mail">Kontaktieren</Link> Sie mich jetzt für eine erfolgreiche Zusammenarbeit!
+          Als teamorientierter Entwickler mit hoher technischer Affinität unterstütze ich Unternehmen zuverlässig bei der Umsetzung moderner Weblösungen. <Link href="/kontakt" title="Kontaktieren Sie mich via E-Mail">Kontaktieren</Link> Sie mich jetzt für eine erfolgreiche Zusammenarbeit!
         </p>
       </div>
     </div>
@@ -103,7 +97,7 @@ return (
       350+ <strong>Projekte</strong>
     </div>
     <div className="item">
-      Team übergreifende <strong>Kommunikation</strong>
+      Teamübergreifende <strong>Kommunikation</strong>
     </div>
   </div>
 
@@ -116,12 +110,10 @@ return (
             <span>- Erfolg im digitalen Markt</span>
           </h3>
           <p>
-            Was die Entwicklung von Onlineshops betrifft, nutze ich vor allem meine Kenntnisse im Frontendbereich, um ein
-            ansprechendes und intuitives Einkaufserlebnis für Kunden zu schaffen.
+            In der Entwicklung von Onlineshops bringe ich vor allem meine Frontend-Expertise ein, um ein ansprechendes, intuitives und conversionstarkes Einkaufserlebnis zu schaffen. Dabei arbeite ich überwiegend mit WooCommerce in Verbindung mit WordPress sowie teils mit E-Pages.
           </p>
           <p>
-            Bei WordPress-Shops kümmere ich mich zusätzlich um das Backend, um sicherzustellen, dass alles reibungslos
-            funktioniert und die Verwaltung der Produkte und Bestellungen für den Kunden einfach zu bedienen ist.
+            Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technische Optimierungen.
           </p>
         </div>
         {/* <div className="content-box"></div> */}

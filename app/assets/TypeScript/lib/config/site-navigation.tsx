@@ -58,6 +58,11 @@ export const footerNavigationConfig: NavItem[] = [
     description: "Zur Startseite und Übersicht gelangen",
   },
   {
+    label: "Kontakt",
+    href: "/kontakt",
+    description: "Kontaktieren Sie mich per E-Mail",
+  },
+  {
     label: "Impressum",
     href: "/impressum",
     description: "Rechtliche Angaben und Informationen",
@@ -66,10 +71,5 @@ export const footerNavigationConfig: NavItem[] = [
     label: "Datenschutz",
     href: "/datenschutz",
     description: "Informationen zum Datenschutz lesen",
-  },
-  {
-    label: "Kontakt",
-    href: "/kontakt",
-    description: "Kontaktieren Sie mich per E-Mail",
-  },
+  }
 ]

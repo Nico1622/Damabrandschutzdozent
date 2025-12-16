@@ -150,7 +150,7 @@ form:not(.form) {
         transform: scale(1);
     }
 
-    &:hover {
+    &:hover, &:focus {
         cursor: pointer;
     }
     
@@ -166,6 +166,11 @@ form:not(.form) {
         &:focus {
             background: none;
         }
+    }
+
+    &:focus-visible {
+      outline-color: color(light);
+      outline-width: 2px;
     }
 }
 
@@ -197,8 +202,7 @@ form:not(.form) {
   }
   
 
-  [type="submit"] {
-
+  [type="submit"] {   
     &.loading,
     &.check,
     &.false {
