@@ -9,7 +9,7 @@ import type { NavItem } from "@/app/assets/TypeScript/lib/config/site-navigation
 
 interface NavigationBaseProps {
   items: NavItem[]
-  variant?: "main" | "footer" // unterschiedliche Verhaltensweisen
+  variant?: "main" | "footer"
   closeMobileMenuCallback?: () => void
 }
 
@@ -17,41 +17,20 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([])
   const [isMobileView, setIsMobileView] = useState<boolean | null>(null)
+  const [hasMounted, setHasMounted] = useState(false)
   const pathname = usePathname()
   const navRef = useRef<HTMLDivElement>(null)
   const lastScrollY = useRef(0)
   const NAV_BREAK = 992
 
   const isMain = variant === "main"
-  const isMobileViewRendered = isMobileView === null ? false : isMobileView
 
-  // -------- UTILITY --------
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href))
-
-  const toggleDropdown = (href: string) =>
-    setOpenDropdowns((prev) => (prev.includes(href) ? prev.filter((i) => i !== href) : [...prev, href]))
-
-  const closeDropdown = (href: string) => setOpenDropdowns((prev) => prev.filter((i) => i !== href))
-
-  const closeAllDropdowns = () => setOpenDropdowns([])
-
-  const closeMobileMenu = () => {
-    setIsOpen(false)
-    closeAllDropdowns()
-    closeMobileMenuCallback?.()
-  }
-
-  const focusParent = (href: string) => {
-    const selector = isMobileView ? `.navigation__mobile [data-trigger="${href}"]` : `[data-trigger="${href}"]`
-    const parent = document.querySelector<HTMLElement>(selector)
-    parent?.focus()
-  }
-
-  // -------- EFFECTS --------
   useEffect(() => {
+    setHasMounted(true)
     setIsMobileView(window.innerWidth <= NAV_BREAK)
-    window.addEventListener("resize", () => setIsMobileView(window.innerWidth <= NAV_BREAK))
-    return () => window.removeEventListener("resize", () => setIsMobileView(window.innerWidth <= NAV_BREAK))
+    const handleResize = () => setIsMobileView(window.innerWidth <= NAV_BREAK)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   useEffect(() => {
@@ -82,7 +61,27 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
     }
   }, [isMain])
 
-  // -------- KEY HANDLERS --------
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href))
+
+  const toggleDropdown = (href: string) =>
+    setOpenDropdowns((prev) => (prev.includes(href) ? prev.filter((i) => i !== href) : [...prev, href]))
+
+  const closeDropdown = (href: string) => setOpenDropdowns((prev) => prev.filter((i) => i !== href))
+
+  const closeAllDropdowns = () => setOpenDropdowns([])
+
+  const closeMobileMenu = () => {
+    setIsOpen(false)
+    closeAllDropdowns()
+    closeMobileMenuCallback?.()
+  }
+
+  const focusParent = (href: string) => {
+    const selector = isMobileView ? `.navigation__mobile [data-trigger="${href}"]` : `[data-trigger="${href}"]`
+    const parent = document.querySelector<HTMLElement>(selector)
+    parent?.focus()
+  }
+
   const handleParentKeyDown = (e: React.KeyboardEvent, item: NavItem) => {
     const hasChildren = !!item.children?.length
     if (!hasChildren) return
@@ -127,7 +126,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
   }
 
   const handleMobileMenuKeyDown = (e: React.KeyboardEvent) => {
-    if (!isMobileViewRendered || !isOpen) return
+    if (!isMobileView || !isOpen) return
 
     if (e.key === "Escape") {
       e.preventDefault()
@@ -149,7 +148,6 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
     }
   }
 
-  // -------- RENDER NAV ITEM --------
   const renderNavItem = (item: NavItem, level = 0) => {
     const hasChildren = !!item.children?.length
     const isDropdownOpen = openDropdowns.includes(item.href)
@@ -196,7 +194,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
                   onClick={() => closeDropdown(item.href)}
                   aria-label={`Dropdown ${item.label} schließen`}
                 >
-                  ✕ Schließen
+                  {"✕ Schließen"}
                 </button>
               </li>
             )}
@@ -210,7 +208,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
                 onKeyDown={(e) => handleChildKeyDown(e, item)}
                 onClick={closeMobileMenu}
               >
-                Übersicht
+                {"Übersicht"}
               </Link>
             </li>
 
@@ -234,7 +232,6 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
     )
   }
 
-  // -------- RENDER --------
   if (!isMain) {
     return (
       <nav role="navigation" aria-label="Footer Navigation" className="footer-navigation">
@@ -270,7 +267,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
         </button>
       </div>
 
-      {isOpen && isMobileViewRendered && <div className="navigation__overlay" onClick={closeMobileMenu} />}
+      {hasMounted && isOpen && isMobileView && <div className="navigation__overlay" onClick={closeMobileMenu} />}
 
       <div
         className={`navigation__mobile ${isOpen ? "navigation__mobile--open" : ""}`}
