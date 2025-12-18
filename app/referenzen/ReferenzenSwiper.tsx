@@ -27,7 +27,7 @@ export default function ReferenzenSwiper() {
   return (
     <div className="referenzen-slider">
       {/* --- MAIN SLIDER --- */}
-      <div className="referenzen-container">
+      <div className="referenzen-container" data-aos="fade-up" data-aos-delay="100">
         <div className="row">
           <div className="col">
             <Swiper
@@ -63,10 +63,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
-                    desktopVideo="/assets/files/kaspar-desktop.mp4"
-                    desktopPoster="/assets/images/files/kaspar-thumb-desktop.png"
-                    mobileVideo="/assets/files/kaspar-mobile.mp4"
-                    mobilePoster="/assets/images/files/kaspar-thumb-mobile.png"
+                    desktopImage="/assets/images/files/thumbs/kaspar-thumb-desktop.png"
+                    mobileImage="/assets/images/files/thumbs/kaspar-thumb-mobile.png"
                   />
 
                 </div>
@@ -74,12 +72,22 @@ export default function ReferenzenSwiper() {
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Kaspar Spirituosen</h2>
-                      <p>Für Kaspar Spirituosen entwickelte ich einen modernen Online-Shop, der das hochwertige Sortiment optimal präsentiert. Der Fokus lag auf einer eleganten Produktdarstellung, einer intuitiven Navigation sowie einer reibungslosen Kaufabwicklung. Durch den Einsatz von WooCommerce in Kombination mit WordPress entstand eine Lösung, die sowohl visuell als auch technisch überzeugt.</p>
+                      <p>Für Kaspar Spirituosen entstand ein leistungsstarker WooCommerce-Onlineshop, der den Verkauf hochwertiger Spirituosen und Eventtickets gleichermaßen abbildet. Besonderer Fokus lag auf einer stabilen, wartungsfreundlichen Lösung, die vom Kunden selbstständig gepflegt und erweitert werden kann.</p>
+                      <p>Durch die Anbindung mehrerer Schnittstellen wurde das bestehende Warenwirtschaftssystem nahtlos integriert. Meine Aufgabe umfasste die vollständige Konzeption und Umsetzung des gesamten Onlineshops – von der technischen Basis bis zur finalen Nutzererfahrung.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/html.png"
+                        src="/assets/images/icons/wordpress.png"
+                        alt="HTML Icon"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/sass.png"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -97,53 +105,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-                    </div>
-
-                    <Button href="https://www.kaspar-spirituosen.de/shop/" target="_blank" className="btn" title="Hier geht es zum Kasper Spirituosen - Onlineshop">
-                      Zu Kaspar Spirituosen
-                    </Button>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="col large-6">
-                  <Devices desktopVideo="/videos/projekt2-desktop.mp4" />
-                </div>
-                <div className="col large-5 large-prefix-1 flex align-center">
-                  <div className="slide-container">
-                    <div className="device-text-container">
-                      <h2>Busche Gruppe</h2>
-                      <p>Bei der Busche Gruppe lag der Schwerpunkt auf der Entwicklung einer Corporate Website, die das Unternehmen professionell und authentisch repräsentiert. Besonderes Augenmerk legte ich auf klare Strukturen, Barrierefreiheit und eine hohe Performance.</p>
-                    </div>
-
-                    <div className="device-icon-container margin-bottom">
-                      <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/html.png"
+                        src="/assets/images/icons/php.png"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -158,21 +120,27 @@ export default function ReferenzenSwiper() {
                   </div>
                 </div>
               </SwiperSlide>
+
               <SwiperSlide>
                 <div className="col large-6">
-                  <Devices desktopVideo="/videos/projekt2-desktop.mp4" />
+                  <Devices 
+                    desktopImage="/assets/images/files/thumbs/helpcenter-desktop.png"
+                    mobileImage="/assets/images/files/thumbs/helpcenter-mobile.png" 
+                  />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
                   <div className="slide-container">
                     <div className="device-text-container">
-                      <h2>Up Cologne</h2>
-                      <p>Für Up Cologne entwickelte ich eine dynamische Website auf Basis moderner Webtechnologien. Ziel war es, komplexe Inhalte übersichtlich darzustellen und gleichzeitig ein interaktives, benutzerfreundliches Erlebnis zu schaffen.</p>
+                      <h2>HelpCenter Euroweb</h2>
+                      <p>Das HelpCenter von Euroweb dient als zentrale Anlaufstelle für Kundenfragen rund um Produkte und Leistungen des Unternehmens. Realisiert wurde ein umfangreiches WordPress-Projekt mit individuellen Funktionen wie einem Glossar, Taxonomieverwaltung innerhalb von Beiträgen sowie einer leistungsfähigen Suchfunktion mit Hervorhebung der Suchbegriffe.</p>
+                      <p>Ich war verantwortlich für den strukturellen Aufbau des Helpcenters sowie die komplette Frontend-Ausgabe. Die inhaltliche Texterstellung wurde dabei konzeptionell mitbetreut, um eine klare und verständliche Nutzerführung sicherzustellen.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
+                        src="/assets/images/icons/wordpress.png"
+                        alt="Wordpress Icon"
+                        title="Wordpress"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -180,8 +148,9 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
+                        src="/assets/images/icons/php.png"
+                        alt="PHP Icon"
+                        title="PHP Systeme"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -189,8 +158,29 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
+                        src="/assets/images/icons/sass.png"
+                        alt="SASS Icon"
+                        title="SCSS"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/cms.png"
+                        alt="CMS Icon"
+                        title="CMS"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/javascript.png"
+                        alt="JavaScript Icon"
+                        title="JavaScript"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -198,27 +188,33 @@ export default function ReferenzenSwiper() {
                       />
                     </div>
 
-                    <Button href="https://www.kaspar-spirituosen.de/shop/" target="_blank" className="btn" title="Hier geht es zum Kasper Spirituosen - Onlineshop">
-                      Kaspar Spirituosen
+                    <Button href="https://helpcenter.euroweb.de/" target="_blank" className="btn" title="Hier geht es zum Helpcenter von Euroweb">
+                      HelpCenter Euroweb
                     </Button>
                   </div>
                 </div>
               </SwiperSlide>
+
               <SwiperSlide>
                 <div className="col large-6">
-                  <Devices desktopVideo="/videos/projekt2-desktop.mp4" />
+                  <Devices
+                    desktopImage="/assets/images/files/thumbs/Scharrn3-desktop.png"
+                    mobileImage="/assets/images/files/thumbs/Scharrn3-mobile.png" 
+                  />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
                   <div className="slide-container">
                     <div className="device-text-container">
                       <h2>Scharrn3</h2>
-                      <p>Scharrn3 erhielt eine individuell entwickelte Weblösung, die exakt auf die spezifischen Anforderungen abgestimmt wurde. Dabei standen responsives Design, kurze Ladezeiten und eine SEO-optimierte Struktur im Fokus, um eine maximale Sichtbarkeit zu erreichen.</p>
+                      <p>Für den lokalen Deko- und Accessoire-Laden Scharrn3 wurde eine moderne Webpräsenz entwickelt, die das Unternehmen zeitgemäß und ansprechend repräsentiert. Die Inhalte können komfortabel über ein CMS gepflegt werden, wodurch eine langfristige Wartbarkeit gewährleistet ist.</p>
+                      <p>Der Fokus lag jedoch klar auf einem modernen, ästhetischen Auftritt, der die Marke emotional transportiert und die Produkte wirkungsvoll präsentiert.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">
                       <Image
                         src="/assets/images/icons/html.png"
                         alt="HTML Icon"
+                        title="HTML"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -226,8 +222,9 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
+                        src="/assets/images/icons/cms.png"
+                        alt="CMS Icon"
+                        title="CMS"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -235,8 +232,9 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
-                        alt="HTML Icon"
+                        src="/assets/images/icons/sass.png"
+                        alt="SASS Icon"
+                        title="SCSS"
                         width={100}
                         height={100}
                         style={{ width: "auto", height: "auto" }}
@@ -244,8 +242,72 @@ export default function ReferenzenSwiper() {
                       />
                     </div>
 
-                    <Button href="https://www.kaspar-spirituosen.de/shop/" target="_blank" className="btn" title="Hier geht es zum Kasper Spirituosen - Onlineshop">
-                      Kaspar Spirituosen
+                    <Button href="https://www.scharrn3.com/" target="_blank" className="btn" title="Hier geht es zu Scharrn3">
+                      Scharrn3
+                    </Button>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="col large-6">
+                  <Devices 
+                    desktopImage="/assets/images/files/thumbs/busche-gruppe-desktop.png"
+                    mobileImage="/assets/images/files/thumbs/busche-gruppe-mobile.png" 
+                  />
+                </div>
+                <div className="col large-5 large-prefix-1 flex align-center">
+                  <div className="slide-container">
+                    <div className="device-text-container">
+                      <h2>Busche Gruppe</h2>
+                      <p>Für die Busche Gruppe entstand eine Corporate Website, die mehrere Unterfirmen unter einem einheitlichen digitalen Auftritt vereint. In enger Zusammenarbeit mit dem Kunden wurden individuelle Designwünsche sowie speziell gewünschte Funktionen umgesetzt.</p>
+                      <p>Ein zentrales Element bildet ein detailliertes Anfrageformular für Strategiegespräche, das gezielt auf die Bedürfnisse potenzieller Kunden ausgerichtet ist. Neben der Vermarktung der Produkte lag ein weiterer Schwerpunkt auf der professionellen Präsentation des Unternehmens und seiner Werte.</p>
+                    </div>
+
+                    <div className="device-icon-container margin-bottom">
+                      <Image
+                        src="/assets/images/icons/html.png"
+                        alt="HTML Icon"
+                        title="HTML"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/cms.png"
+                        alt="CMS Icon"
+                        title="CMS Systeme"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/sass.png"
+                        alt="SASS Icon"
+                        title="SCSS"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+
+                      <Image
+                        src="/assets/images/icons/javascript.png"
+                        alt="JavaScript Icon"
+                        title="JavaScript"
+                        width={100}
+                        height={100}
+                        style={{ width: "auto", height: "auto" }}
+                        className="thumb-image"
+                      />
+                    </div>
+
+                    <Button href="https://www.busche-gruppe.de/" target="_blank" className="btn" title="Hier geht es zur Busche Gruppe">
+                      Busche Gruppe
                     </Button>
                   </div>
                 </div>
@@ -258,9 +320,9 @@ export default function ReferenzenSwiper() {
       {/* --- Buttons --- */}
       <div className="row">
         <div className="col">
-          <div className="controls">
+          <div className="controls" data-aos="fade-up" data-aos-delay="100">
             <Button className="btn-prev btn" title="Vorherige Projekte">
-              Zurück
+              <i className="icon icon-arrow-left"></i>
             </Button>
             <div className="thumbs-container">
               <Swiper
@@ -281,11 +343,12 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/icons/html.png"
-                      alt="HTML Icon"
-                      width={100}
-                      height={100}
-                      style={{ width: "auto", height: "auto" }}
+                      src="/assets/images/files/favicon/favicon-kaspar.png"
+                      alt="Kaspar Icon"
+                      title="Kaspar Spirituosen"
+                      width={60}
+                      height={60}
+                      style={{ width: "100%", height: "auto" }}
                       className="thumb-image"
                     />
                   </div>
@@ -293,11 +356,12 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/icons/html.png"
-                      alt="HTML Icon"
-                      width={100}
-                      height={100}
-                      style={{ width: "auto", height: "auto" }}
+                      src="/assets/images/files/favicon/favicon-helpcenter.png"
+                      alt="Helpcenter Icon"
+                      title="Helpcenter"
+                      width={60}
+                      height={60}
+                      style={{ width: "100%", height: "auto" }}
                       className="thumb-image"
                     />
                   </div>
@@ -305,11 +369,12 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/icons/html.png"
-                      alt="HTML Icon"
-                      width={100}
-                      height={100}
-                      style={{ width: "auto", height: "auto" }}
+                      src="/assets/images/files/favicon/favicon-scharrn3.png"
+                      alt="Scharrn3 Icon"
+                      title="Scharrn3"
+                      width={60}
+                      height={60}
+                      style={{ width: "100%", height: "auto" }}
                       className="thumb-image"
                     />
                   </div>
@@ -317,11 +382,12 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/icons/html.png"
-                      alt="HTML Icon"
+                      src="/assets/images/files/favicon/favicon-busche.png"
+                      alt="Busche Icon"
+                      title="Busche Gruppe"
                       width={100}
                       height={100}
-                      style={{ width: "auto", height: "auto" }}
+                      style={{ width: "100%", height: "auto" }}
                       className="thumb-image"
                     />
                   </div>
@@ -329,7 +395,7 @@ export default function ReferenzenSwiper() {
               </Swiper>
             </div>
             <Button className="btn-next btn" title="Weitere Projekte">
-              Weiter
+              <i className="icon icon-arrow-right"></i>
             </Button>
           </div>
         </div>

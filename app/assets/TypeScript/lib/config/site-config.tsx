@@ -51,13 +51,13 @@ export const siteConfig = {
       name: "Xing",
       title: "Besuchen Sie mich auf XING",
       text: "Xing",
-      href: "https://www.xing.com/company/musterfirma",
+      href: "https://www.xing.com/profile/Nico_Beyer031219",
     },
     linkedin: {
       name: "LinkedIn",
       title: "Besuchen Sie mich auf LinkedIn",
       text: "LinkedIn",
-      href: "https://www.linkedin.com/company/musterfirma",
+      href: "https://de.linkedin.com/in/nico-beyer-1347a8377",
     },
   },
 

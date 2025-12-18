@@ -8,27 +8,31 @@ export default function MainPage() {
 return (
 <div className="pageWrap">
   <section className="row first-content" id="first-content">
-    <div className="col large-6">
+    <div className="col large-6" data-aos="fade-right">
       <div className="row">
-        <div className="col large-10 no-gutter">
+        <div className="col medium-prefix-1 medium-10 large-prefix-0 large-10 no-gutter">
           <Image src="/assets/images/layout/content.png" alt="Header Background" width={512} height={512}
             style={{ height: "auto", width: "100%"}} />
         </div>
+
         <div className="box-container">
-          <Image src="/assets/images/icons/wordpress.png" title="WordPress" alt="Wordpress - Icon" width={64} height={64}
-            style={{ width: "auto", height: "auto" }} />
-          <Image src="/assets/images/icons/html.png" title="HTML" alt="HTML - Icon" width={64} height={64}
-            style={{ width: "auto", height: "auto" }} />
-          <Image src="/assets/images/icons/sass.png" title="SASS / SCSS" alt="Sass - Icon" width={64} height={64}
-            style={{ width: "auto", height: "auto" }} />
-          <Image src="/assets/images/icons/javascript.png" title="JavaScript" alt="Javascript - Icon" width={64} height={64}
-            style={{ width: "auto", height: "auto" }} />
-          <Image src="/assets/images/icons/php.png" title="PHP" alt="PHP - Icon" width={64} height={64}
-            style={{ width: "auto", height: "auto" }} />
+          <Image src="/assets/images/icons/wordpress.png" title="WordPress" alt="Wordpress - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
+          <Image src="/assets/images/icons/html.png" title="HTML" alt="HTML - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
+          <Image src="/assets/images/icons/sass.png" title="SASS / SCSS" alt="Sass - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
+          <Image src="/assets/images/icons/javascript.png" title="JavaScript" alt="Javascript - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
+          <Image src="/assets/images/icons/php.png" title="PHP" alt="PHP - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
+          <Image src="/assets/images/icons/nextjs.png" title="NextJs" alt="NextJs - Icon" width={52} height={52}
+            style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
     </div>
-    <div className="col large-6 giant-5 giant-prefix-1 flex align-center">
+
+    <div className="col large-6 giant-5 giant-prefix-1 flex align-center" data-aos="fade-left" data-aos-delay="200">
       <div className="inner-container">
         <h1 className="line">
           Ein Einblick in meine Welt
@@ -44,7 +48,11 @@ return (
 
   <section className="second-content" id="workflow">
     <div className="row between">
-      <div className="col medium-5 full-4 giant-prefix-1">
+      <div 
+        className="col medium-5 full-4 giant-prefix-1"
+        data-aos="fade-right" 
+        data-aos-duration="1000"
+      >
         <div className="sticky-container lazy-bg">
           <h2 className="line second">
             Mein Workflow in der Webentwicklung
@@ -55,6 +63,7 @@ return (
           </Button>
         </div>
       </div>
+
       <div className="col medium-6 giant-5">
         <div className="workflow-container">
           {[
@@ -68,6 +77,10 @@ return (
               key={i}
               data-count={i + 1}
               className="workflow-box"
+              data-aos="fade-left"
+              data-aos-delay={i * 150}
+              data-aos-duration="800"
+              data-aos-anchor-placement="center-bottom"
             >
               <strong>{step.title}</strong>
               <p>{step.text}</p>
@@ -79,10 +92,13 @@ return (
   </section>
 
   <div className="banner-container lazy-bg" id="banner">
-    <div className="row center">
+    <div className="row center" data-aos="fade-up" data-aos-duration="1000">
       <div className="col small-10 large-7 giant-6 huge-5">
-        <blockquote>Bereits überzeugt?</blockquote>
-        <p>
+        <blockquote data-aos="zoom-in" data-aos-delay="200">
+          Bereits überzeugt?
+        </blockquote>
+        
+        <p data-aos="fade-up" data-aos-delay="400">
           Als teamorientierter Entwickler mit hoher technischer Affinität unterstütze ich Unternehmen zuverlässig bei der Umsetzung moderner Weblösungen. <Link href="/kontakt" title="Kontaktieren Sie mich via E-Mail">Kontaktieren</Link> Sie mich jetzt für eine erfolgreiche Zusammenarbeit!
         </p>
       </div>
@@ -90,20 +106,24 @@ return (
   </div>
 
   <div className="banner-inner-container">
-    <div className="item">
+    <div className="item" data-aos="fade-up" data-aos-delay="100">
       Über 5 Jahre <strong>Erfahrung</strong>
     </div>
-    <div className="item">
+    <div className="item" data-aos="fade-up" data-aos-delay="300">
       350+ <strong>Projekte</strong>
     </div>
-    <div className="item">
+    <div className="item" data-aos="fade-up" data-aos-delay="500">
       Teamübergreifende <strong>Kommunikation</strong>
     </div>
   </div>
 
   <section className="third-content" id="onlineshops">
     <div className="row">
-      <div className="col medium-6 large-prefix-1 giant-5 flex align-center">
+      <div 
+        className="col medium-6 large-prefix-1 giant-5 flex align-center"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <div>
           <h3 className="line">
             Erfahrungen mit Onlineshops
@@ -116,11 +136,21 @@ return (
             Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technische Optimierungen.
           </p>
         </div>
-        {/* <div className="content-box"></div> */}
       </div>
-      <div className="col medium-6 large-4 giant-prefix-1 huge-suffix-1 cut-5 cut-suffix-0 flex">
-        <Image src="/assets/images/layout/shop-img.jpg" alt="Onlineshop Background" width={1536} height={1024}
-          style={{ width: "100%", height: "auto" }} />
+
+      <div 
+        className="col medium-6 large-4 giant-prefix-1 huge-suffix-1 cut-5 cut-suffix-0 flex"
+        data-aos="fade-left"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <Image 
+          src="/assets/images/layout/shop-img.jpg" 
+          alt="Onlineshop Background" 
+          width={1536} 
+          height={1024}
+          style={{ width: "100%", height: "auto" }} 
+        />
       </div>
     </div>
   </section>

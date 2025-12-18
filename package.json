@@ -11,8 +11,9 @@
   "dependencies": {
     "@react-email/render": "^1.2.3",
     "@studio-freight/lenis": "^1.0.42",
+    "aos": "^2.3.4",
     "framer-motion": "^12.23.24",
-    "next": "15.5.3",
+    "next": "^15.5.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "resend": "^6.1.0",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

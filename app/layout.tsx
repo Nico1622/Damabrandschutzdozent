@@ -4,6 +4,7 @@ import Basics from "./assets/TypeScript/_essentials/basics";
 import ScrollToTop from "./assets/TypeScript/_module/scrollToTop";
 import PageLoader from "./assets/TypeScript/_module/pageLoader";
 import SmoothScroll from "./assets/TypeScript/_module/smoothScroll";
+import AOSProvider from "./assets/TypeScript/_module/aos";
 import ClientLayout from "./ClientLayout";
 import "./assets/scss/style.scss"; 
 
@@ -63,7 +64,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ScrollToTop />
         <SmoothScroll />
         <Basics />
-        <ClientLayout>{children}</ClientLayout>
+        
+        <AOSProvider>
+          <ClientLayout>
+            {children}
+          </ClientLayout>
+        </AOSProvider>
       </body>
     </html>
   );

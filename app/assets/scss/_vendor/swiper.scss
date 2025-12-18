@@ -11,13 +11,20 @@
 
     .slide-container {
       width: 100%;
-      padding-top: 2rem;
       padding-bottom: 2rem;
+      
+      @include breakpoint(medium) {
+        padding-top: 2rem;        
+      }
 
       .device-icon-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: .5rem;
+
+        @include breakpoint(tiny) {
+          gap: 1rem;
+        }
 
         img {
           background: color(dark, 0.2);
@@ -27,6 +34,8 @@
           transition: all 0.3s ease;
           backdrop-filter: blur(10px);
           height: 100%;
+          max-width: 2rem;
+          width: 100%!important;
 
           &:hover, &:focus {
               background: color(dark, 0.08);
@@ -37,7 +46,9 @@
       }
 
       .device-text-container {
-        padding-right: clamp(1.5rem, 4vw, 3rem);
+        @include breakpoint(large) {
+          padding-right: clamp(1.5rem, 4vw, 3rem);
+        }
       }
     }
   }
@@ -63,22 +74,62 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   justify-content: space-around;
   background-color: color(dark, 0.4);
   padding: 2rem;
   border-radius: $base-radius;
 
+  @include breakpoint(medium) {
+    gap: 2.5rem;
+  }
+
   .btn-prev, .btn-next {
     white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+    order: 1;
+    flex-grow: 1;
+
+    @include breakpoint(medium) {
+      flex-grow: 0;
+      width: fit-content;
+      order: unset;
+      padding: 1rem 1.5rem;
+    }
+
+    @include breakpoint(giant) {
+      padding: 1rem 2rem;
+    }
+
+    i {
+      font-size: 1rem;
+      line-height: 1;
+
+      @include breakpoint(large) {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   .thumbs-container {
     width: 100%;
-    max-width: 800px;
-    padding: 1rem;
+    padding: .5rem;
     background-color: color(dark, 0.4);
     border-radius: $base-radius;
+
+    @include breakpoint(medium) {
+      width: 60%;
+      padding: 1rem;
+    }
+
+    @include breakpoint(giant) {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    @include breakpoint(huge) {
+      max-width: 800px;
+    }
 
     .thumbs-swiper {
       .swiper-slide {
@@ -86,12 +137,33 @@
 
         .thumb-image {
           width: 100%;
+          max-width: 40px;
           height: auto;
           border-radius: 8px;
           cursor: pointer;
-          opacity: 0.5;
+          opacity: 0.75;
           transition: 0.3s ease;
-          padding: 0.5rem;
+          padding: 0.25rem;
+
+          @include breakpoint(medium) {
+            padding: 0.5rem;
+          }
+
+          @include breakpoint(large) {
+            max-width: 50px;
+          }
+
+          @include breakpoint(huge) {
+            max-width: 60px;
+          }
+        }
+
+        .thumb-wrapper {
+          &:hover, &:focus-visible {
+            .thumb-image {
+              background-color: color(primary, 0.2);
+            }
+          }
         }
 
         &.swiper-slide-thumb-active {

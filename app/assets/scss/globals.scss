@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6
 			height: 2px;
 			margin-top: $base-gap;
 			margin-bottom: $base-gap;
-			background-color: color(secondary);	
+			background-color: color(primary);	
 
 			@include breakpoint($break) {
 				margin-top: 36px;
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 h1, .h1 {
-	font-size: clamp(28px, 3vw, $h1-size);
+	font-size: clamp(24px, 3vw, $h1-size);
 
 	@include breakpoint($break) {
 		span {
@@ -143,6 +143,7 @@ h6, .h6 {
 }
   
 html {
+	overflow-x: hidden;
 	background: color(background);
 	box-sizing: border-box;
 	color: color(light); 
@@ -155,54 +156,6 @@ html {
 	max-width: $max-width;
 	margin: auto;
 	box-shadow: 0px 0px 20px color(dark);
-}
-
-%margin-bottom {
-	margin-bottom: calc($base-gap * 1.5);
-}
-
-p {
-	@extend %margin-bottom;
-	font-size: $base-font-size;
-}
-
-img{
-	main & {
-		width: 100%;
-		height: auto;
-		display: block;
-
-		&:not(.no-border) {
-			border-radius: $base-radius;
-		}
-	}
-}
-
-a {
-	@extend %animated-transform;
-	text-decoration: underline;
-	color: color(primary);
-
-	&:hover, &:focus, &:active {
-		color: color(secondary);
-		text-decoration: none;
-	}
-}
-
-.video-container {
-	display: block;
-	width: 100%;
-	padding-top: 56.25%;
-	position: relative;
-
-	iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border: none;
-	  }
 }
 
 main {
@@ -221,8 +174,56 @@ main {
 	}
 }
 
+img{
+	main & {
+		width: 100%;
+		height: auto;
+		display: block;
+
+		&:not(.no-border) {
+			border-radius: $base-radius;
+		}
+	}
+}
+
+p {
+	@extend %margin-bottom;
+	font-size: $base-font-size;
+
+	@include breakpoint(medium, max) {
+		font-size: calc($base-font-size - 1px);
+	}
+}
+
+a {
+	@extend %animated-transform;
+	text-decoration: underline;
+	color: color(primary);
+
+	&:hover, &:focus, &:active {
+		color: color(secondary);
+		text-decoration: none;
+	}
+}
+
 ul, ol {
 	list-style-type: none;
+}
+
+.video-container {
+	display: block;
+	width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	  }
 }
 
 dl.styled-list {

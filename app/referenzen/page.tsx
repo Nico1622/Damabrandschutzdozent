@@ -9,7 +9,7 @@ export default function ReferenzenPage() {
   return (
     <main className="pageWrap">
       <div className="row">
-        <div className="col">
+        <div className="col" data-aos="fade-up" data-aos-delay="100">
           <h1>Referenzen</h1>
         </div>
       </div>

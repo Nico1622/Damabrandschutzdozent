@@ -1,20 +1,24 @@
 .devices-container {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   display: grid;
   place-items: center;
   position: relative;
 
+  @include breakpoint(medium) {
+    aspect-ratio: 1 / 1;
+  }
+
   .devices {
     display: flex;
     align-items: flex-end;
-    border-radius: clamp(5px, 4vw, 15px);
+    border-radius: clamp(5px, 4vw, 10px);
     margin-bottom: 10%;
     width: 100%;
     justify-content: center;
 
     .iphone {
       border: clamp(3px, 4vw, 2px) solid #cacacc;
-      border-radius: clamp(10px, 4vw, 20px);
+      border-radius: clamp(10px, 4vw, 15px);
       width: 16%;
       // margin-right: 9%;
       height: 100%;
@@ -34,7 +38,7 @@
           background: #cacacc;
           width: 55%;
           height: 2%;
-          border-radius: 0px 0px 20px 20px;
+          border-radius: 0px 0px 15px 15px;
       }
 
       .screen {
@@ -43,16 +47,18 @@
         background-color: color(dark);
         width: 100%;
         height: 100%;
-        border-radius: clamp(7.5px, 4vw, 15px);
+        border-radius: clamp(7.5px, 4vw, 10px);
         overflow: hidden;
 
-        .inner-video {
+        .inner-image {
           position: absolute;
-          width: 100%;
-          object-position: top left;
+          width: calc(100% - (0.25rem) - 2px);
+          height: calc(100% - 0.25rem - 2px);
+          object-position: top center;
           object-fit: cover;
-          height: 100%;
+          padding: 0.175rem;
           top: 0;
+          image-rendering: optimizeQuality;
         }
       }
     }
@@ -62,7 +68,7 @@
       margin-right: 20px;
 
       .macbook-inner {
-          padding-bottom: 1.7%;
+        padding-bottom: 1.7%;
 
         .screen {
           background: color(dark);
@@ -79,21 +85,22 @@
             padding-top: 67%;
           }
 
-          .inner-video {
-            width: calc(100% - (3.2% * 2));
-            height: 89%;
+          .inner-image {
+            width: calc(100% - (0.5rem * 2));
+            height: calc(100% - 1rem);
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             top: 0;
-            margin: 4.3% 3.2%;
             transition: background-position 3s ease;
             object-fit: cover;
             object-position: center top;
             background-position: 0 0;
             background-size: 100% auto;
             overflow: hidden;
+            image-rendering: optimizeQuality;
+            padding: 0.5rem;
 
             &:hover, &:focus {
               background-position: 0 100%;

@@ -1,69 +1,27 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
+import Image from "next/image";
 
 interface DevicesProps {
-  desktopVideo?: string;
-  mobileVideo?: string;
-  desktopPoster?: string;
-  mobilePoster?: string;
+  desktopImage?: string;
+  mobileImage?: string;
 }
 
-const Devices: React.FC<DevicesProps> = ({ desktopVideo, mobileVideo, desktopPoster, mobilePoster }) => {
-  useEffect(() => {
-    const videos = document.querySelectorAll<HTMLVideoElement>(".macbook .inner-video, .iphone .inner-video");
-
-    videos.forEach((videoEl) => {
-      const parent = videoEl.closest<HTMLElement>(".macbook, .iphone");
-      if (!parent) return;
-
-      let isHovering = false;
-
-      // Funktion zum sicheren Abspielen
-      const playVideo = async () => {
-        try {
-          await videoEl.play();
-        } catch (err) {
-          // Ignoriere AbortError
-        }
-      };
-
-      // Video neu starten, wenn es zu Ende ist
-      videoEl.addEventListener("ended", () => {
-        videoEl.currentTime = 0;
-        if (isHovering) playVideo(); // Wenn noch Hover, wieder starten
-        else videoEl.pause();
-      });
-
-      parent.addEventListener("mouseenter", () => {
-        isHovering = true;
-        playVideo();
-      });
-
-      parent.addEventListener("mouseleave", () => {
-        isHovering = false;
-        videoEl.pause();
-      });
-    });
-
-    return () => {
-      videos.forEach((videoEl) => {
-        const parent = videoEl.closest<HTMLElement>(".macbook, .iphone");
-        if (!parent) return;
-        parent.replaceWith(parent.cloneNode(true));
-      });
-    };
-  }, []);
-
+const Devices: React.FC<DevicesProps> = ({ desktopImage, mobileImage }) => {
   return (
     <div className="devices-container">
       <div className="devices">
+        {/* MACBOOK */}
         <div className="macbook">
           <div className="macbook-inner">
             <div className="screen">
-              {desktopVideo && (
-                <video className="inner-video" muted playsInline poster={desktopPoster}>
-                  <source src={desktopVideo} type="video/mp4" />
-                </video>
+              {desktopImage && (
+                <Image
+                  src={desktopImage}
+                  alt="Desktop Preview"
+                  className="inner-image"
+                  width={1536} height={1024}
+                />
               )}
             </div>
             <div className="base"></div>
@@ -71,13 +29,16 @@ const Devices: React.FC<DevicesProps> = ({ desktopVideo, mobileVideo, desktopPos
           </div>
         </div>
 
+        {/* IPHONE */}
         <div className="iphone">
-          <div className="notch"></div>
           <div className="screen">
-            {mobileVideo && (
-              <video className="inner-video" muted playsInline poster={mobilePoster}>
-                <source src={mobileVideo} type="video/mp4" />
-              </video>
+            {mobileImage && (
+              <Image
+                src={mobileImage}
+                alt="Mobile Preview"
+                width={768} height={512}
+                className="inner-image"
+              />
             )}
           </div>
         </div>

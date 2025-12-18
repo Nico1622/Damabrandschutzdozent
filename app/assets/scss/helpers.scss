@@ -24,8 +24,8 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 
   &::before,
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 120%;
     left: 50%;
     height: 100%;
@@ -47,34 +47,34 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     &::before {
       top: -70%;
       transition: all 0.3s;
-      background-image:
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, transparent 20%, color(secondary) 20%, transparent 30%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%); // GEÄNDERT
       background-size: $initial-size;
       background-position: 50% 120%;
       animation: greentopBubbles $animation-duration ease;
+      background-image:
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, color(secondary) 20%, transparent 30%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%);
     }
 
     &::after {
       bottom: -70%;
-      background-image:
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%), // GEÄNDERT
-        radial-gradient(circle, color(secondary) 20%, transparent 20%); // GEÄNDERT
       background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
       background-position: 50% 0%;
       animation: greenbottomBubbles $animation-duration ease;
+      background-image:
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, color(secondary) 15%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%),
+        radial-gradient(circle, color(secondary) 20%, transparent 20%);
     }
   }
 }
@@ -191,7 +191,7 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 
 .box {
   position: relative;
-  padding: $base-gap * 3;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
   background-color: color(light, 0.04);
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -247,6 +247,10 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 
 .no-margin {
   margin-bottom: unset;
+}
+
+%margin-bottom {
+	margin-bottom: calc($base-gap * 1.5);
 }
 
 .notification {

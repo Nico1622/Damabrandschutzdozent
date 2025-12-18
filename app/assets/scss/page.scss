@@ -144,19 +144,19 @@ header {
             transition-delay: 0.25s;
 
             &:first-of-type {
-                transform: translateX(108px);
+                transform: translateX(99px);
             }
 
             &:nth-of-type(2) {
-                transform: translateX(132px);
+                transform: translateX(114px);
             }
 
             &:nth-of-type(3) {
-                transform: translateX(154px);   
+                transform: translateX(139px);   
             }
 
             &:last-of-type {
-                transform: translateX(210px);
+                transform: translateX(169px);
             }
 
             span {
@@ -174,13 +174,13 @@ header {
                 @extend %animated-transform;
                 margin: 0;
                 padding-left: 0.5rem;
-                text-transform: uppercase;
                 text-decoration: underline;
             }
 
             &:hover, &:focus {
                 transform: translate(0);
-                transition-delay: 0.25s;
+                transition-delay: 0.25s!important;
+                transition-duration: 0!important;
             }
         }
     }
@@ -319,6 +319,7 @@ main {
             padding: $base-gap;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: $base-gap;
             max-width: 85%;
             background-color: color(medium);
@@ -358,17 +359,16 @@ main {
     
             img {
                 display: inline-block;
-                width: auto;
-                height: auto;
                 min-width: 1rem;
                 max-width: 36px;
+
 
                 @include breakpoint(large) {
                     max-width: 54px;
                 }
 
                 @include breakpoint(huge) {
-                    max-width: unset;
+                    max-width: 50px;
                 }
             }
         }
@@ -550,6 +550,7 @@ main {
         position: relative;
         transform: translate(-50%);
         z-index: 1;
+        overflow: hidden;
 
         @include breakpoint(medium) {
             padding: 40px 0;
@@ -651,7 +652,7 @@ main {
             background: color(dark, 0.2);
             border: 1px solid color(light, 0.08);
             border-radius: 16px;
-            padding: 2rem;
+            padding: clamp(1.5rem, 4vw, 2rem);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             height: 100%;
@@ -667,7 +668,7 @@ main {
             }
 
             .card-headline {
-                font-size: 1.4rem;
+                font-size: clamp(1rem, 4vw, 1.3rem);
             }
         }
 
@@ -760,17 +761,20 @@ main {
                 background: linear-gradient(180deg, color(primary) 0%, rgba(74, 158, 255, 0.2) 100%);
             }
 
-            .badge {
-                position: relative;
-                padding: 2rem;
-                background: color(dark, 0.2);
-                border: 1px solid color(light, 0.08);
-                border-radius: $base-radius;
+            > div {
                 margin-bottom: 1.5rem;
 
                 &:last-of-type {
                     margin-bottom: 0;
                 }
+            }
+
+            .badge {
+                position: relative;
+                padding: clamp(1.5rem, 4vw, 2rem);
+                background: color(dark, 0.2);
+                border: 1px solid color(light, 0.08);
+                border-radius: $base-radius;
 
                 &:before {
                     content: '';
@@ -826,24 +830,34 @@ main {
             background-color: color(dark, 0.5);
             border-radius: $base-radius;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
 
             &:hover, &:focus {
                 transform: scale(1.025);
             }
 
             img {
-                min-height: 250px;
+                max-height: 290px;
                 object-fit: cover;
-                object-position: center;
+                object-position: top center;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
 
             .project-item-inner {
-                padding: 2rem;
+                padding: clamp(1.5rem, 4vw, 2rem);
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
 
                 .project-item-headline {
-                    font-size: 1.4rem;
+                    font-size: clamp(1.1rem, 4vw, 1.4rem);
+                }
+
+                .project-item-text {
+                    flex-grow: 1;
                 }
 
                 .category-container {

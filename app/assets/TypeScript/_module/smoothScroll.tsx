@@ -20,7 +20,7 @@ export default function SmoothScroll() {
 
     if (!lenis) {
       lenis = new Lenis({
-        duration: 1.45,
+        duration: 1.35,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
       });

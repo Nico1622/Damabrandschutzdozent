@@ -79,6 +79,10 @@ form:not(.form) {
     color: $form-light-color;
     margin-bottom: 6px;
     width: fit-content;
+
+    @include breakpoint(medium, max) {
+      font-size: 17px;
+    }
   }
 
   small {
@@ -190,7 +194,7 @@ form:not(.form) {
   .form-headline {
     font-family: $display-font;
     font-weight: 600;
-    font-size: clamp(27px, 4vw, 36px);
+    font-size: clamp(20px, 4vw, 36px);
     text-transform: uppercase;
     margin-bottom: 1em;
   }

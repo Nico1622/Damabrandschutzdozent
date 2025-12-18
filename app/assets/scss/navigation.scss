@@ -171,6 +171,10 @@
     .nav-link {
       padding-left: 1rem;
       font-size: 0.9rem;
+
+      @include breakpoint(huge) {
+        font-size: 1rem;
+      }
     }
   }
 

@@ -34,7 +34,7 @@ export default function ProjectItem({
         <h3 className="project-item-headline">{title}</h3>
         <div className="project-item-text">{children}</div>
         <div className="button-container">
-          <button className="btn">Zur Referenz →</button>
+          <button className="btn">Zur Referenz <i className="icon icon-arrow-right"></i></button>
         </div>
       </div>
     </Link>
