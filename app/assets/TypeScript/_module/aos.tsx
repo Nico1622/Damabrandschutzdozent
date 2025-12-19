@@ -20,7 +20,7 @@ export default function AOSProvider({
   children,
   duration = 1200,
   once = true,
-  offset = 120,
+  offset = 150,
   easing = "ease-out-cubic",
   delay = 0,
   disableOnMobile = true, // Standardmäßig jetzt auf TRUE

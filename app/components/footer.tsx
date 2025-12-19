@@ -65,9 +65,9 @@ export default function Footer() {
       )}
 
       {/* Rechtliche Navigation ganz unten */}
-      <div data-aos="fade-in" data-aos-delay="400" data-aos-offset="0">
-        <FooterNavigation />
-      </div>
+     
+      <FooterNavigation />
+     
     </footer>
   );
 }

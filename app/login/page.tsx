@@ -19,7 +19,7 @@ export default function LoginPage() {
     if (res.ok) {
       router.push("/");
     } else {
-      setError("Passwort falsch.");
+      setError("Passwort falsch");
     }
   };
 
