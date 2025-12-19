@@ -320,3 +320,10 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 	}
 }
 // ************** Smooth Scrolling - End ************** //
+
+
+.order-1-large {
+  @include breakpoint(large, max) {
+    order: -1;
+  }
+}

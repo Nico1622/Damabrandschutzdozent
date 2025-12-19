@@ -120,7 +120,7 @@ return (
   <section className="third-content" id="onlineshops">
     <div className="row">
       <div 
-        className="col medium-6 large-prefix-1 giant-5 flex align-center"
+        className="col large-6 giant-prefix-1 giant-5 flex align-center"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
@@ -139,7 +139,7 @@ return (
       </div>
 
       <div 
-        className="col medium-6 large-4 giant-prefix-1 huge-suffix-1 cut-5 cut-suffix-0 flex"
+        className="col medium-prefix-1 medium-10 large-prefix-0 large-6 giant-4 giant-prefix-1 huge-suffix-1 cut-5 cut-suffix-0 flex order-1-large"
         data-aos="fade-left"
         data-aos-delay="300"
         data-aos-duration="1000"

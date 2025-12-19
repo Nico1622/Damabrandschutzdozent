@@ -625,9 +625,9 @@ main {
             }
         }
 
-        @include breakpoint(medium) {
-            p:last-of-type  {
-                margin-bottom: 0;
+        .order-1-large {
+            @include breakpoint(large, max) {
+                margin-bottom: 3rem;
             }
         }
     
