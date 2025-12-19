@@ -11,7 +11,7 @@ return (
     <div className="col large-6" data-aos="fade-right">
       <div className="row">
         <div className="col medium-prefix-1 medium-10 large-prefix-0 large-10 no-gutter">
-          <Image src="/assets/images/layout/content.png" alt="Header Background" width={512} height={512}
+          <Image src="/assets/images/layout/first-content.png" alt="Header Background" width={512} height={512}
             style={{ height: "auto", width: "100%"}} />
         </div>
 
@@ -70,7 +70,7 @@ return (
             { title: "Recherche", text: "Analyse von Zielgruppe, Markt und Anforderungen als Grundlage für Struktur und Design." },
             { title: "Design", text: "Entwicklung klarer, konsistenter Layouts mit Fokus auf Nutzerführung und Markenwirkung." },
             { title: "Entwicklung", text: "Umsetzung in performanten, wartbaren Code – optimiert für alle Endgeräte." },
-            { title: "Optimierung", text: "Performance-Optimierung, Funktionstests und grundlegende SEO-Anpassungen." },
+            { title: "Optimierung", text: "Performance-Optimierung, Funktionstests und OnPage SEO-Anpassungen." },
             { title: "Veröffentlichung", text: "Server-Setup, Domain- und SSL-Konfiguration sowie finale Live-Prüfung." },
           ].map((step, i) => (
             <div
@@ -130,10 +130,10 @@ return (
             <span>- Erfolg im digitalen Markt</span>
           </h3>
           <p>
-            In der Entwicklung von Onlineshops bringe ich vor allem meine Frontend-Expertise ein, um ein ansprechendes, intuitives und conversionstarkes Einkaufserlebnis zu schaffen. Dabei arbeite ich überwiegend mit WooCommerce in Verbindung mit WordPress sowie teils mit E-Pages.
+            In der Entwicklung von Onlineshops bringe ich vor allem meine Frontend-Expertise ein, um ein ansprechendes, intuitives und conversionstarkes Einkaufserlebnis zu schaffen. Dabei arbeite ich überwiegend mit WordPress in Verbindung mit WooCommerce sowie teils mit E-Pages.
           </p>
           <p>
-            Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technische Optimierungen.
+            Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technischen Optimierungen.
           </p>
         </div>
       </div>

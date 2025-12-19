@@ -3,28 +3,28 @@ export const siteConfig = {
     name: {
       name: "Firma",
       title: "Firmenname",
-      text: "Musterfirma GmbH",
+      text: "Nico Beyer",
     },
     address: {
       name: "Adresse",
       title: "Firmensitz",
-      text: "Musterstraße 123",
+      text: "Uerdinger Straße 122",
     },
     zip: {
       name: "PLZ",
       title: "Postleitzahl",
-      text: "12345",
+      text: "40668",
     },
     city: {
       name: "Ort",
       title: "Standort",
-      text: "Musterstadt",
+      text: "Meerbusch",
     },
     email: {
       name: "E-Mail",
       title: "Kontaktieren Sie mich via E-Mail",
-      text: "info@musterfirma.de",
-      href: "mailto:info@musterfirma.de",
+      text: "info@nbeyer.dev",
+      href: "mailto:info@nbeyer.dev",
     },
     phone: {
       name: "Telefon",

@@ -29,7 +29,7 @@ export default function ProfilPage() {
           </div>
           <div className="col large-6 huge-5 huge-prefix-1" data-aos="fade-left" data-aos-delay="200">
             <Image
-              src="/assets/images/layout/shop-img.jpg"
+              src="/assets/images/layout/profile.png"
               title="SASS / SCSS"
               alt="Sass - Icon"
               width={512}
