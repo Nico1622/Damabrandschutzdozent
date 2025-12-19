@@ -7,257 +7,259 @@ $form-dark-shadow: rgba(color(dark), 0.1);
 $form-dark-shadow-hover: rgba(color(dark), 0.2);
 $form-bg-color: color(form);
 
-form:not(.form) {
-  background: $form-bg-color;
-  width: 100%;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px $form-dark-shadow;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 0px 0px 15px $form-dark-shadow-hover;
-  }
-
-  label {
-    color: color(light);
-  }
-
-  input {
-    background: color(dark);
-    border: none;
-    color: $form-light-color;
-    // border-bottom: 1px solid $form-medium-color;
-    padding: $base-gap;
-    border-radius: 0;
-    box-shadow: none;
+body:not(.login) {
+  form:not(.form) {
+    background: $form-bg-color;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px $form-dark-shadow;
     transition: all 0.3s ease-in-out;
-    width: 100%;
-    margin-bottom: $base-gap;
-    accent-color: color(primary);
 
-    &:focus {
-      border-color: $form-primary-color;
-      // box-shadow: 0px 0px 5px rgba($form-primary-color, 0.5);
-      color: $form-primary-color;
-      outline: none;
+    &:hover {
+      box-shadow: 0px 0px 15px $form-dark-shadow-hover;
     }
-  }
 
-  fieldset {
-    border: none;
-  }
-}
-
-
-//Kontaktformular
-.form{
-  background-color: $form-bg-color;
-  padding: $base-gap 0;
-  border-radius: 4px;
-  margin-bottom: calc($base-gap * 4);
-
-  body.kontakt & {
-    margin-bottom: 0;
-  }
-
-  @include breakpoint(small) {
-    padding: calc($base-gap * 3.5);
-  }
-
-  @include breakpoint(large) {
-    padding: calc($base-gap * 6);
-  }
-
-  fieldset {
-    border: none;
-  }
-
-  label {
-    display: block;
-    font-weight: normal;
-    color: $form-light-color;
-    margin-bottom: 6px;
-    width: fit-content;
-
-    @include breakpoint(medium, max) {
-      font-size: 17px;
+    label {
+      color: color(light);
     }
-  }
 
-  small {
-    color: $form-primary-color;
-  }
-
-  label[for="Datenschutz"] {
-    margin-bottom: unset;
-    // order: -1;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: $base-gap;
-    border: none;
-    border-radius: 4px;
-    background-color: color(dark);
-    color: $form-light-color;
-    margin-bottom: calc($base-gap * 1.5);
-
-    &::placeholder {
+    input {
+      background: color(dark);
+      border: none;
       color: $form-light-color;
-      opacity: 0.35;
-      @extend %animated-transform;
-    }
+      // border-bottom: 1px solid $form-medium-color;
+      padding: $base-gap;
+      border-radius: 0;
+      box-shadow: none;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      margin-bottom: $base-gap;
+      accent-color: color(primary);
 
-    &:focus::placeholder {
-      opacity: 1;
-    }
-
-    &:focus, &:focus-visible {
-      outline: 1px solid $form-primary-color;
-    }
-  }
-
-  input[type="checkbox"] {
-    @supports not (-webkit-appearance: none) {
-        -webkit-appearance: none;
-    }
-    margin-top: 6px;
-    margin-bottom: unset;
-    appearance: none;
-    background-color: transparent;
-    color: $form-primary-color;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.12em solid $form-primary-color;
-    border-radius: 0.15em;
-    transform: translateY(-0.075em);
-    display: grid;
-    place-content: center;
-    padding: unset;
-    order: -2;
-	  
-    &::before {
-        content: "";
-        width: 0.65em;
-        height: 0.65em;
-        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-        transform: scale(0);
-        transform-origin: bottom left;
-        transition: 120ms transform ease-in-out;
-        box-shadow: inset 1em 1em $form-primary-color;
-        background-color: $form-primary-color;
-    }
-    
-    &:checked::before {
-        transform: scale(1);
-    }
-
-    &:hover, &:focus {
-        cursor: pointer;
-    }
-    
-    &:disabled {
-        --form-control-color: var(--form-control-disabled);
-        color: var(--form-control-disabled);
-        cursor: not-allowed;
-    }
-
-    body.iexplore & {
-        border: none;
-
-        &:focus {
-            background: none;
-        }
-    }
-
-    &:focus-visible {
-      outline-color: color(light);
-      outline-width: 2px;
-    }
-}
-
-  textarea {
-    height: 150px;
-    resize: vertical;
-  }
-
-  textarea[name="Nachricht"] {
-    margin-bottom: .5rem;
-
-    body.kontakt & {
-      height: 170px;
-    }
-  }
-
-  .form-headline {
-    font-family: $display-font;
-    font-weight: 600;
-    font-size: clamp(20px, 4vw, 36px);
-    text-transform: uppercase;
-    margin-bottom: 1em;
-  }
-
-  .checkbox-container {
-    display: flex;
-    gap: calc($base-gap / 1.5);
-    margin-bottom: calc($base-gap * 1.5);
-  }
-  
-
-  [type="submit"] {   
-    &.loading,
-    &.check,
-    &.false {
-      position: relative;
-      color: transparent;
-      background: $form-primary-color;
-      @extend %animated-transform;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: $form-light-color;
-        @extend %animated-transform;
+      &:focus {
+        border-color: $form-primary-color;
+        // box-shadow: 0px 0px 5px rgba($form-primary-color, 0.5);
+        color: $form-primary-color;
+        outline: none;
       }
     }
 
-    &.loading:after {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid transparent;
-      border-top-color: $form-light-color;
-      animation: spin 1s linear infinite;
-      color: unset;
-    }
-
-    &.check::after {
-      content: map-get($icons, check);
-      font-family: $icon-font;
-    }
-
-    &.false::after {
-      content: map-get($icons, error);
-      font-family: $icon-font;
+    fieldset {
+      border: none;
     }
   }
-}
 
-.error {
-  outline: 1px solid color(alert);
-  border: none!important;
-  position: relative;
-}
 
-.error-message {
-  color: color(alert);
-  display: block;
-  border-radius: 4px;
-  margin-top: calc(($base-gap * -1) / 1.5);
-  margin-bottom: $base-gap;
+  //Kontaktformular
+  .form{
+    background-color: $form-bg-color;
+    padding: $base-gap 0;
+    border-radius: 4px;
+    margin-bottom: calc($base-gap * 4);
+
+    body.kontakt & {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(small) {
+      padding: calc($base-gap * 3.5);
+    }
+
+    @include breakpoint(large) {
+      padding: calc($base-gap * 6);
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    label {
+      display: block;
+      font-weight: normal;
+      color: $form-light-color;
+      margin-bottom: 6px;
+      width: fit-content;
+
+      @include breakpoint(medium, max) {
+        font-size: 17px;
+      }
+    }
+
+    small {
+      color: $form-primary-color;
+    }
+
+    label[for="Datenschutz"] {
+      margin-bottom: unset;
+      // order: -1;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: $base-gap;
+      border: none;
+      border-radius: 4px;
+      background-color: color(dark);
+      color: $form-light-color;
+      margin-bottom: calc($base-gap * 1.5);
+
+      &::placeholder {
+        color: $form-light-color;
+        opacity: 0.35;
+        @extend %animated-transform;
+      }
+
+      &:focus::placeholder {
+        opacity: 1;
+      }
+
+      &:focus, &:focus-visible {
+        outline: 1px solid $form-primary-color;
+      }
+    }
+
+    input[type="checkbox"] {
+      @supports not (-webkit-appearance: none) {
+          -webkit-appearance: none;
+      }
+      margin-top: 6px;
+      margin-bottom: unset;
+      appearance: none;
+      background-color: transparent;
+      color: $form-primary-color;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.12em solid $form-primary-color;
+      border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+      padding: unset;
+      order: -2;
+      
+      &::before {
+          content: "";
+          width: 0.65em;
+          height: 0.65em;
+          clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+          transform: scale(0);
+          transform-origin: bottom left;
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em $form-primary-color;
+          background-color: $form-primary-color;
+      }
+      
+      &:checked::before {
+          transform: scale(1);
+      }
+
+      &:hover, &:focus {
+          cursor: pointer;
+      }
+      
+      &:disabled {
+          --form-control-color: var(--form-control-disabled);
+          color: var(--form-control-disabled);
+          cursor: not-allowed;
+      }
+
+      body.iexplore & {
+          border: none;
+
+          &:focus {
+              background: none;
+          }
+      }
+
+      &:focus-visible {
+        outline-color: color(light);
+        outline-width: 2px;
+      }
+  }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    textarea[name="Nachricht"] {
+      margin-bottom: .5rem;
+
+      body.kontakt & {
+        height: 170px;
+      }
+    }
+
+    .form-headline {
+      font-family: $display-font;
+      font-weight: 600;
+      font-size: clamp(20px, 4vw, 36px);
+      text-transform: uppercase;
+      margin-bottom: 1em;
+    }
+
+    .checkbox-container {
+      display: flex;
+      gap: calc($base-gap / 1.5);
+      margin-bottom: calc($base-gap * 1.5);
+    }
+    
+
+    [type="submit"] {   
+      &.loading,
+      &.check,
+      &.false {
+        position: relative;
+        color: transparent;
+        background: $form-primary-color;
+        @extend %animated-transform;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $form-light-color;
+          @extend %animated-transform;
+        }
+      }
+
+      &.loading:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: $form-light-color;
+        animation: spin 1s linear infinite;
+        color: unset;
+      }
+
+      &.check::after {
+        content: map-get($icons, check);
+        font-family: $icon-font;
+      }
+
+      &.false::after {
+        content: map-get($icons, error);
+        font-family: $icon-font;
+      }
+    }
+  }
+
+  .error {
+    outline: 1px solid color(alert);
+    border: none!important;
+    position: relative;
+  }
+
+  .error-message {
+    color: color(alert);
+    display: block;
+    border-radius: 4px;
+    margin-top: calc(($base-gap * -1) / 1.5);
+    margin-bottom: $base-gap;
+  }
 }

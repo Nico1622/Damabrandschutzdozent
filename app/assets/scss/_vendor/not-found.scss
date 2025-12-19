@@ -1,4 +1,4 @@
-$bg-color: color(background);
+// $bg-color: color(background);
 $text-color: color(light);
 $text-muted: #a9b2c3;
 $text-submuted: #7e8ca0;
@@ -12,7 +12,7 @@ $primary-hover: color(secondary);
   align-items: center;
   text-align: center;
   color: $text-color;
-  background: $bg-color;
+  // background: $bg-color;
 
   .notfound-title {
     font-size: clamp(36px, 30vw, 110px);

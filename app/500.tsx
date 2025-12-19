@@ -1,12 +1,9 @@
 export const metadata = {
-  title: "404 – Diese Seite gibt es nicht",
-  description: "Oops! Diese Seite existiert leider nicht (mehr). Nutze die Navigation oder kehre zur Startseite zurück.",
+  title: "500 – Serverfehler",
+  description: "Ups! Auf dem Server ist ein Fehler aufgetreten. Bitte versuche es später erneut oder kehre zur Startseite zurück.",
 };
 
-
-import Link from "next/link";
-
-export default function NotFoundPage() {
+export default function ServerErrorPage() {
   return (
     <div className="pageWrap">
       <div className="row">
@@ -20,7 +17,7 @@ export default function NotFoundPage() {
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-              404
+              500
             </h1>
 
             <p
@@ -28,7 +25,7 @@ export default function NotFoundPage() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Diese Seite konnte nicht gefunden werden.
+              Interner Serverfehler
             </p>
 
             <p
@@ -36,22 +33,11 @@ export default function NotFoundPage() {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              Vielleicht wurde sie verschoben oder gelöscht.
+              Etwas ist schiefgelaufen. Bitte versuche es später erneut.
             </p>
-
-            <div
-              className="notfound-btn-wrapper"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <Link href="/" title="Weiter zur Startseite" className="btn">
-                Zur Startseite
-              </Link>
-            </div>
           </div>
         </div>
       </div>
     </div>
   );
-
 }

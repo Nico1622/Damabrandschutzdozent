@@ -2,8 +2,8 @@ import { company  } from "../assets/TypeScript/lib/backend/company";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Profil – Webdesign mit Köpfchen",
-  description: "Seit über fünf Jahren gestalte und entwickle ich moderne, benutzerfreundliche Webauftritte – mit Fokus auf klare Strukturen und zielgerichtete Lösungen.",
+  title: "Impressum",
+  description: "Rechtliche Angaben zum Betreiber der Website gemäß §5 TMG. Informationen zu Kontakt und Verantwortlichkeit.",
 };
 
 export default function ImprintPage() {
@@ -26,7 +26,7 @@ export default function ImprintPage() {
             <dd>{company.imprint.address.text}</dd>
 
             <dt>{company.imprint.zip.name}:</dt>
-            <dd>{company.imprint.zip.text}</dd>          
+            <dd className="margin-bottom">{company.imprint.zip.text}</dd>          
           </dl>
         </div>
         <div className="col large-6">

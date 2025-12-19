@@ -1,9 +1,10 @@
 import ContactForm from "../components/form/form";
 
 export const metadata = {
-  title: "Profil – Webdesign mit Köpfchen",
-  description: "Seit über fünf Jahren gestalte und entwickle ich moderne, benutzerfreundliche Webauftritte – mit Fokus auf klare Strukturen und zielgerichtete Lösungen.",
+  title: "Kontakt & Anfrage",
+  description: "Kontaktieren Sie mich für ein Gespräch.",
 };
+
 
 export default function KontaktPage() {
   return (

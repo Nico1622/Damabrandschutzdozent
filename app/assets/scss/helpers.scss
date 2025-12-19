@@ -7,7 +7,7 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   padding: 1rem 2rem;
   border-radius: $base-radius;
   border: none;
-  color: color(light);
+  color: color(ultralight);
   cursor: pointer;
   width: fit-content;
   background-color: color(primary);
@@ -15,7 +15,7 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   display: inline-block;
   z-index: 1;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 
   &:active {
@@ -36,7 +36,7 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 
   &:hover, &:focus-visible {
-    color: color(light);
+    color: color(ultralight);
     background-color: color(secondary);
 
     &:focus-visible {

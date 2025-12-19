@@ -3,7 +3,6 @@
 import { useEffect, ReactNode } from "react";
 import AOS from "aos";
 import type { easingOptions } from "aos";
-import "aos/dist/aos.css";
 
 type Props = {
   children: ReactNode;

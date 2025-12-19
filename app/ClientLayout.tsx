@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from "react";
+import { useEffect, useState  } from "react";
 import { usePathname } from "next/navigation";
 // import Navigation from "./components/elements/navigation";
 import Header from "./components/header";
@@ -17,6 +17,7 @@ interface ClientLayoutProps {
 
 export default function ClientLayout({ children, customBodyClass }: ClientLayoutProps) {
   const pathname = usePathname();
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     const body = document.body;
@@ -38,6 +39,9 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
 
     body.className = classes.join(" ");
 
+    const isLoggedIn = document.cookie.includes("loggedIn=true");
+    setLoggedIn(isLoggedIn);
+
     return () => {
       body.className = "";
     };
@@ -45,13 +49,18 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
 
   return (
     <>
-      <div className="navigation">
-        <div className="row">
-          <div className="col"><MainNavigation /></div>
+      {loggedIn && (
+        <div className="navigation">
+          <div className="row">
+            <div className="col">
+              <MainNavigation />
+            </div>
+          </div>
         </div>
-      </div>
-    
-      <Header />
+      )}
+     
+      {loggedIn && <Header />}
+      
 
       <main id="main" role="main">
           <LazyLoad offset="200px" threshold={0.1}>
@@ -59,7 +68,7 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
           </LazyLoad>
       </main>
 
-      <Footer />
+      {loggedIn && <Footer />}
 
       <Button className="back-to-top no-btn" aria-label="Zum Seitenanfang scrollen">&#8679;</Button>
     </>

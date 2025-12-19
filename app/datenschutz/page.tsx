@@ -2,8 +2,8 @@ import Link from "next/link"
 import { company } from "../assets/TypeScript/lib/backend/company";
 
 export const metadata = {
-  title: "Profil – Webdesign mit Köpfchen",
-  description: "Seit über fünf Jahren gestalte und entwickle ich moderne, benutzerfreundliche Webauftritte – mit Fokus auf klare Strukturen und zielgerichtete Lösungen.",
+  title: "Datenschutzerklärung",
+  description: "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten auf dieser Website gemäß DSGVO.",
 };
 
 // export default function DatenschutzPage() {

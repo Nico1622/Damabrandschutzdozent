@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Profil – Webdesign mit Köpfchen",
-  description: "Seit über fünf Jahren gestalte und entwickle ich moderne, benutzerfreundliche Webauftritte – mit Fokus auf klare Strukturen und zielgerichtete Lösungen.",
+  title: "Meine Referenzen – Webdesign mit Konzept",
+  description: "Einblick in meine Webdesign-Referenzen: durchdachte Konzepte, moderne Gestaltung und funktionale Lösungen aus realen Kundenprojekten.",
 };
 
 import ReferenzenSwiper from "./ReferenzenSwiper"; 
