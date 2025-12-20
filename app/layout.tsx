@@ -6,8 +6,9 @@ import PageLoader from "./assets/TypeScript/_module/pageLoader";
 import SmoothScroll from "./assets/TypeScript/_module/smoothScroll";
 import AOSProvider from "./assets/TypeScript/_module/aos";
 import ClientLayout from "./ClientLayout";
+import { Analytics } from "@vercel/analytics/next"
 import "./assets/scss/style.scss"; 
-
+ 
 export const metadata: Metadata = {
   title: "Portfolio - Nico Beyer",
   description: "Das persönliche Portfolio von Nico Beyer – Webentwicklung, barrierefreie Projekte und kreative Lösungen mit Next.js.",
