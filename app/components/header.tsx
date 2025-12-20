@@ -25,7 +25,7 @@ export default function Header() {
                   <li>
                     <Link href={company.xing.href!} target="_blank" rel="noopener noreferrer" title={company.xing.title}
                       className={company.xing.text}>
-                      <Image src={`/assets/images/icons/${company.xing.name}.svg`}
+                      <Image src={`/assets/images/icons/${company.xing.text}.svg`}
                           alt={company.xing.text}
                           width={36} height={36} style={{ height: "auto" }}
                       />
@@ -34,7 +34,7 @@ export default function Header() {
                   <li>
                     <Link href={company.linkedin.href!} target="_blank" rel="noopener noreferrer" title={company.linkedin.title}
                       className={company.linkedin.text}>
-                      <Image src={`/assets/images/icons/${company.linkedin.name}.svg`}
+                      <Image src={`/assets/images/icons/${company.linkedin.text}.svg`}
                           alt={company.linkedin.text}
                           width={36} height={36} style={{ height: "auto" }}
                       />
