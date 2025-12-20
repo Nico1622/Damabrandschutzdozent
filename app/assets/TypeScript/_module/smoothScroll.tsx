@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from 'next/navigation';
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 let lenis: Lenis | null = null;
 export const getLenis = () => lenis;
