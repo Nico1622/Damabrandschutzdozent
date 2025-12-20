@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import ReferenzenSwiper from "./ReferenzenSwiper"; 
+import { Suspense } from "react";
 
 export default function ReferenzenPage() {
   return (
@@ -13,8 +14,11 @@ export default function ReferenzenPage() {
           <h1>Referenzen</h1>
         </div>
       </div>
+      
+      <Suspense fallback={<div>Loading…</div>}>
+        <ReferenzenSwiper />
+      </Suspense>
 
-      <ReferenzenSwiper />
     </main>
   );
 }
