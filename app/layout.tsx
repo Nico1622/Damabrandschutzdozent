@@ -71,7 +71,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           </ClientLayout>
         </AOSProvider>
-      </body>
+
+        <Analytics/>
+      </body> 
     </html>
   );
 }
