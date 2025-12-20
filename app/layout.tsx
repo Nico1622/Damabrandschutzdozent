@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type React from "react";
 import Basics from "./assets/TypeScript/_essentials/basics";
 import ScrollToTop from "./assets/TypeScript/_module/scrollToTop";
@@ -6,7 +8,6 @@ import PageLoader from "./assets/TypeScript/_module/pageLoader";
 import SmoothScroll from "./assets/TypeScript/_module/smoothScroll";
 import AOSProvider from "./assets/TypeScript/_module/aos";
 import ClientLayout from "./ClientLayout";
-import { Analytics } from "@vercel/analytics/next"
 import "./assets/scss/style.scss"; 
  
 export const metadata: Metadata = {
@@ -71,9 +72,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           </ClientLayout>
         </AOSProvider>
-
-        <Analytics/>
       </body> 
+
+      <Analytics/>
+      <SpeedInsights/>
     </html>
-  );
+  ); 
 }
