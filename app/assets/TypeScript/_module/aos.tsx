@@ -1,49 +1,46 @@
 "use client";
 
 import { useEffect, ReactNode } from "react";
-import AOS from "aos";
-import type { easingOptions } from "aos";
 
 type Props = {
   children: ReactNode;
-  duration?: number;
-  once?: boolean;
-  offset?: number;
-  easing?: easingOptions;
-  delay?: number;
-  // Wir behalten die Prop, falls du sie mal von außen steuern willst, 
-  // setzen sie aber standardmäßig auf true.
-  disableOnMobile?: boolean; 
+  disableOnMobile?: boolean;
 };
 
 export default function AOSProvider({
   children,
-  duration = 1200,
-  once = true,
-  offset = 100,
-  delay = 0,
-  disableOnMobile = true, // Standardmäßig jetzt auf TRUE
+  disableOnMobile = true,
 }: Props) {
   useEffect(() => {
-    // AOS Initialisierung
-    AOS.init({
-      duration,
-      once,
-      offset,
-      delay,
-      // "mobile" erkennt Handys und Tablets. 
-      // Wenn disableOnMobile true ist, wird AOS auf diesen Geräten abgeschaltet.
-      disable: disableOnMobile ? "mobile" : false,
-    });
+    let aos: any;
 
-    // Wichtig: AOS erkennt neu gerenderte Elemente nach dem Route-Wechsel
-    AOS.refresh();
+    const initAOS = async () => {
+      const AOS = (await import("aos")).default;
+
+      AOS.init({
+        duration: 1200,
+        once: true,
+        offset: 100,
+        delay: 0,
+        disable: () => window.innerWidth < 1024,
+        startEvent: "DOMContentLoaded", // verhindert frühes Blocking
+      });
+
+      AOS.refresh();
+      aos = AOS;
+    };
+
+    // ⏱️ erst nach Paint / Idle
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(initAOS);
+    } else {
+      setTimeout(initAOS, 200);
+    }
 
     return () => {
-      // Entfernt alle AOS-Klassen und Listener beim Unmount
-      AOS.refreshHard();
+      aos?.refreshHard?.();
     };
-  }, [duration, once, offset, delay, disableOnMobile]);
+  }, [disableOnMobile]);
 
   return <>{children}</>;
 }
