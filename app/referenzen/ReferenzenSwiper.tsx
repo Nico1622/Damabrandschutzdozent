@@ -198,8 +198,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
-                    desktopImage="/assets/images/files/thumbs/Scharrn3-desktop.png"
-                    mobileImage="/assets/images/files/thumbs/Scharrn3-mobile.png" 
+                    desktopImage="/assets/images/files/thumbs/scharrn3-desktop.png"
+                    mobileImage="/assets/images/files/thumbs/scharrn3-mobile.png" 
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">

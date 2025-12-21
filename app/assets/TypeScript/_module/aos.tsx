@@ -20,8 +20,7 @@ export default function AOSProvider({
   children,
   duration = 1200,
   once = true,
-  offset = 150,
-  easing = "ease-out-cubic",
+  offset = 100,
   delay = 0,
   disableOnMobile = true, // Standardmäßig jetzt auf TRUE
 }: Props) {
@@ -31,7 +30,6 @@ export default function AOSProvider({
       duration,
       once,
       offset,
-      easing,
       delay,
       // "mobile" erkennt Handys und Tablets. 
       // Wenn disableOnMobile true ist, wird AOS auf diesen Geräten abgeschaltet.
@@ -45,7 +43,7 @@ export default function AOSProvider({
       // Entfernt alle AOS-Klassen und Listener beim Unmount
       AOS.refreshHard();
     };
-  }, [duration, once, offset, easing, delay, disableOnMobile]);
+  }, [duration, once, offset, delay, disableOnMobile]);
 
   return <>{children}</>;
 }

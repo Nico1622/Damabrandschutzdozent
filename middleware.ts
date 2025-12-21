@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Konfiguration: Login-Schutz aktivieren/deaktivieren
-const LOGIN_ENABLED = true;
+const LOGIN_ENABLED = false;
 
 const PUBLIC_PATHS = ["/login", "/api/login"];
 
