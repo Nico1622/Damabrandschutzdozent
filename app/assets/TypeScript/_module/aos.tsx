@@ -18,13 +18,15 @@ export default function AOSProvider({
       const AOS = (await import("aos")).default;
 
       AOS.init({
-        duration: 1200,
+        duration: 8000,
         once: true,
         offset: 100,
         delay: 0,
         disable: () => window.innerWidth < 1024,
         startEvent: "DOMContentLoaded", // verhindert frühes Blocking
       });
+
+      document.body.classList.add("aos-initialized")
 
       AOS.refresh();
       aos = AOS;

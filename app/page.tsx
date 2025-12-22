@@ -35,8 +35,8 @@ return (
     <div className="col large-6 giant-5 giant-prefix-1 flex align-center" data-aos="fade-left" data-aos-delay="200">
       <div className="inner-container">
         <h1 className="line">
-          Ein Einblick in meine Welt
-          <span>- Facettenreich kreativ</span>
+          Ein Einblick<br className="large-none"/> in meine Welt
+          <span>Facettenreich kreativ</span>
         </h1>
         <p>
           Seit über fünf Jahren bin ich in der Webentwicklung tätig und habe mir ein breites technisches Fundament aufgebaut. Mein Schwerpunkt liegt auf WordPress, HTML5, SCSS und JavaScript, ergänzt durch Next.js sowie Backend-Kenntnisse in PHP. Dabei verbinde ich sauberen Code mit einem hohen Anspruch an Design und Nutzerfreundlichkeit.
@@ -55,8 +55,8 @@ return (
       >
         <div className="sticky-container lazy-bg">
           <h2 className="line second">
-            Mein Workflow in der Webentwicklung
-            <span>- Von der Idee zur Umsetzung</span>
+            Mein Work&shy;flow in der Web&shy;entwicklung
+            <span>Von der Idee zur Umsetzung</span>
           </h2>
           <Button href="/referenzen" title="Meine Projekte und Arbeiten ansehen">
             Referenzen anschauen
@@ -127,7 +127,7 @@ return (
         <div>
           <h3 className="line">
             Erfahrungen mit Onlineshops
-            <span>- Erfolg im digitalen Markt</span>
+            <span>Erfolg im digitalen Markt</span>
           </h3>
           <p>
             In der Entwicklung von Onlineshops bringe ich vor allem meine Frontend-Expertise ein, um ein ansprechendes, intuitives und conversionstarkes Einkaufserlebnis zu schaffen. Dabei arbeite ich überwiegend mit WordPress in Verbindung mit WooCommerce sowie teils mit E-Pages.

@@ -42,17 +42,17 @@ export default function ProfilPage() {
         {/* Value Cards (Clean Code, etc.) */}
         <div className="distance no-distance-bottom">
           <div className="row card-container">
-            <div className="col large-4" >
+            <div className="col large-4 margin-bottom" >
               <Card title="Clean Code">
                 Ich lege großen Wert auf wartbaren und skalierbaren Code, der langfristig verständlich und erweiterbar bleibt.
               </Card>
             </div>
-            <div className="col large-4" data-aos="fade-up" data-aos-delay="200">
+            <div className="col large-4 margin-bottom" data-aos="fade-up" data-aos-delay="200">
               <Card title="Nutzerzentriert">
                 Technische und gestalterische Entscheidungen treffe ich stets mit Blick auf die User Experience.
               </Card>
             </div>
-            <div className="col large-4" data-aos="fade-up" data-aos-delay="300">
+            <div className="col large-4 margin-bottom" data-aos="fade-up" data-aos-delay="300">
               <Card title="Frontend-Kompetenz">
                 Ich entwickle performante, responsive Oberflächen mit sauberer Trennung von Struktur, Stil und Logik.
               </Card>

@@ -22,12 +22,12 @@ export default function ProjectItem({
   const referenceLink = slideIndex !== undefined ? `${href}?slide=${slideIndex}` : href
 
   return (
-    <Link href={referenceLink} className="project-item">
+    <Link href={referenceLink} className="project-item" title={title}>
       <Image
         src={image || "/placeholder.svg"}
         alt={title}
-        width={500}
-        height={350}
+        width={850}
+        height={600}
         style={{ width: "100%", height: "auto" }}
       />
       <div className="project-item-inner">

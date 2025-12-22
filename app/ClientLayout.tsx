@@ -82,6 +82,7 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
 
       <Button
         className="back-to-top no-btn"
+        title="Zurück zum Start"
         aria-label="Zum Seitenanfang scrollen"
       >
         &#8679;

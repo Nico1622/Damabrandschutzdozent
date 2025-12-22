@@ -57,15 +57,16 @@ h1, h2, h3, h4, h5, h6
 	color: color(ultralight);
 
 	span { 
-		line-height: 1.5em;
+		line-height: 1.3em;
 		margin-top: 0.45rem;
 		font-weight: 400;
-
+		display: block;
+		font-size: 0.7em;
+			
 		@include breakpoint(small) {
-			display: block;
 			letter-spacing: 0.2em; 
 			font-size: 0.65em;
-		}
+		}	
 	}
 
 	&.line {
@@ -76,8 +77,8 @@ h1, h2, h3, h4, h5, h6
 			width: 150px;
 			left: 0;
 			height: 2px;
-			margin-top: $base-gap;
-			margin-bottom: $base-gap;
+			margin-top: .75rem;
+			margin-bottom: 2rem;
 			background-color: color(primary);	
 
 			@include breakpoint($break) {

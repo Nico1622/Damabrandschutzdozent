@@ -61,18 +61,18 @@ export default function ContactForm({}: ContactFormProps) {
                 )}
                                
                 <fieldset className="col large-6">
-                    <label htmlFor="companyName">Firmenname</label>
+                    <label htmlFor="companyName">Firmenname <small>(Pflicht)</small></label>
                     <input type="text" id="companyName" placeholder="Ihr Firmenname" name="companyName" required />
 
-                    <label htmlFor="email">E-Mail</label>
+                    <label htmlFor="email">E-Mail <small>(Pflicht)</small></label>
                     <input type="email" id="email" placeholder="Ihre E-Mail" name="email" required />
 
-                    <label htmlFor="phone">Telefon</label>
+                    <label htmlFor="phone">Telefon <small>(Pflicht)</small></label>
                     <input type="tel" id="phone" placeholder="Ihre Telefonnummer" name="phone" required />
                 </fieldset>
 
                 <fieldset className="col large-6">
-                    <label htmlFor="message">Nachricht</label>
+                    <label htmlFor="message">Nachricht <small>(Pflicht)</small></label>
                     <textarea id="message" placeholder="Ihre Nachricht" name="message" rows={6} required />
 
                     {/* Captcha */}

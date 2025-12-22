@@ -249,4 +249,16 @@
         }
     }
     }
+
+    body:not(.aos-initialized) {
+        header & {
+            .header-container {
+                [data-aos] {
+                    opacity: 1;
+                    transform: none;   
+                    visibility: visible;
+                } 
+            }  
+        }
+    }
 }

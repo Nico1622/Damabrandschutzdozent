@@ -23,8 +23,8 @@ export const siteConfig = {
     email: {
       name: "E-Mail",
       title: "Kontaktieren Sie mich via E-Mail",
-      text: "info@nbeyer.dev",
-      href: "mailto:info@nbeyer.dev",
+      text: "info@nbeyer.tech",
+      href: "mailto:info@nbeyer.tech",
     },
     phone: {
       name: "Telefon",
@@ -90,8 +90,8 @@ export const siteConfig = {
     email: {
       name: "E-Mail",
       title: "Kontakt E-Mail",
-      text: "info@nbeyer.dev",
-      href: "mailto:info@nbeyer.dev",
+      text: "info@nbeyer.tech",
+      href: "mailto:info@nbeyer.tech",
     },
     phone: {
       name: "Telefon",

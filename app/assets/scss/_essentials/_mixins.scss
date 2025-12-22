@@ -1,5 +1,6 @@
 @mixin font-face-V2($font-name, $file-name, $types, $style) {
     @font-face {
+      font-display: swap;
       font-family: '#{$font-name}';
       font-weight: $style;
       src: #{url('/assets/fonts/' + $file-name + ".eot")} format("embedded-opentype"),
