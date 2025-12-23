@@ -29,11 +29,20 @@ export default function ProfilPage() {
           </div>
           <div className="col large-6 huge-5 huge-prefix-1" data-aos="fade-left" data-aos-delay="200">
             <Image
-              src="/assets/images/layout/profile.png"
+              src="/assets/images/layout/profile.webp"
               title="SASS / SCSS"
               alt="Sass - Icon"
-              width={512}
-              height={512}
+              width={1024}
+              height={1024}
+              sizes="
+                (max-width: 360px) 90vw,
+                (max-width: 480px) 85vw,
+                (max-width: 576px) 80vw,
+                (max-width: 768px) 75vw,
+                (max-width: 992px) 70vw,
+                (max-width: 1360px) 65vw,
+                1024px
+              "
               style={{ width: "100%", height: "auto" }}
             />
           </div>
@@ -148,21 +157,21 @@ export default function ProfilPage() {
           <div className="col">
             <div className="project-item-container">
               <div data-aos="fade-up" data-aos-delay="100">
-                <ProjectItem image="/assets/images/files/thumbs/kaspar-thumb-desktop.png" title="Kaspar Spirituosen" slideIndex={0}>
+                <ProjectItem image="/assets/images/files/thumbs/kaspar-thumb-desktop.webp" title="Kaspar Spirituosen" slideIndex={0}>
                     <p>
                     Moderner WooCommerce-Onlineshop für den Verkauf von Spirituosen und Eventtickets – technisch durchdacht, wartungsfreundlich und nahtlos in bestehende Systeme integriert.
                     </p>
                 </ProjectItem>
               </div>
               <div data-aos="fade-up" data-aos-delay="200">
-                <ProjectItem image="/assets/images/files/thumbs/helpcenter-desktop.png" title="Helpcenter Euroweb" slideIndex={1}>
+                <ProjectItem image="/assets/images/files/thumbs/helpcenter-desktop.webp" title="Helpcenter Euroweb" slideIndex={1}>
                     <p>
                     Zentrale Wissensplattform auf WordPress-Basis mit intelligenter Struktur, leistungsstarker Suche und individuellen Funktionen für optimale Kundenunterstützung.
                     </p>
                 </ProjectItem>
               </div>
               <div data-aos="fade-up" data-aos-delay="300">
-                <ProjectItem image="/assets/images/files/thumbs/scharrn3-desktop.png" title="Scharrn3" slideIndex={2}>
+                <ProjectItem image="/assets/images/files/thumbs/scharrn3-desktop.webp" title="Scharrn3" slideIndex={2}>
                     <p>
                     Zeitgemäße Webpräsenz für ein lokales Deko- und Accessoire-Geschäft – modern gestaltet, leicht pflegbar und klar auf Markenwirkung ausgelegt.
                     </p>

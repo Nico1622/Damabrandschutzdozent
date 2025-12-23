@@ -11,22 +11,36 @@ return (
     <div className="col large-6" data-aos="fade-right">
       <div className="row">
         <div className="col medium-prefix-1 medium-10 large-prefix-0 large-10 no-gutter">
-          <Image src="/assets/images/layout/first-content.png" alt="Header Background" width={512} height={512}
-            style={{ height: "auto", width: "100%"}} />
+          <Image 
+            src="/assets/images/layout/first-content.webp" 
+            alt="Header Background" 
+            width={1024}
+            height={1024}
+            sizes="
+              (max-width: 360px) 90vw,
+              (max-width: 480px) 85vw,
+              (max-width: 576px) 80vw,
+              (max-width: 768px) 75vw,
+              (max-width: 992px) 70vw,
+              (max-width: 1360px) 65vw,
+              1024px
+            "
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
 
         <div className="box-container">
-          <Image src="/assets/images/icons/wordpress.png" title="WordPress" alt="Wordpress - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/wordpress.webp" title="WordPress" alt="Wordpress - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
-          <Image src="/assets/images/icons/html.png" title="HTML" alt="HTML - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/html.webp" title="HTML" alt="HTML - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
-          <Image src="/assets/images/icons/sass.png" title="SASS / SCSS" alt="Sass - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/sass.webp" title="SASS / SCSS" alt="Sass - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
-          <Image src="/assets/images/icons/javascript.png" title="JavaScript" alt="Javascript - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/javascript.webp" title="JavaScript" alt="Javascript - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
-          <Image src="/assets/images/icons/php.png" title="PHP" alt="PHP - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/php.webp" title="PHP" alt="PHP - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
-          <Image src="/assets/images/icons/nextjs.png" title="NextJs" alt="NextJs - Icon" width={52} height={52}
+          <Image src="/assets/images/icons/nextjs.webp" title="NextJs" alt="NextJs - Icon" width={52} height={52}
             style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
@@ -145,11 +159,20 @@ return (
         data-aos-duration="1000"
       >
         <Image 
-          src="/assets/images/layout/shop-img.jpg" 
+          src="/assets/images/layout/shop-img.webp" 
           alt="Onlineshop Background" 
-          width={1536} 
+          width={1024}
           height={1024}
-          style={{ width: "100%", height: "auto" }} 
+          sizes="
+            (max-width: 360px) 90vw,
+            (max-width: 480px) 85vw,
+            (max-width: 576px) 80vw,
+            (max-width: 768px) 75vw,
+            (max-width: 992px) 70vw,
+            (max-width: 1360px) 65vw,
+            1024px
+          "
+          style={{ width: "100%", height: "auto" }}
         />
       </div>
     </div>

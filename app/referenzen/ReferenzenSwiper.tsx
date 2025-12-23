@@ -63,8 +63,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
-                    desktopImage="/assets/images/files/thumbs/kaspar-thumb-desktop.png"
-                    mobileImage="/assets/images/files/thumbs/kaspar-thumb-mobile.png"
+                    desktopImage="/assets/images/files/thumbs/kaspar-thumb-desktop.webp"
+                    mobileImage="/assets/images/files/thumbs/kaspar-thumb-mobile.webp"
                   />
 
                 </div>
@@ -78,7 +78,7 @@ export default function ReferenzenSwiper() {
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/wordpress.png"
+                        src="/assets/images/icons/wordpress.webp"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -87,7 +87,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/sass.png"
+                        src="/assets/images/icons/sass.webp"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -96,7 +96,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/html.png"
+                        src="/assets/images/icons/html.webp"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -105,7 +105,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/php.png"
+                        src="/assets/images/icons/php.webp"
                         alt="HTML Icon"
                         width={100}
                         height={100}
@@ -124,8 +124,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices 
-                    desktopImage="/assets/images/files/thumbs/helpcenter-desktop.png"
-                    mobileImage="/assets/images/files/thumbs/helpcenter-mobile.png" 
+                    desktopImage="/assets/images/files/thumbs/helpcenter-desktop.webp"
+                    mobileImage="/assets/images/files/thumbs/helpcenter-mobile.webp" 
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -138,7 +138,7 @@ export default function ReferenzenSwiper() {
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/wordpress.png"
+                        src="/assets/images/icons/wordpress.webp"
                         alt="Wordpress Icon"
                         title="Wordpress"
                         width={100}
@@ -148,7 +148,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/php.png"
+                        src="/assets/images/icons/php.webp"
                         alt="PHP Icon"
                         title="PHP Systeme"
                         width={100}
@@ -158,7 +158,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/sass.png"
+                        src="/assets/images/icons/sass.webp"
                         alt="SASS Icon"
                         title="SCSS"
                         width={100}
@@ -168,7 +168,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/cms.png"
+                        src="/assets/images/icons/cms.webp"
                         alt="CMS Icon"
                         title="CMS"
                         width={100}
@@ -178,7 +178,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/javascript.png"
+                        src="/assets/images/icons/javascript.webp"
                         alt="JavaScript Icon"
                         title="JavaScript"
                         width={100}
@@ -198,8 +198,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
-                    desktopImage="/assets/images/files/thumbs/scharrn3-desktop.png"
-                    mobileImage="/assets/images/files/thumbs/scharrn3-mobile.png" 
+                    desktopImage="/assets/images/files/thumbs/scharrn3-desktop.webp"
+                    mobileImage="/assets/images/files/thumbs/scharrn3-mobile.webp" 
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -212,7 +212,7 @@ export default function ReferenzenSwiper() {
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/html.png"
+                        src="/assets/images/icons/html.webp"
                         alt="HTML Icon"
                         title="HTML"
                         width={100}
@@ -222,7 +222,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/cms.png"
+                        src="/assets/images/icons/cms.webp"
                         alt="CMS Icon"
                         title="CMS"
                         width={100}
@@ -232,7 +232,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/sass.png"
+                        src="/assets/images/icons/sass.webp"
                         alt="SASS Icon"
                         title="SCSS"
                         width={100}
@@ -252,8 +252,8 @@ export default function ReferenzenSwiper() {
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices 
-                    desktopImage="/assets/images/files/thumbs/busche-gruppe-desktop.png"
-                    mobileImage="/assets/images/files/thumbs/busche-gruppe-mobile.png" 
+                    desktopImage="/assets/images/files/thumbs/busche-gruppe-desktop.webp"
+                    mobileImage="/assets/images/files/thumbs/busche-gruppe-mobile.webp" 
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -266,7 +266,7 @@ export default function ReferenzenSwiper() {
 
                     <div className="device-icon-container margin-bottom">
                       <Image
-                        src="/assets/images/icons/html.png"
+                        src="/assets/images/icons/html.webp"
                         alt="HTML Icon"
                         title="HTML"
                         width={100}
@@ -276,7 +276,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/cms.png"
+                        src="/assets/images/icons/cms.webp"
                         alt="CMS Icon"
                         title="CMS Systeme"
                         width={100}
@@ -286,7 +286,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/sass.png"
+                        src="/assets/images/icons/sass.webp"
                         alt="SASS Icon"
                         title="SCSS"
                         width={100}
@@ -296,7 +296,7 @@ export default function ReferenzenSwiper() {
                       />
 
                       <Image
-                        src="/assets/images/icons/javascript.png"
+                        src="/assets/images/icons/javascript.webp"
                         alt="JavaScript Icon"
                         title="JavaScript"
                         width={100}
@@ -343,7 +343,7 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/files/favicon/favicon-kaspar.png"
+                      src="/assets/images/files/favicon/favicon-kaspar.webp"
                       alt="Kaspar Icon"
                       title="Kaspar Spirituosen"
                       width={60}
@@ -356,7 +356,7 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/files/favicon/favicon-helpcenter.png"
+                      src="/assets/images/files/favicon/favicon-helpcenter.webp"
                       alt="Helpcenter Icon"
                       title="Helpcenter"
                       width={60}
@@ -369,7 +369,7 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/files/favicon/favicon-scharrn3.png"
+                      src="/assets/images/files/favicon/favicon-scharrn3.webp"
                       alt="Scharrn3 Icon"
                       title="Scharrn3"
                       width={60}
@@ -382,7 +382,7 @@ export default function ReferenzenSwiper() {
                 <SwiperSlide>
                   <div className="thumb-wrapper">
                     <Image
-                      src="/assets/images/files/favicon/favicon-busche.png"
+                      src="/assets/images/files/favicon/favicon-busche.webp"
                       alt="Busche Icon"
                       title="Busche Gruppe"
                       width={100}
