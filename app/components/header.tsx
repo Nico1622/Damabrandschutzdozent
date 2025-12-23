@@ -72,7 +72,7 @@ export default function Header() {
 
             <span className="hr" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600"></span>
 
-            <p>
+            <p data-aos="fade-up" data-aos-delay="100">
               Als Frontend-Entwickler liegt mein Schwerpunkt auf der Gestaltung moderner Websites und Onlineshops mit
               klarem Fokus auf Benutzererlebnis und Performance. Ich entwickle durchdachte, funktionale Lösungen, die
               Design und Technik sinnvoll verbinden.

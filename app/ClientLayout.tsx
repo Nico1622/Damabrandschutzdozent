@@ -1,13 +1,12 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-// import Navigation from "./components/elements/navigation";
-import Header from "./components/header";
-import Button from "./components/elements/button";
-import Footer from "./components/footer";
-import LazyLoad from './assets/TypeScript/_module/lazyLoad';
+import { usePathname, useRouter } from "next/navigation";
 
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Button from "./components/elements/button";
+import LazyLoad from "./assets/TypeScript/_module/lazyLoad";
 import { MainNavigation } from "./components/navigation/main-navigation";
 
 interface ClientLayoutProps {
@@ -15,12 +14,13 @@ interface ClientLayoutProps {
   customBodyClass?: string;
 }
 
-// 🔐 Login global aktiv/deaktiviert (Client-seitig verfügbar)
 const LOGIN_ENABLED = process.env.NEXT_PUBLIC_LOGIN_ENABLED === "true";
 
 export default function ClientLayout({ children, customBodyClass }: ClientLayoutProps) {
   const pathname = usePathname();
-  const [loggedIn, setLoggedIn] = useState(false);
+  const router = useRouter();
+
+  const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
 
   useEffect(() => {
     const body = document.body;
@@ -34,51 +34,59 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
       const segments = pathname.split("/").filter(Boolean);
       classes.push(...segments);
 
-      if (segments.length >= 2) {
-        for (let i = 1; i < segments.length; i++) {
-          classes.push(`${segments[i - 1]}-${segments[i]}`);
-        }
+      for (let i = 1; i < segments.length; i++) {
+        classes.push(`${segments[i - 1]}-${segments[i]}`);
       }
     }
 
     body.className = classes.join(" ");
 
-    // ✅ Login-Status bestimmen
-    if (!LOGIN_ENABLED) {
-      // Login-Schutz deaktiviert → immer "eingeloggt"
-      setLoggedIn(true);
-    } else {
-      // Login-Schutz aktiv → Cookie prüfen
-      const isLoggedIn = document.cookie.includes("loggedIn=true");
-      setLoggedIn(isLoggedIn);
+    // 🔐 Login bestimmen
+    let isLoggedIn = true;
+
+    if (LOGIN_ENABLED) {
+      isLoggedIn = document.cookie.includes("loggedIn=true");
+    }
+
+    setLoggedIn(isLoggedIn);
+
+    // 🔁 Redirect, wenn nicht eingeloggt
+    if (!isLoggedIn && pathname !== "/login") {
+      router.replace("/login");
     }
 
     return () => {
       body.className = "";
     };
-  }, [pathname, customBodyClass]);
+  }, [pathname, customBodyClass, router]);
 
   return (
     <>
-      {loggedIn && (
-        <div className="navigation">
-          <div className="row">
-            <div className="col">
-              <MainNavigation />
-            </div>
+      {/* Layout IMMER rendern */}
+      <div className="navigation">
+        <div className="row">
+          <div className="col">
+            <MainNavigation />
           </div>
         </div>
-      )}
+      </div>
 
-      {loggedIn && <Header />}
+      <Header />
 
       <main id="main" role="main">
-        <LazyLoad offset="200px" threshold={0.1}>
-          {children}
-        </LazyLoad>
+        {/* 
+          children sind ENTWEDER:
+          - normale Seite (eingeloggt)
+          - /login/page.tsx (nicht eingeloggt)
+        */}
+        {loggedIn === null ? null : (
+          <LazyLoad offset="200px" threshold={0.1}>
+            {children}
+          </LazyLoad>
+        )}
       </main>
 
-      {loggedIn && <Footer />}
+      <Footer />
 
       <Button
         className="back-to-top no-btn"

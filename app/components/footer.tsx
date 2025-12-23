@@ -8,7 +8,12 @@ import { usePathname } from 'next/navigation';
 import { FooterNavigation } from "../components/navigation/footer-navigation"
 
 export default function Footer() {
-  const pathname = usePathname();
+  const pathname = usePathname()
+
+  if (pathname == "/login") {
+    return null
+  }
+
   const isContactPage = pathname === '/kontakt'; 
 
   return (
