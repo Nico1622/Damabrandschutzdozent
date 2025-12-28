@@ -18,7 +18,7 @@ export default function Header() {
       <div className="row center-large">
         <div className="col large-1">
           <aside className="social-container" data-aos="fade-right" data-aos-delay="100">
-            <p>Folge mir</p>
+            <p>Social Media</p>
             <span className="line"></span>
             <address className="socials">
               <ul className="unstyled-list">
