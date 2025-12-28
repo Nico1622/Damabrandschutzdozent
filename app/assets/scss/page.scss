@@ -13,8 +13,7 @@ header {
 
     @include breakpoint($break) {
         max-height: 850px;
-        min-height: unset;
-        height: 100vh;
+        height: calc(100vh - var(--navigation-height));
     }
 
     aside.social-container {

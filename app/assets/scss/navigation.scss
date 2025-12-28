@@ -15,11 +15,13 @@
     align-items: center;
     justify-content: space-between;
 
-    html.scrolled & {
-      @extend %animated-transform;
+    body:not(.login) & {
+      html.scrolled & {
+        @extend %animated-transform;
 
-      @include breakpoint($break) {
-        padding: 0.75rem 0;
+        @include breakpoint($break) {
+          padding: 0.75rem 0;
+        }
       }
     }
   }
