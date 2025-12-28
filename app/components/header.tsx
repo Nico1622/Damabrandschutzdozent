@@ -73,9 +73,9 @@ export default function Header() {
             <span className="hr" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600"></span>
 
             <p data-aos="fade-up" data-aos-delay="100">
-              Als Frontend-Entwickler liegt mein Schwerpunkt auf der Gestaltung moderner Websites und Onlineshops mit
-              klarem Fokus auf Benutzererlebnis und Performance. Ich entwickle durchdachte, funktionale Lösungen, die
-              Design und Technik sinnvoll verbinden.
+              Ein Frontend-Entwickler aus der Niederrhein-Region.
+              Mein Schwerpunkt liegt auf der Erstellung ansprechender Websites und Onlineshops.
+              Ich freue mich über Ihr Interresse – erfahren Sie im Folgenden mehr über mich.
             </p>
 
             <div data-aos="fade-up" data-aos-delay="200">

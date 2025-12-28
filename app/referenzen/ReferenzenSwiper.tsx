@@ -107,7 +107,7 @@ export default function ReferenzenSwiper() {
                     <div className="device-text-container">
                       <h2>HelpCenter Euroweb</h2>
                       <p>Das HelpCenter von Euroweb dient als zentrale Anlaufstelle für Kundenfragen rund um Produkte und Leistungen des Unternehmens. Realisiert wurde ein umfangreiches WordPress-Projekt mit individuellen Funktionen wie einem Glossar, Taxonomieverwaltung innerhalb von Beiträgen sowie einer leistungsfähigen Suchfunktion mit Hervorhebung der Suchbegriffe.</p>
-                      <p>Ich war verantwortlich für den strukturellen Aufbau des Helpcenters sowie die komplette Frontend-Ausgabe. Die inhaltliche Texterstellung wurde dabei konzeptionell mitbetreut, um eine klare und verständliche Nutzerführung sicherzustellen.</p>
+                      <p>Ich war verantwortlich für den strukturellen Aufbau des Helpcenters sowie die komplette Frontend-Ausgabe. Die inhaltliche Texterstellung wurde dabei konzeptionell mitbetreut.</p>
                     </div>
 
                     <div className="device-icon-container margin-bottom">

@@ -21,10 +21,10 @@ export default function ProfilPage() {
             </h1>
 
             <p>
-              Was mit einem Schulpraktikum begann, entwickelte sich zu meiner beruflichen Leidenschaft. Seit über fünf Jahren konzipiere und realisiere ich moderne, nutzerzentrierte Webauftritte – von der Planung bis zur Umsetzung. Dabei arbeite ich mit CMS-Systemen, HTML5, SCSS und JavaScript, um stabile und ansprechende Lösungen zu entwickeln.
+              Was mit einem Schulpraktikum begann, entwickelte sich zu meiner beruflichen Leidenschaft. Seit über fünf Jahren konzipiere und realisiere ich moderne, nutzerzentrierte Webauftritte – von der Planung bis zur Umsetzung. Dabei arbeite ich mit CMS-Systemen, sowie gängigen Entwicklungssprachen & Tools zusammmen, um stabile und ansprechende Lösungen zu entwickeln.
             </p>
             <p>
-              Ein besonderer Schwerpunkt liegt in meiner derzeiteigen Anstellung auf der Entwicklung und Betreuung von WooCommerce-Shops. Ergänzend unterstütze ich Auszubildende und Praktikant:innen, übernehme technische Supportaufgaben und bringe mich aktiv in die Weiterentwicklung bestehender Systeme ein.
+              Ein besonderer Schwerpunkt liegt in meiner derzeiteigen Anstellung auf der Entwicklung und Betreuung von WooCommerce-Shops, sowie der unterstützung von Auszubildenden und Praktikant:innen. Ergänzend übernehme ich technische Supportaufgaben für Mitarbeiter und bringe mich aktiv in die Weiterentwicklung bestehender interner Systeme ein.
             </p>
           </div>
           <div className="col large-6 huge-5 huge-prefix-1" data-aos="fade-left" data-aos-delay="200">
@@ -57,12 +57,12 @@ export default function ProfilPage() {
             </div>
             <div className="col large-4 margin-bottom" data-aos="fade-up" data-aos-delay="200">
               <Card title="Nutzerzentriert">
-                Technische und gestalterische Entscheidungen treffe ich stets mit Blick auf die User Experience.
+                Ein zentraler Aspekt für mich ist, technische und gestalterische Entscheidungen stets mit Blick auf die User Experience zu treffen.
               </Card>
             </div>
             <div className="col large-4 margin-bottom" data-aos="fade-up" data-aos-delay="300">
               <Card title="Frontend-Kompetenz">
-                Ich entwickle performante, responsive Oberflächen mit sauberer Trennung von Struktur, Stil und Logik.
+                Ich entwickle Oberflächen, die performant und Responsive nutzbar sind, und achte dabei auf eine klare Trennung von Struktur, Stil und Logik.
               </Card>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function ProfilPage() {
                 <div data-aos="fade-up" data-aos-delay="200">
                     <Card className="badge" date="2023 - Heute" title="WWWE GmbH (Festanstellung)">
                     <p>
-                        In meiner aktuellen Position entwickle und betreue ich kundenspezifische Online-Shops auf Basis von Shopify und WooCommerce. Dabei arbeite ich eng mit Design- und Backend-Teams zusammen, um ganzheitliche E-Commerce-Lösungen umzusetzen.
+                        In meiner aktuellen Position entwickle und betreue ich kundenspezifische Online-Shops auf Basis von Wordpress und WooCommerce. Dabei arbeite ich eng mit Kunden zusammen und stehe in engem Austauschen mit meinen Kollegen um ganzheitliche E-Commerce-Lösungen umzusetzen.
                     </p>
                     </Card>
                 </div>
@@ -91,9 +91,9 @@ export default function ProfilPage() {
                     </Card>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="600">
-                    <Card className="badge" date="2016 - 2020" title="Informationstechnischer Assistent (BTI Neuss)">
+                    <Card className="badge" date="2016 - 2020" title="Fachabitur & Informationstechnischer Assistent (BTI Neuss)">
                     <p>
-                        Fundierte Ausbildung im Bereich Softwareentwicklung mit Schwerpunkt auf Webtechnologien. Hier sammelte ich meine ersten praktischen Erfahrungen mit HTML, CSS, JavaScript und PHP und entdeckte meine Leidenschaft für die Webentwicklung.
+                        Absolviertes Fachabitur mit paraleller Ausbildung (Schwerpunkt Informatik). Hier sammelte ich meine ersten praktischen Erfahrungen mit HTML, CSS, JavaScript, PHP sowie Datenbanken und entdeckte meine Leidenschaft für die Webentwicklung.
                     </p>
                     </Card>
                 </div>
@@ -118,7 +118,7 @@ export default function ProfilPage() {
                   <li>WooCommerce</li>
                   <li>E-Pages</li>
                   <li>Shop-Optimierung</li>
-                  <li>SEO-Grundlagen</li>
+                  <li>OnPage - SEO</li>
                 </ul>
               </Card>
               <Card icon="" title="Tools & Workflow" data-aos="zoom-in" data-aos-delay="600">
@@ -134,7 +134,7 @@ export default function ProfilPage() {
                   <li>Strukturierte Arbeitsweise</li>
                   <li>Qualitätsbewusstsein</li>
                   <li>Zuverlässigkeit</li>
-                  <li>Nutzerzentrierung</li>
+                  <li>Nutzerorientiert</li>
                   <li>Teamfähigkeit</li>
                   <li>Lösungsorientierung</li>
                 </ul>
@@ -150,7 +150,7 @@ export default function ProfilPage() {
           <div className="col" data-aos="fade-up">
             <h2>Projekt-Referenzen</h2>
             <p>
-              Eine Auswahl relevanter Projekte aus den letzten Jahren – mit Fokus auf E-Commerce und Webentwicklung.
+              Eine Auswahl an Projekte aus den letzten Jahren.
             </p>
           </div>
           <div className="col">
@@ -158,21 +158,21 @@ export default function ProfilPage() {
               <div data-aos="fade-up" data-aos-delay="100">
                 <ProjectItem image="/assets/images/files/thumbs/kaspar-thumb-desktop.webp" title="Kaspar Spirituosen" slideIndex={0}>
                     <p>
-                    Moderner WooCommerce-Onlineshop für den Verkauf von Spirituosen und Eventtickets – technisch durchdacht, wartungsfreundlich und nahtlos in bestehende Systeme integriert.
+                    Moderner WooCommerce-Onlineshop für den Verkauf von Spirituosen und Eventtickets.
                     </p>
                 </ProjectItem>
               </div>
               <div data-aos="fade-up" data-aos-delay="200">
                 <ProjectItem image="/assets/images/files/thumbs/helpcenter-desktop.webp" title="Helpcenter Euroweb" slideIndex={1}>
                     <p>
-                    Zentrale Wissensplattform auf WordPress-Basis mit intelligenter Struktur, leistungsstarker Suche und individuellen Funktionen für optimale Kundenunterstützung.
+                    Zentrale Wissensplattform auf WordPress-Basis zur Untersützung von Kundenanfragen.
                     </p>
                 </ProjectItem>
               </div>
               <div data-aos="fade-up" data-aos-delay="300">
                 <ProjectItem image="/assets/images/files/thumbs/scharrn3-desktop.webp" title="Scharrn3" slideIndex={2}>
                     <p>
-                    Zeitgemäße Webpräsenz für ein lokales Deko- und Accessoire-Geschäft – modern gestaltet, leicht pflegbar und klar auf Markenwirkung ausgelegt.
+                      Webpräsenz für ein lokales Deko- und Accessoire-Geschäft in Lübbecke.
                     </p>
                 </ProjectItem>
               </div>

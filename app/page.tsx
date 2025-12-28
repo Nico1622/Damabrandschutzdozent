@@ -53,7 +53,7 @@ return (
           <span>Facettenreich kreativ</span>
         </h1>
         <p>
-          Seit über fünf Jahren bin ich in der Webentwicklung tätig und habe mir ein breites technisches Fundament aufgebaut. Mein Schwerpunkt liegt auf WordPress, HTML5, SCSS und JavaScript, ergänzt durch Next.js sowie Backend-Kenntnisse in PHP. Dabei verbinde ich sauberen Code mit einem hohen Anspruch an Design und Nutzerfreundlichkeit.
+          Seit über fünf Jahren bin ich in der Webentwicklung tätig und habe mir ein breites technisches Fundament aufgebaut. Mein Schwerpunkt liegt auf WordPress, HTML5, SCSS und der Integration von JavaScript, ergänzt durch Next.js sowie Backend-Kenntnisse in PHP. Dabei verbinde ich sauberen Code mit einem hohen Anspruch an Design und Nutzerfreundlichkeit.
         </p>
         <p>Konzepte setze ich zunächst visuell mit Figma oder Adobe XD um, bevor sie technisch realisiert werden. Ziel ist stets eine klare Struktur, gute Wartbarkeit und eine positive User Experience. Weitere Einblicke in meinen Werdegang finden Sie in meinem <Link href="/profil" title="Mehr über mich und meine Arbeit erfahren">Profil</Link>.</p>
       </div>
@@ -113,8 +113,8 @@ return (
         </blockquote>
         
         <p data-aos="fade-up" data-aos-delay="400">
-          Als teamorientierter Entwickler mit hoher technischer Affinität unterstütze ich Unternehmen zuverlässig bei der Umsetzung moderner Weblösungen. <Link href="/kontakt" title="Kontaktieren Sie mich via E-Mail">Kontaktieren</Link> Sie mich jetzt für eine erfolgreiche Zusammenarbeit!
-        </p>
+          Als teamorientierter Entwickler unterstütze ich Ihr Unternehmen zuverlässig bei der Umsetzung moderner Weblösungen. <Link href="/kontakt" title="Kontaktieren Sie mich via E-Mail">Kontaktieren</Link> Sie mich für eine erfolgreiche Zusammenarbeit!
+        </p> 
       </div>
     </div>
   </div>
