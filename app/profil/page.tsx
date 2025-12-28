@@ -24,7 +24,7 @@ export default function ProfilPage() {
               Was mit einem Schulpraktikum begann, entwickelte sich zu meiner beruflichen Leidenschaft. Seit über fünf Jahren konzipiere und realisiere ich moderne, nutzerzentrierte Webauftritte – von der Planung bis zur Umsetzung. Dabei arbeite ich mit CMS-Systemen, sowie gängigen Entwicklungssprachen & Tools zusammmen, um stabile und ansprechende Lösungen zu entwickeln.
             </p>
             <p>
-              Ein besonderer Schwerpunkt liegt in meiner derzeiteigen Anstellung auf der Entwicklung und Betreuung von WooCommerce-Shops, sowie der unterstützung von Auszubildenden und Praktikant:innen. Ergänzend übernehme ich technische Supportaufgaben für Mitarbeiter und bringe mich aktiv in die Weiterentwicklung bestehender interner Systeme ein.
+              Ein besonderer Schwerpunkt liegt in meiner derzeiteigen Anstellung auf der Entwicklung und Betreuung von WooCommerce-Shops, sowie der Unterstützung von Auszubildenden und Praktikant:innen. Ergänzend übernehme ich technische Supportaufgaben für Mitarbeiter und bringe mich aktiv in die Weiterentwicklung bestehender interner Systeme ein.
             </p>
           </div>
           <div className="col large-6 huge-5 huge-prefix-1" data-aos="fade-left" data-aos-delay="200">
