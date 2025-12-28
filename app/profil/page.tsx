@@ -30,8 +30,7 @@ export default function ProfilPage() {
           <div className="col large-6 huge-5 huge-prefix-1" data-aos="fade-left" data-aos-delay="200">
             <Image
               src="/assets/images/layout/profile.webp"
-              title="SASS / SCSS"
-              alt="Sass - Icon"
+              alt="Webdesigner arbeitet an einem großen Monitor an einem Website-Layout in einem gemütlichen Homeoffice mit Schreibtischlampe und Pflanze"
               width={1024}
               height={1024}
               sizes="

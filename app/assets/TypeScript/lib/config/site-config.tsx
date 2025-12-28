@@ -65,7 +65,7 @@ export const siteConfig = {
     companyName: {
       name: "Firma",
       title: "Firmenname",
-      text: "Musterfirma GmbH",
+      text: "Nico Beyer",
     },
     owner: {
       name: "Inhaber",

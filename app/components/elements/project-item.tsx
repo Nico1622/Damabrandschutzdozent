@@ -25,7 +25,7 @@ export default function ProjectItem({
     <Link href={referenceLink} className="project-item" title={title}>
       <Image
         src={image || "/placeholder.svg"}
-        alt={title}
+        alt={`${title} - Referenz`}
         width={1024}
         height={1024}
         sizes="

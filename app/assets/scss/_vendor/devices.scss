@@ -52,8 +52,8 @@
 
         .inner-image {
           position: absolute;
-          width: calc(100% - (0.25rem) - 2px);
-          height: calc(100% - 0.25rem - 2px);
+          width: calc(100% - (0.25rem) - 2px)!important;
+          height: calc(100% - 0.25rem - 2px)!important;
           object-position: top center;
           object-fit: cover;
           padding: 0.175rem;
@@ -86,8 +86,8 @@
           }
 
           .inner-image {
-            width: calc(100% - (0.5rem * 2));
-            height: calc(100% - 1rem);
+            width: calc(100% - (0.5rem * 2))!important;
+            height: calc(100% - 1rem)!important;
             position: absolute;
             bottom: 0;
             left: 0;

@@ -76,12 +76,20 @@ header {
         padding-top: 3rem;
         padding-bottom: 3rem;
 
+        @include breakpoint($break, max) {
+            text-align: center;
+
+            .hr {
+                margin: 2rem auto!important;
+            }
+        }
+
         @include breakpoint($break) {
             padding-left: 2rem;
         }
         
         blockquote {
-            font-size: clamp(36px, 12vw, 80px);
+            font-size: clamp(36px, 9vw, 80px);
             line-height: 1em;
             font-family: $display-font;
             font-weight: 700;
@@ -106,6 +114,26 @@ header {
         }
     }
 
+    .header-img-container {
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 2rem;
+        margin-bottom: 0;
+
+        @include breakpoint($break) {
+            margin: 5%;
+        }
+
+        @include breakpoint(cut) {
+            margin: 10%;
+            margin-right: 20%;
+        }
+
+        .header-img {
+            transform: scale(1.025);
+        }
+    }
+
     aside.pointer-nav {
         display: flex;
         flex-direction: column;
@@ -120,7 +148,7 @@ header {
         overflow: hidden;
         padding-bottom: 3rem;
 
-        @include breakpoint($break, max) {
+        @include breakpoint(giant, max) {
             display: none;
         }
 
@@ -141,6 +169,8 @@ header {
             text-decoration: none;
             color: color(light);
             transition-delay: 0.25s;
+            background-color: color(dark);
+            border-radius: $base-radius;
 
             &:first-of-type {
                 transform: translateX(98px);

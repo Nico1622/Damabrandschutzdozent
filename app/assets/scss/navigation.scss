@@ -8,6 +8,10 @@
   z-index: 1000;
   border-bottom: 1px solid color(light);
 
+  body.login & {
+    border: none;
+  }
+
   &__container {
     @extend %animated-transform;
     padding: 1rem 0;

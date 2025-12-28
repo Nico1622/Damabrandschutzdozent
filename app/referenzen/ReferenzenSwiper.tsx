@@ -60,13 +60,15 @@ export default function ReferenzenSwiper() {
                 containerMessage: 'Referenz Slider',
               }}
             >
+              {/* --- KASPAR SPIRITUOSEN --- */}
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
                     desktopImage="/assets/images/files/thumbs/kaspar-thumb-desktop.webp"
                     mobileImage="/assets/images/files/thumbs/kaspar-thumb-mobile.webp"
+                    desktopAlt="Kaspar Spirituosen – Desktop Ansicht – Onlineshop für Spirituosen und Events"
+                    mobileAlt="Kaspar Spirituosen – Mobile Ansicht – Responsive WooCommerce Shop"
                   />
-
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
                   <div className="slide-container">
@@ -77,41 +79,10 @@ export default function ReferenzenSwiper() {
                     </div>
 
                     <div className="device-icon-container margin-bottom">
-                      <Image
-                        src="/assets/images/icons/wordpress.webp"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/sass.webp"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/html.webp"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/php.webp"
-                        alt="HTML Icon"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
+                      <Image src="/assets/images/icons/wordpress.webp" alt="WordPress Technologie Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/sass.webp" alt="SASS CSS Framework Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/html.webp" alt="HTML5 Webstandard Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/php.webp" alt="PHP Programmierung Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
                     </div>
 
                     <Button href="https://www.kaspar-spirituosen.de/shop/" target="_blank" className="btn" title="Hier geht es zum Kasper Spirituosen - Onlineshop">
@@ -121,11 +92,14 @@ export default function ReferenzenSwiper() {
                 </div>
               </SwiperSlide>
 
+              {/* --- HELPCENTER EUROWEB --- */}
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices 
                     desktopImage="/assets/images/files/thumbs/helpcenter-desktop.webp"
                     mobileImage="/assets/images/files/thumbs/helpcenter-mobile.webp" 
+                    desktopAlt="Euroweb HelpCenter – Desktop Ansicht – Wissensdatenbank und Support-Portal"
+                    mobileAlt="Euroweb HelpCenter – Mobile Ansicht – Responsive Hilfe-Plattform"
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -137,55 +111,11 @@ export default function ReferenzenSwiper() {
                     </div>
 
                     <div className="device-icon-container margin-bottom">
-                      <Image
-                        src="/assets/images/icons/wordpress.webp"
-                        alt="Wordpress Icon"
-                        title="Wordpress"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/php.webp"
-                        alt="PHP Icon"
-                        title="PHP Systeme"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/sass.webp"
-                        alt="SASS Icon"
-                        title="SCSS"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/cms.webp"
-                        alt="CMS Icon"
-                        title="CMS"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/javascript.webp"
-                        alt="JavaScript Icon"
-                        title="JavaScript"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
+                      <Image src="/assets/images/icons/wordpress.webp" alt="WordPress Technologie Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/php.webp" alt="PHP Programmierung Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/sass.webp" alt="SASS CSS Framework Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/cms.webp" alt="Content Management System Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/javascript.webp" alt="JavaScript Programmierung Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
                     </div>
 
                     <Button href="https://helpcenter.euroweb.de/" target="_blank" className="btn" title="Hier geht es zum Helpcenter von Euroweb">
@@ -195,11 +125,14 @@ export default function ReferenzenSwiper() {
                 </div>
               </SwiperSlide>
 
+              {/* --- SCHARRN3 --- */}
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices
                     desktopImage="/assets/images/files/thumbs/scharrn3-desktop.webp"
                     mobileImage="/assets/images/files/thumbs/scharrn3-mobile.webp" 
+                    desktopAlt="Scharrn3 – Desktop Ansicht – Webpräsenz für Lifestyle und Dekoration"
+                    mobileAlt="Scharrn3 – Mobile Ansicht – Responsive Website für den Einzelhandel"
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -211,35 +144,9 @@ export default function ReferenzenSwiper() {
                     </div>
 
                     <div className="device-icon-container margin-bottom">
-                      <Image
-                        src="/assets/images/icons/html.webp"
-                        alt="HTML Icon"
-                        title="HTML"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/cms.webp"
-                        alt="CMS Icon"
-                        title="CMS"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/sass.webp"
-                        alt="SASS Icon"
-                        title="SCSS"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
+                      <Image src="/assets/images/icons/html.webp" alt="HTML5 Webstandard Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/cms.webp" alt="Content Management System Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/sass.webp" alt="SASS CSS Framework Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
                     </div>
 
                     <Button href="https://www.scharrn3.com/" target="_blank" className="btn" title="Hier geht es zu Scharrn3">
@@ -249,11 +156,14 @@ export default function ReferenzenSwiper() {
                 </div>
               </SwiperSlide>
 
+              {/* --- BUSCHE GRUPPE --- */}
               <SwiperSlide>
                 <div className="col large-6">
                   <Devices 
                     desktopImage="/assets/images/files/thumbs/busche-gruppe-desktop.webp"
                     mobileImage="/assets/images/files/thumbs/busche-gruppe-mobile.webp" 
+                    desktopAlt="Busche Gruppe – Desktop Ansicht – Corporate Website für Unternehmensgruppe"
+                    mobileAlt="Busche Gruppe – Mobile Ansicht – Responsive Unternehmenspräsentation"
                   />
                 </div>
                 <div className="col large-5 large-prefix-1 flex align-center">
@@ -265,45 +175,10 @@ export default function ReferenzenSwiper() {
                     </div>
 
                     <div className="device-icon-container margin-bottom">
-                      <Image
-                        src="/assets/images/icons/html.webp"
-                        alt="HTML Icon"
-                        title="HTML"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/cms.webp"
-                        alt="CMS Icon"
-                        title="CMS Systeme"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/sass.webp"
-                        alt="SASS Icon"
-                        title="SCSS"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
-
-                      <Image
-                        src="/assets/images/icons/javascript.webp"
-                        alt="JavaScript Icon"
-                        title="JavaScript"
-                        width={100}
-                        height={100}
-                        style={{ width: "auto", height: "auto" }}
-                        className="thumb-image"
-                      />
+                      <Image src="/assets/images/icons/html.webp" alt="HTML5 Webstandard Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/cms.webp" alt="Content Management System Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/sass.webp" alt="SASS CSS Framework Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
+                      <Image src="/assets/images/icons/javascript.webp" alt="JavaScript Programmierung Icon" width={100} height={100} style={{ width: "auto", height: "auto" }} className="thumb-image" />
                     </div>
 
                     <Button href="https://www.busche-gruppe.de/" target="_blank" className="btn" title="Hier geht es zur Busche Gruppe">
@@ -317,7 +192,7 @@ export default function ReferenzenSwiper() {
         </div>
       </div>
 
-      {/* --- Buttons --- */}
+      {/* --- THUMBNAILS --- */}
       <div className="row">
         <div className="col">
           <div className="controls" data-aos="fade-up" data-aos-delay="100">
@@ -327,7 +202,7 @@ export default function ReferenzenSwiper() {
             <div className="thumbs-container">
               <Swiper
                 onSwiper={setThumbsSwiper}
-                modules={[Thumbs, A11y,  Keyboard]}
+                modules={[Thumbs, A11y, Keyboard]}
                 spaceBetween={10}
                 slidesPerView={4}
                 watchSlidesProgress
@@ -342,54 +217,22 @@ export default function ReferenzenSwiper() {
               >
                 <SwiperSlide>
                   <div className="thumb-wrapper">
-                    <Image
-                      src="/assets/images/files/favicon/favicon-kaspar.webp"
-                      alt="Kaspar Icon"
-                      title="Kaspar Spirituosen"
-                      width={60}
-                      height={60}
-                      style={{ width: "100%", height: "auto" }}
-                      className="thumb-image"
-                    />
+                    <Image src="/assets/images/files/favicon/favicon-kaspar.webp" alt="Projekt Kaspar Spirituosen – Logo Icon" width={60} height={60} style={{ width: "100%", height: "auto" }} className="thumb-image" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="thumb-wrapper">
-                    <Image
-                      src="/assets/images/files/favicon/favicon-helpcenter.webp"
-                      alt="Helpcenter Icon"
-                      title="Helpcenter"
-                      width={60}
-                      height={60}
-                      style={{ width: "100%", height: "auto" }}
-                      className="thumb-image"
-                    />
+                    <Image src="/assets/images/files/favicon/favicon-helpcenter.webp" alt="Projekt HelpCenter – Logo Icon" width={60} height={60} style={{ width: "100%", height: "auto" }} className="thumb-image" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="thumb-wrapper">
-                    <Image
-                      src="/assets/images/files/favicon/favicon-scharrn3.webp"
-                      alt="Scharrn3 Icon"
-                      title="Scharrn3"
-                      width={60}
-                      height={60}
-                      style={{ width: "100%", height: "auto" }}
-                      className="thumb-image"
-                    />
+                    <Image src="/assets/images/files/favicon/favicon-scharrn3.webp" alt="Projekt Scharrn3 – Logo Icon" width={60} height={60} style={{ width: "100%", height: "auto" }} className="thumb-image" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="thumb-wrapper">
-                    <Image
-                      src="/assets/images/files/favicon/favicon-busche.webp"
-                      alt="Busche Icon"
-                      title="Busche Gruppe"
-                      width={100}
-                      height={100}
-                      style={{ width: "100%", height: "auto" }}
-                      className="thumb-image"
-                    />
+                    <Image src="/assets/images/files/favicon/favicon-busche.webp" alt="Projekt Busche Gruppe – Logo Icon" width={100} height={100} style={{ width: "100%", height: "auto" }} className="thumb-image" />
                   </div>
                 </SwiperSlide>
               </Swiper>

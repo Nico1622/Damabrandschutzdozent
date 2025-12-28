@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
+import { company } from "@/app/assets/TypeScript/lib/backend/company"
 import { usePathname } from "next/navigation"
 import type { NavItem } from "@/app/assets/TypeScript/lib/config/site-navigation"
 // Import der neuen Scroll-Funktion
@@ -252,7 +253,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
             title="Zur Startseite gelangen"
             onClick={(e) => handleLogoScroll(e, pathname)}
           >
-            <img src="/assets/images/layout/icon.svg" alt="Logo" width={60} height="auto" />
+            <img src="/assets/images/layout/icon.svg" alt={`${company.name.text} - Logo`} width={60} height="auto" />
           </Link>
         </div>
 

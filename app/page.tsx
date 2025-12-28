@@ -13,7 +13,7 @@ return (
         <div className="col medium-prefix-1 medium-10 large-prefix-0 large-10 no-gutter">
           <Image 
             src="/assets/images/layout/first-content.webp" 
-            alt="Header Background" 
+            alt="Webentwickler plant Website-Projekt mit verschiedenen Web-Technologien" 
             width={1024}
             height={1024}
             sizes="
@@ -160,7 +160,7 @@ return (
       >
         <Image 
           src="/assets/images/layout/shop-img.webp" 
-          alt="Onlineshop Background" 
+          alt="Illustration eines Webentwicklers am Laptop bei der Erstellung eines Onlineshops" 
           width={1024}
           height={1024}
           sizes="

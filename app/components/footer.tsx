@@ -25,8 +25,8 @@ export default function Footer() {
             {/* Branding */}
             <div className="footer-branding" data-aos="fade-up" data-aos-delay="200">
               <Link href="/" title="Zur Startseite und Übersicht gelangen">
-                <Image className="no-border" src="/assets/images/layout/branding.svg" alt={`${company.address.text} - Logo`} width={150} height={24} style={{ width: "auto", height: "auto" }} />
-              </Link>
+                <Image className="no-border" src="/assets/images/layout/branding.svg" alt={`${company.name.text} - Logo`} width={150} height={24} style={{ width: "auto", height: "auto" }} />
+              </Link> 
             </div>
 
             <span className="trenner"></span>
@@ -46,12 +46,12 @@ export default function Footer() {
               <ul>
                 <li>
                   <Link href={company.xing.href!} target="_blank" rel="noopener noreferrer" title={company.xing.title} className={company.xing.text}>
-                    <Image src={`/assets/images/icons/${company.xing.text}.svg`} alt={company.xing.text} width={24} height={24} style={{ height: "auto" }} />
+                    <Image src={`/assets/images/icons/${company.xing.text}.svg`} alt={`${company.xing.name} - Logo`} width={24} height={24} style={{ height: "auto" }} />
                   </Link>
                 </li>
                 <li>
                   <Link href={company.linkedin.href!} target="_blank" rel="noopener noreferrer" title={company.linkedin.title} className={company.linkedin.text}>
-                    <Image src={`/assets/images/icons/${company.linkedin.text}.svg`} alt={company.linkedin.text} width={24} height={24} style={{ height: "auto" }} />
+                    <Image src={`/assets/images/icons/${company.linkedin.text}.svg`} alt={`${company.linkedin.name} - Logo`} width={24} height={24} style={{ height: "auto" }} />
                   </Link>
                 </li>
               </ul>

@@ -10,7 +10,7 @@ import LazyLoad from "./assets/TypeScript/_module/lazyLoad";
 import { MainNavigation } from "./components/navigation/main-navigation";
 
 interface ClientLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode; 
   customBodyClass?: string;
 }
 

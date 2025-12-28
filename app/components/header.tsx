@@ -1,8 +1,8 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { company } from "../assets/TypeScript/lib/backend/company"
-import Button from "./elements/button"
+import { company } from "@/app/assets/TypeScript/lib/backend/company"
+import Button from "@/app/components/elements/button"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header role="banner" id="header">
-      <div className="row">
+      <div className="row center-large">
         <div className="col large-1">
           <aside className="social-container" data-aos="fade-right" data-aos-delay="100">
             <p>Folge mir</p>
@@ -32,7 +32,7 @@ export default function Header() {
                   >
                     <Image
                       src={`/assets/images/icons/${company.xing.text}.svg`}
-                      alt={company.xing.text}
+                      alt={`${company.xing.name} - Logo`}
                       width={36}
                       height={36}
                       style={{ height: "auto" }}
@@ -50,7 +50,7 @@ export default function Header() {
                   >
                     <Image
                       src={`/assets/images/icons/${company.linkedin.text}.svg`}
-                      alt={company.linkedin.text}
+                      alt={`${company.linkedin.name} - Logo`}
                       width={36}
                       height={36}
                       style={{ height: "auto" }}
@@ -63,7 +63,7 @@ export default function Header() {
           </aside>
         </div>
 
-        <div className="col large-7 giant-6 huge-5">
+        <div className="col medium-10 large-7 giant-6 huge-5">
           <div className="header-container">
             <blockquote>
               <span>Hi! Ich bin</span>
@@ -83,6 +83,29 @@ export default function Header() {
                 Lernen Sie mich kennen
               </Button>
             </div>
+          </div>
+        </div>
+
+        <div className="col tiny-10 small-8 medium-6 large-4 huge-4 huge-prefix-1 flex align-center order-1-large">
+          <div className="header-img-container" data-aos="fade-left" data-aos-delay="100">
+            <Image
+              src={`/assets/images/layout/header-img.png`}
+              alt="Profilfoto von Nico Beyer"
+              className="header-img"
+              width={560}
+              height={560}
+              priority
+              sizes="
+                (max-width: 360px) 90vw,
+                (max-width: 480px) 85vw,
+                (max-width: 576px) 80vw,
+                (max-width: 768px) 75vw,
+                (max-width: 992px) 70vw,
+                (max-width: 1360px) 65vw,
+                1024px
+              "
+              style={{ width:"100%", height: "auto" }}
+            />
           </div>
         </div>
       </div>
