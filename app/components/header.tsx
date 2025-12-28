@@ -89,7 +89,7 @@ export default function Header() {
         <div className="col tiny-10 small-8 medium-6 large-4 huge-4 huge-prefix-1 flex align-center order-1-large">
           <div className="header-img-container" data-aos="fade-left" data-aos-delay="100">
             <Image
-              src={`/assets/images/layout/header-img.png`}
+              src={`/assets/images/layout/header-img.webp`}
               alt="Profilfoto von Nico Beyer"
               className="header-img"
               width={560}
