@@ -58,9 +58,41 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
+const richSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Nico Beyer",
+      "url": "https://www.nbeyer.tech",
+      "logo": "https://www.nbeyer.tech/assets/images/layout/branding.svg",
+      "sameAs": [
+        "https://de.linkedin.com/in/nico-beyer-1347a8377",
+        "https://www.xing.com/profile/Nico_Beyer031219"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Nico Beyer",
+      "url": "https://www.nbeyer.tech/profil",
+      "sameAs": [
+        "https://de.linkedin.com/in/nico-beyer-1347a8377",
+        "https://www.xing.com/profile/Nico_Beyer031219"
+      ]
+    }
+  ]
+};
+
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(richSchema, null, 2) }}
+        />
+      </head>
       <body>
         <PageLoader />
         <ScrollToTop />
