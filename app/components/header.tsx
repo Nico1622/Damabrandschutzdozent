@@ -72,13 +72,13 @@ export default function Header() {
 
             <span className="hr" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600"></span>
 
-            <p data-aos="fade-up" data-aos-delay="100">
+            <p>
               Ein Frontend-Entwickler aus der Niederrhein-Region.
               Mein Schwerpunkt liegt auf der Erstellung ansprechender Websites und Onlineshops.
               Ich freue mich über Ihr Interresse – erfahren Sie im Folgenden mehr über mich.
             </p>
 
-            <div data-aos="fade-up" data-aos-delay="200">
+            <div>
               <Button href="/profil" title="Mehr über mich und meine Arbeit erfahren">
                 Lernen Sie mich kennen
               </Button>
