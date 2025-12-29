@@ -59,10 +59,6 @@ body:not(.login) {
     border-radius: 4px;
     margin-bottom: calc($base-gap * 4);
 
-    body.kontakt & {
-      margin-bottom: 0;
-    }
-
     @include breakpoint(small) {
       padding: calc($base-gap * 3.5);
     }
@@ -276,4 +272,10 @@ body:not(.login) {
     margin-top: calc(($base-gap * -1) / 1.5);
     margin-bottom: $base-gap;
   }
+}
+
+body.kontakt {
+  form {
+    margin-bottom: 0!important;
+  } 
 }

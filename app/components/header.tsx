@@ -75,7 +75,7 @@ export default function Header() {
             <p>
               Ein Frontend-Entwickler aus der Niederrhein-Region.
               Mein Schwerpunkt liegt auf der Erstellung ansprechender Websites und Onlineshops.
-              Ich freue mich über Ihr Interresse – erfahren Sie im Folgenden mehr über mich.
+              Ich freue mich über Ihr Interesse – erfahren Sie im Folgenden mehr über mich.
             </p>
 
             <div>
@@ -86,7 +86,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="col tiny-10 small-8 medium-6 large-4 huge-4 huge-prefix-1 flex align-center order-1-large">
+        <div className="col tiny-10 small-8 medium-6 large-3 huge-4 cut-4 large-prefix-1 flex align-center order-1-large">
           <div className="header-img-container">
             <Image
               src={`/assets/images/layout/header-img.webp`}

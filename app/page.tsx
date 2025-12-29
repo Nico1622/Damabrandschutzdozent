@@ -147,7 +147,7 @@ return (
             In der Entwicklung von Onlineshops bringe ich vor allem meine Frontend-Expertise ein, um ein ansprechendes, intuitives und conversionstarkes Einkaufserlebnis zu schaffen. Dabei arbeite ich überwiegend mit WordPress in Verbindung mit WooCommerce sowie teils mit E-Pages.
           </p>
           <p>
-            Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technischen Optimierungen.
+            Bei WordPress-basierten Shops übernehme ich zusätzlich Backend-Aufgaben, darunter individuelle Anpassungen von WooCommerce, Plugin-Integration und technische Optimierungen.
           </p>
         </div>
       </div>
