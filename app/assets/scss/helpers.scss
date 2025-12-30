@@ -77,6 +77,10 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         radial-gradient(circle, color(secondary) 20%, transparent 20%);
     }
   }
+
+  &:focus {
+    color: color(ultralight);
+  }
 }
 
 @keyframes greentopBubbles {

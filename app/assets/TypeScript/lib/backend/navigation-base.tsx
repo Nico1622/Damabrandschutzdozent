@@ -63,7 +63,11 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
     }
   }, [isMain])
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href))
+  const isActive = (href: string, external?: boolean) => {
+    if (external) return false
+    return href === "/" ? pathname === "/" : pathname.startsWith(href)
+  }
+
 
   const toggleDropdown = (href: string) =>
     setOpenDropdowns((prev) => (prev.includes(href) ? prev.filter((i) => i !== href) : [...prev, href]))
@@ -165,21 +169,36 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
               aria-expanded={isDropdownOpen}
               aria-haspopup="true"
               title={item.description || item.label}
-              className={`nav-link nav-link--span ${isActive(item.href) ? "nav-link--active" : ""}`}
+              className={`nav-link ${item.className ?? ""} ${
+                isActive(item.href, item.external) ? "nav-link--active" : ""
+              }`}
               onClick={() => toggleDropdown(item.href)}
               onKeyDown={(e) => handleParentKeyDown(e, item)}
             >
               {item.label}
             </span>
           ) : (
-            <Link
-              href={item.href}
-              className={`nav-link ${isActive(item.href) ? "nav-link--active" : ""}`}
-              title={item.description || item.label}
-              onClick={closeMobileMenu}
-            >
-              {item.label}
-            </Link>
+            item.external ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`nav-link ${item.className ?? ""}`}
+                title={item.description || item.label}
+                onClick={closeMobileMenu}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                href={item.href}
+                className={`nav-link ${isActive(item.href, item.external) ? "nav-link--active" : ""}`}
+                title={item.description || item.label}
+                onClick={closeMobileMenu}
+              >
+                {item.label}
+              </Link>
+            )
           )}
         </div>
 

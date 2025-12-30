@@ -8,6 +8,7 @@ export interface NavItem {
   children?: NavItem[]
   external?: boolean
   description?: string
+  className?: string   
 }
 
 // Hauptnavigation (mit optionalen Dropdowns)
@@ -48,6 +49,13 @@ export const mainNavigationConfig: NavItem[] = [
     label: "Kontakt",
     href: "/kontakt",
     description: "Kontaktieren Sie mich via E-Mail",
+  },
+  {
+    label: "Lebenslauf - PDF",
+    href: "/assets/files/lebenslauf_nico_beyer.pdf",
+    external: true,
+    description: "Lebenslauf als PDF öffnen",
+    className: 'btn'
   },
 ]
 
