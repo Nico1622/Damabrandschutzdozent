@@ -62,19 +62,20 @@ const richSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "name": "Nico Beyer",
+      "@type": "WebSite",
+      "@id": "https://www.nbeyer.tech/#website",
       "url": "https://www.nbeyer.tech",
-      "logo": "https://www.nbeyer.tech/assets/images/layout/branding.svg",
-      "sameAs": [
-        "https://de.linkedin.com/in/nico-beyer-1347a8377",
-        "https://www.xing.com/profile/Nico_Beyer031219"
-      ]
+      "name": "Portfolio Nico Beyer",
+      "publisher": {
+        "@id": "https://www.nbeyer.tech/#person"
+      }
     },
     {
       "@type": "Person",
+      "@id": "https://www.nbeyer.tech/#person",
       "name": "Nico Beyer",
-      "url": "https://www.nbeyer.tech/profil",
+      "url": "https://www.nbeyer.tech",
+      "jobTitle": "Frontend Developer",
       "sameAs": [
         "https://de.linkedin.com/in/nico-beyer-1347a8377",
         "https://www.xing.com/profile/Nico_Beyer031219"
