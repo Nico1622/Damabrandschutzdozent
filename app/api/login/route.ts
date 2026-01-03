@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 // Benutzer-Daten nur Passwort-basiert
 const USERS = [
   { password: "WPLogin213!", role: "admin" },
-  { password: "Bewerbung2025", role: "visitor" },
+  { password: "Bewerbung2026", role: "visitor" },
 ];
 
 export async function POST(req: NextRequest) {
