@@ -39,9 +39,13 @@ export default function LoginPage() {
               placeholder="Passwort"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleLogin(e);
+              }}
               required
               autoComplete="off"
             />
+
             <i
               title={showPassword ? "Passwort ausblenden" : "Passwort anzeigen"}
               onClick={() => setShowPassword(!showPassword)}

@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react";
 
 type CaptchaProps = {
-  onChange?: (value: number | null) => void; // Callback an Parent, falls nötig
+  onValidate: (valid: boolean) => void;
 };
 
-export default function Captcha({ onChange }: CaptchaProps) {
+export default function Captcha({ onValidate }: CaptchaProps) {
   const [captchaOptions, setCaptchaOptions] = useState<number[]>([]);
   const [captchaQuestion, setCaptchaQuestion] = useState("");
   const [selectedCaptcha, setSelectedCaptcha] = useState<number | null>(null);
-  const [correctAnswer, setCorrectAnswer] = useState<number | null>(null);
+  const [correctAnswer, setCorrectAnswer] = useState<number>(0);
 
-  // Captcha generieren: 3 Buttons, +-5 des korrekten Ergebnisses
+  // Generiere ein neues Captcha
   function generateCaptcha() {
     const a = Math.floor(Math.random() * 10) + 1;
     const b = Math.floor(Math.random() * 10) + 1;
@@ -25,26 +25,19 @@ export default function Captcha({ onChange }: CaptchaProps) {
     }
 
     setCaptchaQuestion(`Wie viel ergibt: ${a} + ${b}?`);
-    setCaptchaOptions(shuffleArray(options));
+    setCaptchaOptions(options.sort(() => Math.random() - 0.5));
     setCorrectAnswer(correct);
     setSelectedCaptcha(null);
+    onValidate(false); // Reset
   }
 
   useEffect(() => {
     generateCaptcha();
   }, []);
 
-  function shuffleArray(arr: number[]) {
-    return arr.sort(() => Math.random() - 0.5);
-  }
-
   function handleSelect(option: number) {
     setSelectedCaptcha(option);
-    if (onChange) onChange(option);
-  }
-
-  function validate() {
-    return selectedCaptcha === correctAnswer;
+    onValidate(option === correctAnswer); // Parent erfährt, ob korrekt
   }
 
   return (
@@ -65,5 +58,3 @@ export default function Captcha({ onChange }: CaptchaProps) {
     </div>
   );
 }
-
-export type { CaptchaProps };

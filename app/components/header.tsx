@@ -80,7 +80,7 @@ export default function Header() {
 
             <div>
               <Button href="/profil" title="Mehr über mich und meine Arbeit erfahren">
-                Lernen Sie mich kennen
+                Mein Profil / Werdegang
               </Button>
             </div>
           </div>
