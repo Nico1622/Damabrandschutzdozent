@@ -165,7 +165,7 @@ export default function Datenschutz() {
             <strong>Name:</strong> {company.name.text!}<br />
             <strong>Straße:</strong> {company.address.text!}, {company.zip.text!} {company.city.text!}<br />
             <strong>E-Mail:</strong> <Link href={company.email.href!} title={company.email.title}>{company.email.text}</Link><br />
-            <strong>Website:</strong> <Link href="https://nbeyer.tech" title="Website URL">nbeyer.tech</Link>
+            <strong>Website:</strong> <Link href="https://damabrandschutzdozent.de" title="Website URL">damabrandschutzdozent.de</Link>
           </address>
 
           <h2 className="h4">3. Erfassung von allgemeinen Daten und Informationen</h2>

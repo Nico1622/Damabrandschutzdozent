@@ -3,17 +3,17 @@ export const siteConfig = {
     name: {
       name: "Firma",
       title: "Firmenname",
-      text: "Nico Beyer",
+      text: "Damabrandschutzdozent",
     },
     address: {
       name: "Adresse",
       title: "Firmensitz",
-      text: "Uerdinger Straße 122",
+      text: "Drosselweg 7",
     },
     zip: {
       name: "PLZ",
       title: "Postleitzahl",
-      text: "40668",
+      text: "40667",
     },
     city: {
       name: "Ort",
@@ -23,64 +23,64 @@ export const siteConfig = {
     email: {
       name: "E-Mail",
       title: "Kontaktieren Sie mich via E-Mail",
-      text: "beyer.nico99@gmail.com",
-      href: "mailto:beyer.nico99@gmail.com",
+      text: "info@damabrandschutzdozent.de",
+      href: "mailto:info@damabrandschutzdozent.de",
     },
     phone: {
       name: "Telefon",
       title: "Rufen Sie uns an",
-      text: "+49 123 4567890",
-      href: "tel:+491234567890",
+      text: "+49 172 267 63 25",
+      href: "tel:+491722676325",
     },
   },
 
   social: {
-    instagram: {
-      name: "Instagram",
-      title: "Besuchen Sie mich auf Instagram",
-      text: "Instagram",
-      href: "https://instagram.com/musterfirma",
-    },
-    facebook: {
-      name: "Facebook",
-      title: "Besuchen Sie mich auf Facebook",
-      text: "Facebook",
-      href: "https://facebook.com/musterfirma",
-    },
-    xing: {
-      name: "Xing",
-      title: "Besuchen Sie mich auf XING",
-      text: "xing",
-      href: "https://www.xing.com/profile/Nico_Beyer031219",
-    },
-    linkedin: {
-      name: "LinkedIn",
-      title: "Besuchen Sie mich auf LinkedIn",
-      text: "linkedin",
-      href: "https://de.linkedin.com/in/nico-beyer-1347a8377",
-    },
+    // instagram: {
+    //   name: "Instagram",
+    //   title: "Besuchen Sie mich auf Instagram",
+    //   text: "Instagram",
+    //   href: "https://instagram.com/musterfirma",
+    // },
+    // facebook: {
+    //   name: "Facebook",
+    //   title: "Besuchen Sie mich auf Facebook",
+    //   text: "Facebook",
+    //   href: "https://facebook.com/musterfirma",
+    // },
+    // xing: {
+    //   name: "Xing",
+    //   title: "Besuchen Sie mich auf XING",
+    //   text: "xing",
+    //   href: "https://www.xing.com/profile/Nico_Beyer031219",
+    // },
+    // linkedin: {
+    //   name: "LinkedIn",
+    //   title: "Besuchen Sie mich auf LinkedIn",
+    //   text: "linkedin",
+    //   href: "https://de.linkedin.com/in/nico-beyer-1347a8377",
+    // },
   },
 
   imprint: {
     companyName: {
       name: "Firma",
       title: "Firmenname",
-      text: "Nico Beyer",
+      text: "Damabrandschutzdozent",
     },
     owner: {
       name: "Inhaber",
       title: "Inhaber des Unternehmens",
-      text: "Nico Beyer",
+      text: "Daniel Marzinzik",
     },
     address: {
       name: "Adresse",
       title: "Adresse",
-      text: "Uerdinger Straße 122",
+      text: "Drosselweg 7",
     },
     zip: {
       name: "PLZ",
       title: "Postleitzahl",
-      text: "40668",
+      text: "40667",
     },
     city: {
       name: "Ort",
@@ -90,14 +90,14 @@ export const siteConfig = {
     email: {
       name: "E-Mail",
       title: "Kontakt E-Mail",
-      text: "beyer.nico99@gmail.com",
-      href: "mailto:beyer.nico99@gmail.com",
+      text: "info@damabrandschutzdozent.de",
+      href: "mailto:info@damabrandschutzdozent.de",
     },
     phone: {
       name: "Telefon",
       title: "Kontakt Telefon",
-      text: "+49 123 4567890",
-      href: "tel:+491234567890",
+      text: "+49 172 267 63 25",
+      href: "tel:+491722676325",
     },
   },
 };

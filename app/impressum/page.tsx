@@ -43,7 +43,7 @@ export default function ImprintPage() {
             </dd>
 
             <dt>Datenschutz:</dt>
-            <dd>Beachten Sie auch meine <Link href="/datenschutz" title="Informationen zum Datenschutz lesen">Datenschutzerklärung</Link></dd>
+            <dd>Beachten Sie auch unsere <Link href="/datenschutz" title="Informationen zum Datenschutz lesen">Datenschutzerklärung</Link></dd>
           </dl>
         </div>
       </div>

@@ -14,61 +14,59 @@ export interface NavItem {
 // Hauptnavigation (mit optionalen Dropdowns)
 export const mainNavigationConfig: NavItem[] = [
   {
-    label: "Home",
+    label: "Startseite",
     href: "/",
     description: "Zur Startseite und Übersicht gelangen",
   },
   {
-    label: "Profil",
-    href: "/profil",
-    description: "Mehr über mich und meine Arbeit erfahren",
+    label: "Brandschutz",
+    href: "/brandschutz",
+    description: "Brandschutz",
+    children: [
+      {
+        label: "Brandschutzhelfer Ausbildung",
+        href: "/brandschutz/brandschutzhelfer-ausbildung",
+        description: "Brandschutzhelfer Ausbildung",
+      },
+      {
+        label: "Brandschutzunterweisung",
+        href: "/brandschutz/brandschutzunterweisung",
+        description: "Brandschutzunterweisung",
+      },
+      {
+        label: "Praktisches Feuerlöschtraining",
+        href: "/brandschutz/praktisches-feuerloeschtraining",
+        description: "Praktisches Feuerlöschtraining",
+      },
+      {
+        label: "Co2 Übungsfeuerlöscher",
+        href: "/brandschutz/co2-uebungsfeuerloescher",
+        description: "Co2 Übungsfeuerlöscher",
+      },
+    ],
   },
   {
-    label: "Referenzen",
-    href: "/referenzen",
-    description: "Meine Projekte und Arbeiten ansehen",
-    // children: [
-    //   {
-    //     label: "Projekt-1",
-    //     href: "/referenzen/projekt-1",
-    //     description: "Projekt 1 im Detail entdecken",
-    //   },
-    //   {
-    //     label: "Projekt-2",
-    //     href: "/referenzen/projekt-2",
-    //     description: "Projekt 2 und seine Umsetzung ansehen",
-    //   },
-    //   {
-    //     label: "Projekt-3",
-    //     href: "/referenzen/projekt-3",
-    //     description: "Projekt 3 mit allen Highlights ansehen",
-    //   },
-    // ],
+    label: "Brandschutzhelfer / Evakuirungshelfer",
+    href: "/brandschutzhelfer-evakuierungshelfer",
+    description: "Brandschutzhelfer / Evakuirungshelfer",
   },
   {
     label: "Kontakt",
     href: "/kontakt",
-    description: "Kontaktieren Sie mich via E-Mail",
-  },
-  {
-    label: "Lebenslauf - PDF",
-    href: "/assets/files/lebenslauf_nico_beyer.pdf",
-    external: true,
-    description: "Lebenslauf als PDF öffnen",
-    className: 'btn'
-  },
+    description: "Kontaktieren Sie uns via E-Mail",
+  }
 ]
 
 export const footerNavigationConfig: NavItem[] = [
   {
-    label: "Home",
+    label: "Startseite",
     href: "/",
     description: "Zur Startseite und Übersicht gelangen",
   },
   {
     label: "Kontakt",
     href: "/kontakt",
-    description: "Kontaktieren Sie mich per E-Mail",
+    description: "Kontaktieren Sie uns per E-Mail",
   },
   {
     label: "Impressum",
