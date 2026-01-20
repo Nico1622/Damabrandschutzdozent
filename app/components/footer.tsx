@@ -9,11 +9,6 @@ import { FooterNavigation } from "../components/navigation/footer-navigation"
 
 export default function Footer() {
   const pathname = usePathname()
-
-  if (pathname == "/login") {
-    return null
-  }
-
   const isContactPage = pathname === '/kontakt'; 
 
   return (

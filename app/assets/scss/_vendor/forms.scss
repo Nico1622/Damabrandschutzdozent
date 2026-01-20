@@ -7,7 +7,6 @@ $form-dark-shadow: rgba(color(dark), 0.1);
 $form-dark-shadow-hover: rgba(color(dark), 0.2);
 $form-bg-color: color(form);
 
-body:not(.login) {
   form:not(.form) {
     background: $form-bg-color;
     width: 100%;
@@ -272,7 +271,7 @@ body:not(.login) {
     margin-top: calc(($base-gap * -1) / 1.5);
     margin-bottom: $base-gap;
   }
-}
+
 
 body.kontakt {
   form {

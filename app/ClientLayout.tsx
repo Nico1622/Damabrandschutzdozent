@@ -14,8 +14,6 @@ interface ClientLayoutProps {
   customBodyClass?: string;
 }
 
-const LOGIN_ENABLED = process.env.NEXT_PUBLIC_LOGIN_ENABLED === "true";
-
 export default function ClientLayout({ children, customBodyClass }: ClientLayoutProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -41,20 +39,6 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
 
     body.className = classes.join(" ");
 
-    // 🔐 Login bestimmen
-    let isLoggedIn = true;
-
-    if (LOGIN_ENABLED) {
-      isLoggedIn = document.cookie.includes("loggedIn=true");
-    }
-
-    setLoggedIn(isLoggedIn);
-
-    // 🔁 Redirect, wenn nicht eingeloggt
-    if (!isLoggedIn && pathname !== "/login") {
-      router.replace("/login");
-    }
-
     return () => {
       body.className = "";
     };
@@ -74,16 +58,9 @@ export default function ClientLayout({ children, customBodyClass }: ClientLayout
       <Header />
 
       <main id="main" role="main">
-        {/* 
-          children sind ENTWEDER:
-          - normale Seite (eingeloggt)
-          - /login/page.tsx (nicht eingeloggt)
-        */}
-        {loggedIn === null ? null : (
-          <LazyLoad offset="200px" threshold={0.1}>
-            {children}
-          </LazyLoad>
-        )}
+        <LazyLoad offset="200px" threshold={0.1}>
+          {children}
+        </LazyLoad>
       </main>
 
       <Footer />

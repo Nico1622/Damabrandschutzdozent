@@ -9,7 +9,7 @@ export async function POST(req: Request) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Portfolio <onboarding@resend.dev>',
+      from: 'Damabrandschutzdozent <onboarding@resend.dev>',
       to: ["beyer.nico99@gmail.com"],
       subject: `Neue Nachricht von ${companyName}`,
       react: EmailTemplate({ companyName, email, phone, message }), // <-- dynamisch
