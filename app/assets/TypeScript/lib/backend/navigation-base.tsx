@@ -272,7 +272,7 @@ export function NavigationBase({ items, variant = "main", closeMobileMenuCallbac
             title="Zur Startseite gelangen"
             onClick={(e) => handleLogoScroll(e, pathname)}
           >
-            <img src="/assets/images/layout/branding.png" alt={`${company.name.text} - Logo`} width={250} height="auto" />
+            <img src="/assets/images/layout/branding.png" alt={`${company.name.text} - Logo`} width={460} height="auto" />
           </Link>
         </div>
 

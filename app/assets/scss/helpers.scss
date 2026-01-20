@@ -275,7 +275,8 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 
   &:before {
     @extend .icon;
-    @extend .icon-close;
+    content: 'x';
+    // @extend .icon-close;
     position: absolute;
     top: 0;
     right: 0;
@@ -317,9 +318,26 @@ $final-size-zero: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 
 video {
   height: 100%;
+  width: 100%;
   position: absolute;
+  top: 0;
   left: 0;
   z-index: -2;
   object-fit: cover;
   object-position: left center
+}
+
+.medium-order-1 {
+  @include breakpoint(medium, max) {
+    order: -1;
+  }
+}
+
+.hr, .trenner {
+  display: block;
+  border: 0;
+  border-top: $base-border;
+  color: inherit;
+  margin: 60px 0;
+  opacity: .25;
 }

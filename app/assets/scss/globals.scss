@@ -48,20 +48,17 @@
 h1, h2, h3, h4, h5, h6
 .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: 1.15em;
-	margin-bottom: 0.7em;
-	font-weight: 600;
+	margin-bottom: 1em;
+	font-weight: 400;
 	font-family: $display-font;
 	word-break: break-word;
-	color: color(secondary);
-	text-transform: uppercase;
-	color: color(ultralight);
+	color: color(primary);
 
 	span { 
 		line-height: 1.3em;
-		margin-top: 0.45rem;
-		font-weight: 400;
 		display: block;
-		font-size: 0.7em;
+		font-size: .85em;
+		color: color(light);
 			
 		@include breakpoint(small) {
 			letter-spacing: 0.2em; 
@@ -165,7 +162,7 @@ main {
 		&:not(.unstyled-list) {
 			li {
 				@extend .icon;
-				@extend .icon-arrow-right;
+				@extend .icon-arrow;
 				padding-left: 25px;
 
 				&:before {

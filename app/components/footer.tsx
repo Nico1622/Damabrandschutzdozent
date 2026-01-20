@@ -10,19 +10,18 @@ export default function Footer() {
     <footer className="bg-color-dark" role="contentinfo">
       <div className="row">
         <div className="col">
-          <Link href="/" title="Zur Startseite und Übersicht gelangen">
-            <Image className="no-border" src="/assets/images/layout/branding.png" alt={`${company.name.text} - Logo`} width={150} height={24} style={{ width: "auto", height: "auto" }} />
-          </Link> 
-        </div>
-        <div className="col">
-          <address>
-            <strong>E-Mail: </strong> 
-            
-            <Link href={company.email.href!} title={company.email.title}>
-              {company.email.text}
-            </Link>
-          </address>
-
+          <div className="footer-details">
+            <Link href="/" title="Zur Startseite und Übersicht gelangen">
+              <Image className="no-border" src="/assets/images/layout/branding.png" alt={`${company.name.text} - Logo`} width={150} height={24} style={{ width: "auto", height: "auto" }} />
+            </Link> 
+            <address>
+              <strong>E-Mail: </strong> 
+              
+              <Link href={company.email.href!} title={company.email.title}>
+                {company.email.text}
+              </Link>
+            </address>
+          </div>
           <span className="trenner"></span>
         </div>
       </div>

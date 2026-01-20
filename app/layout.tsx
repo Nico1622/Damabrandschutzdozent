@@ -10,44 +10,44 @@ import AOSProvider from "./assets/TypeScript/_module/aos";
 import ClientLayout from "./ClientLayout";
 import "./assets/scss/style.scss"; 
  
-// export const metadata: Metadata = {
-//   title: "Damabrandschutzdozent",
-//   description: "Das persönliche Portfolio von Nico Beyer – Webentwicklung, barrierefreie Projekte und kreative Lösungen mit Next.js.",
-//   keywords: [
-//     "Nico Beyer",
-//     "Portfolio",
-//     "Webentwicklung",
-//     "Next.js",
-//     "Barrierefreiheit",
-//     "Web Accessibility",
-//     "Frontend",
-//     "SEO",
-//     "UI/UX Design",
-//     "Web Projekte"
-//   ],
-//   generator: "Next.js v14",
-//   applicationName: "Portfolio Nico Beyer",
-//   creator: "Nico Beyer",
-//   publisher: "Nico Beyer",
-//   referrer: "no-referrer-when-downgrade",
-//   robots: {
-//     index: true,
-//     follow: true,
-//     nocache: false,
-//     googleBot: {
-//       index: true,
-//       follow: true,
-//       noimageindex: false,
-//       "max-video-preview": -1,
-//       "max-image-preview": "large",
-//       "max-snippet": -1,
-//     },
-//   },
-//   icons: {
-//     icon: "/assets/images/favicon.ico",
-//     shortcut: "/assets/images/favicon.ico",
-//   },
-// };
+export const metadata: Metadata = {
+  // title: "Damabrandschutzdozent",
+  // description: "Das persönliche Portfolio von Nico Beyer – Webentwicklung, barrierefreie Projekte und kreative Lösungen mit Next.js.",
+  // keywords: [
+  //   "Nico Beyer",
+  //   "Portfolio",
+  //   "Webentwicklung",
+  //   "Next.js",
+  //   "Barrierefreiheit",
+  //   "Web Accessibility",
+  //   "Frontend",
+  //   "SEO",
+  //   "UI/UX Design",
+  //   "Web Projekte"
+  // ],
+  // generator: "Next.js v14",
+  // applicationName: "Portfolio Nico Beyer",
+  // creator: "Nico Beyer",
+  // publisher: "Nico Beyer",
+  // referrer: "no-referrer-when-downgrade",
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   nocache: false,
+  //   googleBot: {
+  //     index: true,
+  //     follow: true,
+  //     noimageindex: false,
+  //     "max-video-preview": -1,
+  //     "max-image-preview": "large",
+  //     "max-snippet": -1,
+  //   },
+  // },
+  icons: {
+    icon: "/assets/images/favicon.ico",
+    shortcut: "/assets/images/favicon.ico",
+  },
+};
 
 
 export const viewport: Viewport = {

@@ -20,11 +20,11 @@
     content: "";
     width: 48px;
     height: 48px;
-    border: 3px solid rgba(83, 138, 234, 0.4);
-    border-top-color: #538aea; // oder color(primary)
+    border: 3px solid color(primary, 0.3);
+    border-top-color: color(primary); // oder color(primary)
     border-radius: 50%;
     animation: spin 0.8s ease-in-out infinite;
-    box-shadow: 0 0 12px rgba(83, 138, 234, 0.6);
+    box-shadow: 0 0 12px color(primary, 0.6);
   }
 }
 
