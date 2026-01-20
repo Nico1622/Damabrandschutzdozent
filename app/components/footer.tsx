@@ -8,6 +8,25 @@ import { FooterNavigation } from "../components/navigation/footer-navigation"
 export default function Footer() {
   return (
     <footer className="bg-color-dark" role="contentinfo">
+      <div className="row">
+        <div className="col">
+          <Link href="/" title="Zur Startseite und Übersicht gelangen">
+            <Image className="no-border" src="/assets/images/layout/branding.png" alt={`${company.name.text} - Logo`} width={150} height={24} style={{ width: "auto", height: "auto" }} />
+          </Link> 
+        </div>
+        <div className="col">
+          <address>
+            <strong>E-Mail: </strong> 
+            
+            <Link href={company.email.href!} title={company.email.title}>
+              {company.email.text}
+            </Link>
+          </address>
+
+          <span className="trenner"></span>
+        </div>
+      </div>
+
       {/* Branding & Kontakt-Info Leiste */}
       {/* <div className="row center" data-aos="fade-up">
         <div className="col large-10">
